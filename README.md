@@ -13,7 +13,7 @@ Things you may want to cover:
 
 * Database creation
 
- DB設計
+# DB設計
 
 ## usersテーブル
 
