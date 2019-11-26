@@ -44,8 +44,9 @@ Things you may want to cover:
 ## markingsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, unique: true, foreign_key: true|
-|station_id|references|null: false, unique: true, foreign_key: true, index: true|
+|user_id|references|null: false, foreign_key: true|
+|station_id|references|null: false, foreign_key: true, index: true|
+## controllerにて、「user_id」と「station_id」のペアがすでにある場合はsaveアクションを実行しないようにする記述を行う。
 
 ### Association
 - belongs_to :station
