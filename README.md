@@ -48,7 +48,7 @@ Things you may want to cover:
 |station_id|references|null: false, unique: true, foreign_key: true, index: true|
 
 ### Association
-- belongs_to :group
+- belongs_to :station
 - belongs_to :user
 
 ## imagesテーブル
@@ -60,7 +60,7 @@ Things you may want to cover:
 |station_id|references|null: false, unique: true, foreign_key: true, index: true|
 
 ### Association
-- belongs_to :group
+- belongs_to :station
 - belongs_to :user
 
 
