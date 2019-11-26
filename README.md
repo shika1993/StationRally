@@ -26,7 +26,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :images
-- has_many :markings
+- has_many :users_stations
 - has_many :stations, through: :users_stations
 
 ## stationsテーブル
@@ -38,7 +38,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :images
-- has_many :markings
+- has_many :users_stations
 - has_many :users, through: :users_stations
 
 ## users_stationsテーブル
