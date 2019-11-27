@@ -55,6 +55,10 @@
       picture
       .main__images__image__coment
 .footer
-  .comment
-    .comment__text
-    .commet__image
+  .footer__commentform
+    .footer__commentform__input
+      = text_field :text, 'comment'
+      %label.label
+        = fa_icon 'image'
+    .footer__commentform__submit
+      %input{:type => "submit", :value => "send"}
