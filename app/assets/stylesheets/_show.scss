@@ -10,7 +10,7 @@
     color: white;
     margin: auto 10px;
     font-size: 25px;
-    font-family: TimesNewRoman;
+    font-family: 'TimesNewRoman';
     a{
       color: white;
       text-decoration: none;
@@ -38,6 +38,8 @@
     width:100%;
     line-height: 60px;
     text-align: center;
+    font-family: 'tegaki';
+    font-size: 30px;
   }
   &__images{
     height: 100%;
