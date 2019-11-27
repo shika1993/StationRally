@@ -1,6 +1,6 @@
 .user {
-
-  $__left {
+  height: 680px;
+  &__left {
     width: 400px;
     
     &__title {
@@ -12,7 +12,7 @@
   }
 
   &__right {
-    width: calc(100%-400px);
+    width: calc(100% - 400px);
 
     &__field {
 
