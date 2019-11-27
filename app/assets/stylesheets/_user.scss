@@ -1,0 +1,48 @@
+.user {
+  height: 680px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Hiragino Maru Gothic ProN';
+
+  &__left {  
+    width: 400px;
+
+    &__title {
+      height: 100px;
+      width: 400px;
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    &__link {
+      height: 50px;
+      width: 150px;
+      border: 1px solid #00008B;
+      margin-left: 125px;
+     
+      &--font {
+        color:#00008B;
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px;
+      }
+    }   
+  }
+
+  &__right {
+
+    &__field {
+
+    }
+    &__actions {
+
+    }
+  }
+}
