@@ -4,12 +4,13 @@
       StationRarry
 
 .user
-  .left
-    .title
+  .user__left
+    .user__left__title
       新規登録
-    .link
-      = render "devise/shared/links"
-
+    .user__left__link
+      = link_to '/users/sign_in' do
+        .user__left__link--font  
+          ログイン
   .right
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
