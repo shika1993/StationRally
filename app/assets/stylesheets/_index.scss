@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   margin:auto 0;
-  .header_left{
+  &__left{
     margin: auto 0;
     color: white;
     margin: auto 10px;
@@ -16,7 +16,7 @@
       text-decoration: none;
     }
   }
-  .header_right{
+  .header__right{
     margin: auto 0;
     .btn ul{
       display: flex;
