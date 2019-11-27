@@ -1,8 +1,8 @@
 .header
-  .header_left
+  .header__left
     = link_to '/' do
       StationRarry
-  .header_right
+  .header__right
     .btn
       %ul
         %li
@@ -14,5 +14,6 @@
     
 
 .main
-
+  =link_to map_path(:id) do
+    Station1
 .footer
