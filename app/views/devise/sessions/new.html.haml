@@ -1,3 +1,8 @@
+.header
+  .header_left
+    = link_to '/' do
+      StationRarry
+
 %h2 Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
@@ -15,3 +20,5 @@
   .actions
     = f.submit "Log in"
 = render "devise/shared/links"
+
+.footer

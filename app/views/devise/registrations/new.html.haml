@@ -1,21 +1,28 @@
-%h2 Sign up
+.header
+  .header_left
+    = link_to '/' do
+      StationRarry
+
+%h2 新規登録
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
-    = f.label :email
+    = f.label :'E-mail'
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
-    = f.label :password
+    = f.label :パスワード（6文字以上）
     - if @minimum_password_length
       %em
-        (#{@minimum_password_length} characters minimum)
+        
     %br/
     = f.password_field :password, autocomplete: "new-password"
   .field
-    = f.label :password_confirmation
+    = f.label :パスワード（確認用）
     %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
+    = f.password_field :password_confirmation, autocomplete: "resourcespassword"
   .actions
-    = f.submit "Sign up"
+    = f.submit "登録する"
 = render "devise/shared/links"
+
+.footer

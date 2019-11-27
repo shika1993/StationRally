@@ -1,3 +1,8 @@
+.header
+  .header_left
+    = link_to '/' do
+      StationRarry
+
 %h2 Change your password
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
   = render "devise/shared/error_messages", resource: resource
@@ -17,3 +22,5 @@
   .actions
     = f.submit "Change my password"
 = render "devise/shared/links"
+
+.footer
