@@ -26,6 +26,7 @@
     = f.password_field :password_confirmation, autocomplete: "resourcespassword"
   .actions
     = f.submit "登録する"
-= render "devise/shared/links"
+  .link
+  = render "devise/shared/links"
 
 .footer
