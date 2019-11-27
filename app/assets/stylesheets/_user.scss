@@ -1,0 +1,24 @@
+.user {
+
+  $__left {
+    width: 400px;
+    
+    &__title {
+      color: red;
+    }
+    &__link {
+
+    }  
+  }
+
+  &__right {
+    width: calc(100%-400px);
+
+    &__field {
+
+    }
+    &__actions {
+
+    }
+  }
+}
