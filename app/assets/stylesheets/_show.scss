@@ -1,0 +1,41 @@
+.header{
+  height: 60px;
+  width:100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  margin:auto 0;
+  .header_left{
+    margin: auto 0;
+    color: white;
+    margin: auto 10px;
+    font-size: 25px;
+    font-family: TimesNewRoman;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .header_right{
+    margin: auto 0;
+    .btn ul{
+      display: flex;
+      li{
+        margin: auto 10px;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.main{
+  height: 680px;
+  width: 100%;
+}
+.footer{
+  height: 50px;
+  width:100%;
+  background-color: #333;
+}
