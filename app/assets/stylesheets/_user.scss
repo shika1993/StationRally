@@ -6,12 +6,13 @@
 
   &__left {  
     width: 400px;
+    margin-top: 60px;
 
     &__title {
       height: 100px;
       width: 400px;
       color: black;
-      font-size: 40px;
+      font-size: 50px;
       font-weight: bold;
       margin-top: 60px;
       text-align: center;
@@ -22,16 +23,18 @@
     }
 
     &__link {
-      height: 50px;
-      width: 150px;
-      border: 1px solid #00008B;
-      margin-left: 125px;
+      height: 40px;
+      width: 100px;
+      margin-left: 150px;
+      background-color: #333;
+      border-radius: 8px;
+      margin-top: 50px;
      
       &--font {
-        color:#00008B;
-        font-size: 24px;
+        color: white;
+        font-size: 20px;
         text-align: center;
-        line-height: 50px;
+        line-height: 40px;
       }
     }   
   }
