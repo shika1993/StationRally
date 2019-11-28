@@ -7,10 +7,6 @@
   .user__left
     .user__left__title
       ユーザー情報編集
-    .user__left__link
-      = link_to '/users/sign_up' do
-        .user__left__link--font  
-          新規登録
 
   .user__right
     .user__right__field
@@ -24,8 +20,6 @@
       .user__right__field--label
         = f.label :'E-mail'
         %br/
-        - if @minimum_password_length
-          %br/
       .user__right__field--input
         = f.email_field :email
       .user__right__field--label

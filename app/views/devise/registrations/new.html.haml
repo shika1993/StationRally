@@ -28,8 +28,9 @@
         = f.email_field :email, autofocus: true, autocomplete: "email"
       .user__right__field--label
         = f.label :パスワード（6文字以上）
+        %br/
         - if @minimum_password_length
-        %br/  
+          %br/  
       .user__right__field--input
         = f.password_field :password, autocomplete: "new-password"
       .user__right__field--label
@@ -38,6 +39,5 @@
       .user__right__field--input
         = f.password_field :password_confirmation, autocomplete: "resourcespassword" 
       = f.submit "登録する", class: 'user__right__actions'
-    
 
 .footer
