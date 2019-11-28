@@ -17,6 +17,10 @@
       = link_to '/users/password/new' do
         .user__left__link--font 
           パスワードを忘れた
+    .user__left__link
+      = link_to '/' do
+        .user__left__link--font 
+          メイン画面
   
   .user__right
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
