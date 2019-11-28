@@ -1,15 +1,24 @@
 .header
   = render partial: "maps/header"
 
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+.user
+  .user__left
+    .user__left__title
+      パスワードリセット
+    .user__left__link
+      = link_to '/users/sign_in' do
+        .user__left__link--font  
+          ログイン
+
+  .user__right    
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .user__right__field
+        .user__right__field--label
+          = f.label :'E-mail'
+          %br/
+        .user__right__field--input
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.submit "リセット", class: 'user__right__actions'
 
 .footer
