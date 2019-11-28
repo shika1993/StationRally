@@ -11,22 +11,27 @@
       = link_to '/users/sign_up' do
         .user__left__link--font  
           新規登録
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+    .user__left__link
+      = link_to '/users/password/new' do
+        .user__left__link--font 
+          パスワードを忘れた
+  
+  .user__right
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .user__right__field
+        .user__right__field--label
+          = f.label :'E-mail'
+          %br/
+        .user__right__field--input
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .user__right__field--label
+          = f.label :パスワード
+          %br/
+        .user__right__field--input
+          = f.password_field :password, autocomplete: "resourcespassword"
+        = f.submit "ログインする", class: 'user__right__actions'
+      .user__right__chekbox
+        = f.check_box :remember_me
+        = f.label :パスワードを記憶させる
 
-.footer
+.footer 
