@@ -4,16 +4,22 @@
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
   margin-bottom: 60px;
+  
+  &__space {
+    height: 680px;
+    width: 500px;
+    background-color: blue;
+    margin-top: 60px;
+  }
 
   &__left {  
-    width: 600px;
     margin-top: 60px;
 
     &__title {
       height: 100px;
-      width: 600px;
+      width: 400px;
       color:#333;
-      font-size: 50px;
+      font-size: 40px;
       font-weight: bold;
       margin-top: 60px;
       text-align: center;
@@ -26,7 +32,7 @@
     &__link {
       height: 40px;
       width: 150px;
-      margin-left: 225px;
+      margin-left: 125px;
       background-color: #333;
       border-radius: 8px;
       margin-top: 50px;
@@ -41,7 +47,7 @@
   }
 
   &__right {
-    width: calc(100% - 600px);
+    width: calc(100% - 900px);
     margin-top: 60px;
 
     &__field {
@@ -51,12 +57,14 @@
         font-size: 20px;
         color: #333;
         margin-top: 30px;
+        margin-left: 50px;
       }
 
       &--input {
         input {
-          width: 600px;
+          width: 400px;
           padding: 10px;
+          margin-left: 50px;
         }
       }    
     }
@@ -64,7 +72,7 @@
     &__actions {
       height: 80px;
       width: 200px;
-      margin-left: 200px;
+      margin-left: 160px;
       background-color: #333;
       border-radius: 10px;
       margin-top: 50px;
@@ -74,7 +82,7 @@
 
     &__checkbox {
       height: 20px;
-      width: 600px;
+      width: 520px;
       text-align: center;
       margin-top: 50px;
       color: #333;
