@@ -85,3 +85,13 @@ ja:
     unlocks:
       new:
         resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
+  errors:
+    messages:
+      already_confirmed: "確認済みです。もう一度サインインしてください"
+      confirmation_period_expired: "%{period}の内容を確認後、もう一度試して下さい"
+      expired: "期限が切れています。再設定して下さい。"
+      not_found: "見つかりませんでした"
+      not_locked: "ロックされていません"
+      not_saved:
+        one: "1 件のエラーにより %{resource} が保存ができませんでした"
+        other: "%{count} 件のエラーにより %{resource} が保存できませんでした"

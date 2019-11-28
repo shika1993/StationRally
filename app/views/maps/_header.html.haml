@@ -3,10 +3,19 @@
     StationRarry
 .header__right
   .btn
-    %ul
-      %li
-        = link_to '/' do
-          新規登録
-      %li
-        = link_to '/' do
-          ログイン
+    - if user_signed_in?
+      %ul
+        %li
+          = link_to edit_user_registration_path,class: "btn" do
+            ユーザー情報編集
+        %li    
+          = link_to destroy_user_session_path, method: :delete, class: "btn" do
+            ログアウト
+    - else
+      %ul
+        %li
+          = link_to new_user_session_path,class: "btn" do
+            ログイン
+        %li
+          = link_to new_user_registration_path, class: "btn" do
+            新規登録
