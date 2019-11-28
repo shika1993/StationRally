@@ -1,64 +1,10 @@
 .header
-  .header__left
-    = link_to root_path do
-      StationRarry
-  .header__right
-    .header__right__btn
-      %ul
-        %li
-          = link_to '/' do
-            新規登録
-        %li
-          = link_to '/' do
-            ログイン
-    
-
+  = render partial: "header"
 .main
   .main__stationname
-    駅名
+    YRP野比
   .main__images
-    .main__images__image
-      picture
-      .main__images__image__comment
-        comment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
-    .main__images__image
-      picture
-      .main__images__image__coment
+    -# 仮置状態。数字は繰り返し表示する回数
+    = render partial: 'main-images', collection: (1..30).to_a
 .footer
-  .footer__commentform
-    .footer__commentform__input
-      = text_field :text, 'comment'
-      %label.label
-        = fa_icon 'image'
-    .footer__commentform__submit
-      %input{:type => "submit", :value => "send"}
+  = render partial: "form"

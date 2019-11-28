@@ -1,23 +1,7 @@
 .header
-  .header__left
-    = link_to '/' do
-      StationRarry
-  .header__right
-    .btn
-      %ul
-        %li
-          = link_to '/' do
-            新規登録
-        %li
-          = link_to '/' do
-            ログイン
-    
-
+  = render partial: "header"
 .main
   =link_to map_path(:id) do
     Station1
 .footer
-  .footer__credit
-    %a{ :href => "https://developer.yahoo.co.jp/about" }
-      Web Services by Yahoo! JAPAN
-    
+  = render partial: "credit"
