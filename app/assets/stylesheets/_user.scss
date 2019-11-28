@@ -3,15 +3,17 @@
   display: flex;
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
+  margin-bottom: 60px;
 
   &__left {  
-    width: 400px;
+    width: 600px;
+    margin-top: 60px;
 
     &__title {
       height: 100px;
-      width: 400px;
-      color: black;
-      font-size: 40px;
+      width: 600px;
+      color:#333;
+      font-size: 50px;
       font-weight: bold;
       margin-top: 60px;
       text-align: center;
@@ -22,27 +24,52 @@
     }
 
     &__link {
-      height: 50px;
-      width: 150px;
-      border: 1px solid #00008B;
-      margin-left: 125px;
+      height: 40px;
+      width: 100px;
+      margin-left: 250px;
+      background-color: #333;
+      border-radius: 8px;
+      margin-top: 50px;
      
       &--font {
-        color:#00008B;
-        font-size: 24px;
+        color: white;
+        font-size: 20px;
         text-align: center;
-        line-height: 50px;
+        line-height: 40px;
       }
     }   
   }
 
   &__right {
+    width: calc(100% - 600px);
+    margin-top: 60px;
 
     &__field {
 
-    }
-    &__actions {
+      &--label {
+        height: 50px;
+        font-size: 20px;
+        color: #333;
+        margin-top: 30px;
+      }
+
+      &--input {
+        input {
+          width: 600px;
+          padding: 10px;
+        }
+      }    
 
     }
-  }
+    &__actions {
+      height: 80px;
+      width: 200px;
+      margin-left: 250px;
+      background-color: #333;
+      border-radius: 10px;
+      margin-top: 50px;
+      color: white; 
+      font-size: 40px;
+    }
+  } 
 }
