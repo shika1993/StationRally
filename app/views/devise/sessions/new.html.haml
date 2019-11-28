@@ -1,8 +1,16 @@
 .header
-  .header_left
+  .header__left
     = link_to '/' do
       StationRarry
 
+.user
+  .user__left
+    .user__left__title
+      ログイン
+    .user__left__link
+      = link_to '/users/sign_up' do
+        .user__left__link--font  
+          新規登録
 %h2 Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
