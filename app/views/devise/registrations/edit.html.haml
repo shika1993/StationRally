@@ -19,19 +19,7 @@
         = f.label :'E-mail'
         %br/
       .user__right__field--input
-        = f.email_field :email
-      .user__right__field--label
-        = f.label :パスワード（6文字以上）  
-        %br/
-        - if @minimum_password_length
-          %br/
-      .user__right__field--input
-        = f.password_field :password, autofocus: true, autocomplete: "new-password"
-      .user__right__field--label
-        = f.label :パスワード（確認用）
-        %br/
-      .user__right__field--input
-        = f.password_field :password_confirmation, autocomplete: "resourcespassword" 
+        = f.email_field :email, autofocus: true, autocomplete: "email"
       = f.submit "変更する", class: 'user__right__actions'
 
 .footer
