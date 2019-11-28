@@ -1,7 +1,11 @@
 .header
-  = render partial: "maps/header"
+  = render partial: "maps/devise-header"
 
 .user
+
+  .user__space
+    = render partial: "maps/side-image"
+
   .user__left
     .user__left__title
       ログイン
@@ -28,7 +32,7 @@
         .user__right__field--input
           = f.password_field :password, autocomplete: "resourcespassword"
         = f.submit "ログインする", class: 'user__right__actions'
-      .user__right__chekbox
+      .user__right__checkbox
         = f.check_box :remember_me
         = f.label :パスワードを記憶させる
 
