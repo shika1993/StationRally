@@ -20,7 +20,7 @@
         = f.label :ユーザー名
         %br/
       .user__right__field--input
-        = f.email_field :name, autofocus: true, autocomplete: "name"
+        = f.text_field :name, autofocus: true, autocomplete: "name"
       .user__right__field--label
         = f.label :'E-mail'
         %br/
@@ -29,7 +29,6 @@
       .user__right__field--label
         = f.label :パスワード（6文字以上）
         - if @minimum_password_length
-          %em 
         %br/  
       .user__right__field--input
         = f.password_field :password, autocomplete: "new-password"

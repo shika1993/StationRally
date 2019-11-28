@@ -1,5 +1,5 @@
 .header
-  .header_left
+  .header__left
     = link_to '/' do
       StationRarry
 
@@ -14,31 +14,32 @@
 
   .user__right
     .user__right__field
-      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = render "devise/shared/error_messages", resource: resource
       .user__right__field--label
-        = f.label :email
+        = f.label :ユーザー名
+        %br/
+      .user__right__field--input
+        = f.text_field :name, autofocus: true, autocomplete: "name"
+      .user__right__field--label
+        = f.label :'E-mail'
         %br/
         - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} characters minimum)
           %br/
       .user__right__field--input
-        = f.email_field :email,
+        = f.email_field :email
       .user__right__field--label
-        = f.label :password, "New password"
+        = f.label :パスワード（6文字以上）  
         %br/
         - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} characters minimum)
           %br/
       .user__right__field--input
         = f.password_field :password, autofocus: true, autocomplete: "new-password"
       .user__right__field--label
-        = f.label :password_confirmation, "Confirm new password"
+        = f.label :パスワード（確認用）
         %br/
       .user__right__field--input
         = f.password_field :password_confirmation, autocomplete: "new-password" 
-    = f.submit "変更する", class: 'user__right__actions'
+      = f.submit "変更する", class: 'user__right__actions'
 
 .footer
