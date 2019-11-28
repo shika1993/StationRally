@@ -11,18 +11,34 @@
       = link_to '/users/sign_in' do
         .user__left__link--font  
           ログイン
+  
   .user__right
     .user__right__field
-      = form_for(current_user) do |f|
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email
-    = f.submit "登録する", class: 'user__right__actions'
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .user__right__field--label
+        = f.label :ユーザー名
+        %br/
+      .user__right__field--input
+        = f.email_field :name, autofocus: true, autocomplete: "name"
+      .user__right__field--label
+        = f.label :'E-mail'
+        %br/
+      .user__right__field--input
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .user__right__field--label
+        = f.label :パスワード（6文字以上）
+        - if @minimum_password_length
+          %em 
+        %br/  
+      .user__right__field--input
+        = f.password_field :password, autocomplete: "new-password"
+      .user__right__field--label
+        = f.label :パスワード（確認用）
+        %br/
+      .user__right__field--input
+        = f.password_field :password_confirmation, autocomplete: "resourcespassword" 
+      = f.submit "登録する", class: 'user__right__actions'
+    
 
 .footer
