@@ -2,6 +2,10 @@
   = link_to '/' do
     StationRarry
 .header__right
+  
+  %h3.current
+    = current_user.name
+    
   .btn
     - if user_signed_in?
       %ul
