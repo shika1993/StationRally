@@ -4,8 +4,8 @@
 .header__right
   
   %h3.current
-    = current_user.name
-    
+    = "ようこそ #{current_user.name} さん"
+
   .btn
     - if user_signed_in?
       %ul
