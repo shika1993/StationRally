@@ -1,18 +1,18 @@
 .header{
   height: 60px;
   width:100%;
-  background-color: #333;
+  background-color:$shikagray;
   display: flex;
   justify-content: space-between;
   position: fixed;
   &__left{
     margin: auto 0;
-    color: white;
+    color:$purewhite;
     margin: auto 10px;
     font-size: 25px;
     font-family: 'TimesNewRoman';
     a{
-      color: white;
+      color:$purewhite;
       text-decoration: none;
     }
   }
@@ -24,15 +24,16 @@
         margin: auto 10px;
         a{
           text-decoration: none;
-          color: white;
+          color:$purewhite;
         }
       }
     }
   }
 }
 .main{
-  height: 680px;
+  height: 100vh;
   padding-top:60px;
+  background: $main-background;
   &__stationname{
     height:60px;
     width:100%;
@@ -40,20 +41,37 @@
     text-align: center;
     font-family: 'tegaki';
     font-size: 30px;
+    color:$purewhite;
   }
   &__images{
-    height: 100%;
-    margin: 40px;
+    margin: 0px 40px 40px 40px;
+    height: calc(100vh - 170px);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    overflow: scroll;
+    
     &__image{
-      height: 300px;
-      width: 300px;
-      line-height: 300px;
+      height: 400px;
+      width: 400px;
+      line-height: 400px;
       text-align: center;
-      margin: 30px;
-      background-color: yellow;
+      margin: 20px;
+      background: $imagecolor;
+      position: relative;
+
+      img{
+        object-fit: cover;
+      }
+      
+      &__comment{
+        height: 10px;
+        position: absolute;
+        top:180px;
+        left:20px;
+        color:$purewhite;
+        font-family : 'tegaki';
+      }
     }
   }
 }
@@ -61,9 +79,9 @@
 .footer{
   height: 50px;
   width:100%;
-  background-color: #333;
+  background-color:$shikagray;
   position: fixed;
-
+  bottom: 0;
   &__commentform{
     display: flex;
     justify-content: center;

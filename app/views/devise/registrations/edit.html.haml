@@ -2,22 +2,22 @@
   = render partial: "maps/devise-header"
   
 .user
-
+  .user__img 
+    = image_tag "/assets/tokyo.jpg"
   .user__space
     = render partial: "maps/side-image"
 
   .user__left
     .user__left__title
       ユーザー情報編集
-    .user__left__link
+    .user__left__backlink
       = link_to '/' do
-        .user__left__link--font 
-          メイン画面
+        .user__left__backlink--font 
+          メイン画面へ戻る
 
   .user__right
     .user__right__field
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-      = render "devise/shared/error_messages", resource: resource
       .user__right__field--label
         = f.label :ユーザー名
         %br/
@@ -29,5 +29,6 @@
       .user__right__field--input
         = f.email_field :email, autofocus: true, autocomplete: "email"
       = f.submit "変更する", class: 'user__right__actions'
-
+    .user__right__error
+      = render "devise/shared/error_messages", resource: resource
 .footer
