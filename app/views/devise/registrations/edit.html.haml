@@ -17,7 +17,7 @@
 
   .user__right
     .user__right__field
-    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       .user__right__field--label
         = f.label :ユーザー名
         %br/
