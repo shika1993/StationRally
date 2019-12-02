@@ -2,6 +2,10 @@
   = link_to '/' do
     StationRarry
 .header__right
+  
+  %h3.current
+    = "ようこそ #{current_user.name} さん"
+
   .btn
     - if user_signed_in?
       %ul
