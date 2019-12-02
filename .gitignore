@@ -17,3 +17,4 @@
 .byebug_history
 app/assets/fonts/.DS_Store
 .DS_Store
+*.jpg
