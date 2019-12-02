@@ -4,7 +4,7 @@ class CreateStations < ActiveRecord::Migration[5.0]
       t.string :name, null: false, unique: true
       t.decimal :geolat, precision: 7, scale: 5
       t.decimal :geolong, precision: 8, scale: 5
-      t.integer :point, null: false
+      t.integer :point, null: false, default: 0
       t.timestamps
     end
   end
