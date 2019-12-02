@@ -9,13 +9,11 @@
   &__left{
     margin: auto 0;
     color: $purewhite;
-    ;
     margin: auto 10px;
     font-size: 25px;
     font-family: "TimesNewRoman";
     a{
       color: $purewhite;
-      ;
       text-decoration: none;
     }
   }
@@ -27,7 +25,7 @@
       height: 30px;
       width: 600px;
       border-radius: 10px;
-      color:white;
+      color: $purewhite;
       margin-right: 20px;
       text-align: right;
     }
