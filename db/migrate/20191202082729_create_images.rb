@@ -3,8 +3,8 @@ class CreateImages < ActiveRecord::Migration[5.0]
     create_table :images do |t|
       t.string :image, null: false
       t.string :text
-      t.references :user, unique: true
-      t.references :station, unique: true, index: true
+      t.references :user, null: false, unique: true, foreign_key: true
+      t.references :station, null: false, unique: true, foreign_key: true, index: true
       t.timestamps
     end
   end
