@@ -1,4 +1,4 @@
-class Image < ApplicationRecordra
+class Image < ApplicationRecord
   belongs_to :station
   belongs_to :user
 

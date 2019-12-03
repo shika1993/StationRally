@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: 'maps#index'
   resources :users, only: [:edit, :update]
   resources :maps, only: [:index, :show]
-    resources :images, only: [:index, :create]
+  resources :stations, only: [:index, :show] do
+    resources :images, only: [:create, :update, :edit, :new, :delete]
+  end
 end
