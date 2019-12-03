@@ -8,6 +8,19 @@ class ImagesController < ApplicationController
 
   def create
     @image = @station.images.new(image_params)
+  end
+
+  def new
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def delete
+  end
 
   private
 
