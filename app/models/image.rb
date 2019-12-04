@@ -2,7 +2,7 @@ class Image < ApplicationRecord
   belongs_to :station
   belongs_to :user
 
-  validates :image, presence: true
+  validates :picture, presence: true
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :picture, ImageUploader
 end

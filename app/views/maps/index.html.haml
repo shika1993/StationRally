@@ -2,6 +2,8 @@
   = render partial: "header"
 .main
   =link_to map_path(:id) do
-    Station1
+    maps_controllerのindex
+  =link_to station_images_path(1) do
+    %br images_controllerのindex
 .footer
   = render partial: "credit"

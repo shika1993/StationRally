@@ -36,6 +36,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+#pry-byebug
+gem 'pry-rails'
+gem 'rb-readline'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
