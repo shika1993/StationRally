@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_station 
-
+  before_action :move_to_index, only: [:desteoy]
   def index
     @image = Image.new
     @images = Image.all
@@ -27,9 +27,8 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    post = Image.find(params[:station_id])
-    post.destroy
-    redirect_to root_path
+    image = Image.find(params[:id])
+    image.destroy
   end
 
   private
@@ -40,5 +39,9 @@ class ImagesController < ApplicationController
 
   def set_station
     @station = Station.find(params[:station_id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 end
