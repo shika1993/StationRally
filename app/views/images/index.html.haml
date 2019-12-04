@@ -1,0 +1,9 @@
+.header
+  = render partial: "maps/header"
+.main
+  .main__stationname
+    = @station.name
+  .main__images
+    = render @images
+.footer
+  = render partial: "form"

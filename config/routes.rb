@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :maps, only: [:index, :show]
   resources :stations, only: [:index, :show] do
-    resources :images, only: [:create, :update, :edit, :new, :delete]
+    resources :images, only: [:create, :update, :edit, :destroy, :index]
   end
 end

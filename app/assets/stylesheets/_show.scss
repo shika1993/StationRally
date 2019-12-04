@@ -51,28 +51,32 @@
     flex-wrap: wrap;
     overflow: scroll;
     
-    &__image{
-      height: 400px;
-      width: 400px;
-      line-height: 400px;
-      text-align: center;
-      margin: 20px;
-      background: $imagecolor;
-      position: relative;
-
-      img{
+    
+      &__picture{
+        height: 400px;
+        width: 400px;
+        line-height: 400px;
+        text-align: center;
+        margin: 20px;
+        background: $imagecolor;
+        position: relative;
         object-fit: cover;
-      }
+        img{
+          object-fit: cover;
+          height: 400px;
+          width: 100%;
+        }
       
-      &__comment{
-        height: 10px;
-        position: absolute;
-        top:180px;
-        left:20px;
-        color:$purewhite;
-        font-family : 'tegaki';
+        &__text{
+          height: 10px;
+          position: absolute;
+          top:180px;
+          left:20px;
+          color:$purewhite;
+          font-family : 'tegaki';
+        }
       }
-    }
+    
   }
 }
 
@@ -105,9 +109,11 @@
     }
     &__submit{
       margin-left: 15px;
-      input{
-
-      }
+      display: flex;
     }
   }
+}
+
+.newimage{
+  width: 100%;
 }
