@@ -8,7 +8,9 @@ class StationsController < ApplicationController
     @image = Image.find(params[:id])
   end
 
+  private
+
   def set_station
-    @station = Station.find(params[:id])
+    @station = Station.find(params[:station_id])
   end
 end
