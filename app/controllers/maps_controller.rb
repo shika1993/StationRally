@@ -1,7 +1,7 @@
 class MapsController < ApplicationController
   class TrainAPI
     BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-    CONSUMER_KEY= '-'
+    CONSUMER_KEY= ''
     def self.make_get_request(path, params)
       url = BASE_URL + path
       conn = Faraday.new(url)
