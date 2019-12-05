@@ -2,9 +2,9 @@
 = form_for [@station, @image] do |f|
   .footer__commentform__input
     .footer__commentform__input__picture
-      %label
-        %input.input-default{:type => "file"}/
+      %label= f.file_field :image
+        %input.input-default{:type => "file", :name => "picture"}/
         .boxFileSelect
           写真を選ぶ
-    = f.text_field :text, class: 'footer__commentform__input__text', placeholder: "コメントする"
-  = f.submit "投稿", class: 'footer__commentform__submit' 
+    = f.text_field :text, style: "border:none", class: 'footer__commentform__input__text', placeholder: "コメントを入力"
+    = f.submit "投稿", style: "border:none", class: 'footer__commentform__submit' 

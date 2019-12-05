@@ -108,7 +108,7 @@
 .footer{
   height: 80px;
   width: 100%;
-  background-color:$shikagray;
+  background-color:white;
   position: fixed;
   bottom: 0;
 
@@ -132,7 +132,6 @@
           text-align: center;
           line-height: 60px;
           border-radius: 30px;
-          border: 1px solid #d3d3d3;
           background: linear-gradient(-20deg, #CCFFFF, #99CCFF);
           font-size: 25px;
           color: $shikagray;
@@ -151,8 +150,8 @@
         margin-left: 460px;
         font-size: 20px;
         color: $shikagray;
+        background-color: #CCFFFF;
         padding: 0 10px 0;
-        background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
         font-family: 'tegaki';  
       }
     }
@@ -163,9 +162,10 @@
       height: 60px;
       margin-left: 950px;
       border-radius: 3px;
-      background-color: $shikagray;
+      background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
+      font-family: 'tegaki';
       font-size: 25px;
-      color: white;
+      color: $shikagray;
     }
   }
 }
