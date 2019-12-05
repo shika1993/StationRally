@@ -1,13 +1,15 @@
 class ImagesController < ApplicationController
-  before_action :set_station 
+  #before_action :set_station
   before_action :move_to_index, only: [:desteoy]
   def index
+    set_station
     @image = Image.new
     @images = @station.images
     #-@images = @station.images.includes(:user)
   end
 
   def create
+    set_station
     @image = @station.images.new(image_params)
     if @image.save
       redirect_to station_images_path(@station.id)
@@ -28,7 +30,9 @@ class ImagesController < ApplicationController
 
   def destroy
     image = Image.find(params[:id])
+    station_id = image.station_id
     image.destroy
+    redirect_to station_images_path(station_id)
   end
 
   private
@@ -39,7 +43,6 @@ class ImagesController < ApplicationController
 
   def set_station
     @station = Station.find(params[:station_id])
-    #binding.pry
   end
 
   def move_to_index
