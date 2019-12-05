@@ -1,8 +1,9 @@
 .main__images__picture
   = image_tag image.picture_url
-  .main__images__picture__delete
-    = link_to "/stations/station_id/images/#{image.id}", method: :delete do
-      .main__images__picture__delete--font
-        ×
+  - if user_signed_in? && current_user.id == image.user_id
+    .main__images__picture__delete
+      = link_to "/stations/station_id/images/#{image.id}", method: :delete do
+        .main__images__picture__delete--font
+          ×
   .main__images__picture__text
     = image.text
