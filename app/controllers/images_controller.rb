@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
 
   def index
     @image = Image.new
-    @images = Image.all
+    @images = @station.images
     #-@images = @station.images.includes(:user)
   end
 
@@ -40,5 +40,6 @@ class ImagesController < ApplicationController
 
   def set_station
     @station = Station.find(params[:station_id])
+    #binding.pry
   end
 end
