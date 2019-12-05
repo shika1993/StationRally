@@ -1,12 +1,12 @@
 .header__left
-  = link_to '/' do
+  = link_to root_path, data: {"turbolinks" => false} do
     StationRarry
 .header__right
   
-  %h3.current
+  .header__right__current
     = "ようこそ #{current_user.name} さん"
 
-  .btn
+  .header__right__btn
     - if user_signed_in?
       %ul
         %li
