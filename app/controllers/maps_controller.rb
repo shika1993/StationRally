@@ -41,6 +41,7 @@ class MapsController < ApplicationController
     gon.geolats = Station.pluck(:geolat)
     gon.geolongs = Station.pluck(:geolong)
     gon.id = Station.pluck(:id)
+    
   end
 
   def show
