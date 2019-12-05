@@ -6,7 +6,5 @@
         %input.input-default{:type => "file"}/
         .boxFileSelect
           写真を選ぶ
-
-  -#  = f.text_field :text, class: 'footer__commentform__input__text', placeholder: "コメントする"
-  -#.footer__commentform__submit
-  -#  = f.submit "SEND"
+    = f.text_field :text, class: 'footer__commentform__input__text', placeholder: "コメントする"
+  = f.submit "投稿", class: 'footer__commentform__submit' 

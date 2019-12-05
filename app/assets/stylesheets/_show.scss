@@ -111,14 +111,14 @@
   background-color:$shikagray;
   position: fixed;
   bottom: 0;
+
   &__commentform{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10px;
+    position: relative;
     
     &__input{
-      display: flex;
-      position: relative;
       
       &__picture {
       
@@ -137,22 +137,35 @@
           font-size: 25px;
           color: $shikagray;
           margin-top: 0;
-          margin-left: 350px;
+          margin-left: 250px;
           cursor: pointer;
           font-family: 'tegaki';
-
+          position: absolute; 
         }
       }
       
-    
-
       &__text{  
-
+        position: absolute;
+        width: 420px;
+        height: 60px;
+        margin-left: 460px;
+        font-size: 20px;
+        color: $shikagray;
+        padding: 0 10px 0;
+        background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
+        font-family: 'tegaki';  
       }
     }
+
     &__submit{
-      margin-left: 15px;
-      display: flex;
+      position: absolute;
+      width: 150px;
+      height: 60px;
+      margin-left: 950px;
+      border-radius: 3px;
+      background-color: $shikagray;
+      font-size: 25px;
+      color: white;
     }
   }
 }
