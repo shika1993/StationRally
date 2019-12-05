@@ -3,7 +3,7 @@
   src: font-url('tegaki.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  //DL先⇛http://pm85122.onamae.jp/851H_kktt.html
+  //DL元⇛http://pm85122.onamae.jp/851H_kktt.html
 }
 
 @font-face {
@@ -11,5 +11,13 @@
   src: font-url('BraxtonDemo-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  //DL先⇛https://www.fontfabric.com/fonts/braxton/
+  //DL元⇛https://www.fontfabric.com/fonts/braxton/
+}
+
+@font-face {
+  font-family: 'kosugi';
+  src: font-url('KosugiMaru-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  //DL元⇛https://fonts.google.com/specimen/Kosugi+Maru?selection.family=Kosugi+Maru
 }
