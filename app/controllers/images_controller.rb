@@ -11,6 +11,10 @@ class ImagesController < ApplicationController
   def create
     set_station
     @image = @station.images.new(image_params)
+    @image_user = @image.user_id
+    @image_station = @image.station_id
+    UsersStation.create(user_id: @image_user, station_id: @image_station)
+    #binding.pry
     if @image.save
       redirect_to station_images_path(@station.id)
     else
