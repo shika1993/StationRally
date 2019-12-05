@@ -1,10 +1,12 @@
 .footer__commentform
 = form_for [@station, @image] do |f|
   .footer__commentform__input
-    = f.text_field :text, class:"footer__commentform__input", placeholder: "コメントする"
-    %label.label
-      =f.label :image do
-        = fa_icon 'image'
-        = f.file_field :picture
-  .footer__commentform__submit
-    = f.submit "SEND"
+    .footer__commentform__input__picture
+      %label
+        %input.input-default{:type => "file"}/
+        .boxFileSelect
+          写真を選ぶ
+
+  -#  = f.text_field :text, class: 'footer__commentform__input__text', placeholder: "コメントする"
+  -#.footer__commentform__submit
+  -#  = f.submit "SEND"
