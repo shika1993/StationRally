@@ -1,5 +1,6 @@
 .user {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 120px);
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
@@ -19,22 +20,20 @@
     }
   }
 
-  &__left {  
-    margin-top: 60px;
-    position: absolute;
-    left: 500px;
-    top: 0px;
+  &__left {
+  }
+
+  &__right {
+    width: 40%;
+    height: 88%;
+    left: 55%;
+    position: relative;
 
     &__title {
-      height: 100px;
-      width: 400px;
       color:$shikagray;
       font-size: 40px;
       font-weight: bold;
-      margin-top: 60px;
       text-align: center;
-      position: absolute;
-      left:350px;
       text-shadow: $textshadow;
     }
 
@@ -48,8 +47,8 @@
       background-color:rgba(51,51,51,0.9);
       border-radius: 8px;
       position: absolute;
-      top:550px;
-      left:380px;
+      left:20%;
+      top:420px;
 
         &--font {
           color: $white;
@@ -64,9 +63,9 @@
       background-color:rgba(51,51,51,0.9);
       border-radius: 8px;
       position: absolute;
-      top:550px;
-      left:580px;
-      
+      left:55%;
+      top:420px;
+
         &--font {
           color: $white;
           font-size: 15px;
@@ -80,41 +79,34 @@
       background-color:rgba(51,51,51,0.8);
       border-radius: 8px;
       position: absolute;
-      top:550px;
-      left:485px;
-      
+      left:37%;
+      top:400px;
+
         &--font {
           color: $white;
           font-size: 15px;
           text-align: center;
           line-height: 40px;
       } 
-    }   
-  }
+    }
+    #new_user{
+      text-align: center;
+    }  
+    #edit_user_2{
+      text-align: center;
+    }
 
-  &__right {
-    width: calc(100% - 900px);
-    margin-top: 60px;
-    left: 800px;
-    top: 100px;
-    position: absolute;
 
     &__field {
-      position: absolute;
       &--label {
-        height: 25px;
         font-size: 20px;
         color:$shikagray;
-        margin-top: 10px;
-        margin-left: 50px;
-        text-shadow: $textshadow;
+        text-shadow: $textshadow;;
       }
-
       &--input {
         input {
           width: 400px;
           padding: 10px;
-          margin-left: 50px;
           background-color: $formcolor;
         }
       }    
@@ -123,32 +115,25 @@
     &__actions {
       height: 80px;
       width: 200px;
-      margin-left: 160px;
       background-color:rgba(51,51,51,0.8);
       border-radius: 10px;
       border: none;
-      margin-top: 50px;
       color: $white; 
       font-size: 30px;
-      position: absolute;
-      top:300px;
+      margin-top: 15%;
     }
 
     &__checkbox {
-      height: 20px;
-      width: 520px;
       text-align: center;
-      margin-top: 50px;
       color:$shikagray;
       font-size: 20px;
-      position: absolute;
-      top: 150px;
       text-shadow: $textshadow;
+      position: absolute;
+      top: 240px;
+      left: 28%;
     }
     &__error {
-      position: absolute;
-      top:500px;
-      left:50px;
+      text-align: center;
       color: $errorcolor;
       font-weight: bold;
       text-shadow: $textshadow;
