@@ -8,20 +8,20 @@
   .user__left
   
   .user__right
-    .user__left__title
+    .user__right__title
       ログイン
-    .user__left__newlink
+    .user__right__newlink
       = link_to '/users/sign_up' do
-        .user__left__newlink--font
+        .user__right__newlink--font
           新規登録
     -# パスワード変更機能へのリンクを保留
-    -# .user__left__link
+    -# .user__right__link
     -#   = link_to '/users/password/new' do
-    -#     .user__left__link--font 
+    -#     .user__right__link--font 
     -#       パスワードを忘れた
-    .user__left__mainlink
+    .user__right__mainlink
       = link_to '/' do
-        .user__left__mainlink--font
+        .user__right__mainlink--font
           メイン画面
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .user__right__field
