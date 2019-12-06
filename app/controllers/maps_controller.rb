@@ -1,7 +1,6 @@
 class MapsController < ApplicationController
 
   def index
-
     gon.names = Station.pluck(:name)
     gon.geolats = Station.pluck(:geolat)
     gon.geolongs = Station.pluck(:geolong)
