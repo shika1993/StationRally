@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     -webkit-filter: blur(10px);
-    filter: blur(10px);
+    filter: blur(5px);
     margin: -10px;  
     width: calc(100% + 20px);
     }
@@ -45,14 +45,14 @@
     &__newlink {
       height: 40px;
       width: 150px;
-      background-color:$shikagray;
+      background-color:rgba(51,51,51,0.9);
       border-radius: 8px;
       position: absolute;
       top:550px;
       left:380px;
 
         &--font {
-          color: $purewhite;
+          color: $white;
           font-size: 15px;
           text-align: center;
           line-height: 40px;
@@ -61,14 +61,14 @@
     &__mainlink {
       height: 40px;
       width: 150px;
-      background-color:$shikagray;
+      background-color:rgba(51,51,51,0.9);
       border-radius: 8px;
       position: absolute;
       top:550px;
       left:580px;
       
         &--font {
-          color: $purewhite;
+          color: $white;
           font-size: 15px;
           text-align: center;
           line-height: 40px;
@@ -77,14 +77,14 @@
     &__backlink {
       height: 40px;
       width: 150px;
-      background-color:$shikagray;
+      background-color:rgba(51,51,51,0.8);
       border-radius: 8px;
       position: absolute;
       top:550px;
       left:485px;
       
         &--font {
-          color: $purewhite;
+          color: $white;
           font-size: 15px;
           text-align: center;
           line-height: 40px;
@@ -124,11 +124,11 @@
       height: 80px;
       width: 200px;
       margin-left: 160px;
-      background-color:$shikagray;
+      background-color:rgba(51,51,51,0.8);
       border-radius: 10px;
       border: none;
       margin-top: 50px;
-      color: $purewhite; 
+      color: $white; 
       font-size: 30px;
       position: absolute;
       top:300px;

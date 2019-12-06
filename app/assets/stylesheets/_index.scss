@@ -1,62 +1,93 @@
 .header{
   height: 60px;
   width:100%;
-  background-color: $shikagray;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   margin:auto 0;
   z-index: 1;
   &__left{
     margin: auto 0;
-    color: $purewhite;
+    color: $shikagray;
     margin: auto 10px;
-    font-size: 25px;
+    font-size: 40px;
     font-family: "hikki";
     a{
-      color: $purewhite;
+      color: $shikagray;
       text-decoration: none;
     }
   }
-  .header__right{
+  &__right{
     margin: auto 0;
     display: flex;
+    height: 30px;
+    line-height: 30px;
     
-    .current{
+    &__current{
       height: 30px;
-      width: 600px;
-      border-radius: 10px;
-      color: $purewhite;
-      margin-right: 20px;
+      color: $shikagray;
       text-align: right;
+      font-family: 'kosugi';
+      margin: 0 auto;
+      line-height: 30px;
+      padding-right: 30px;
     }
 
-    .btn ul{
+    &__btn ul{
       display: flex;
       li{
         margin: auto 10px;
         a{
           text-decoration: none;
-          color: $purewhite;
+          color: $shikagray;
+          font-family: 'kosugi';
           ;
         }
       }
     }
   }
 }
-
 .footer{
   height: 50px;
   width:100%;
-  background-color: $shikagray;
-  position: relative;
+  background-color:$white;
+  position: fixed;
+  bottom: 0;
+  &__commentform{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    &__input{
+      width: 80%;
+      display: flex;
+      position: relative;
+      label{
+      
+        position: absolute;
+        right: 10px;
+      }
+      input{
+        width:100%;
+      }
+      &__image{
+        position: absolute;
+        right: 10px;
+      }
+    }
+    &__submit{
+      margin-left: 15px;
+      display: flex;
+    }
+  }
   &__credit{
-    position: absolute;
-    right: 10px;
-    bottom: 5px;
+    text-align: right;
+    line-height: 50px;
+    padding-right: 10px;
     a{
       text-decoration: none;
-      color:$purewhite;
-      font-size:12px;
+      color: $shikagray;
+      font-family: 'kosugi';
+      font-size: 13px;
     }
   }
 }
@@ -67,12 +98,10 @@
   position: relative;
 }
 
-.header{
-  background-color: black;
-  height: 50px;
-  width:100%;
+.icons1{
+  height:15px;
 }
 
-img{
-  height:15px;
+.icons2{
+  height: 50px;
 }
