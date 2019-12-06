@@ -1,7 +1,7 @@
 class MapsController < ApplicationController
   class TrainAPI
     BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-    CONSUMER_KEY= 'ea97ddfe6505c6fd5fac94aced400658184825c9cbf902be31bad0d02657b15e'
+    CONSUMER_KEY= ''
     def self.make_get_request(path, params)
       url = BASE_URL + path
       conn = Faraday.new(url)
@@ -34,7 +34,7 @@ class MapsController < ApplicationController
         station_name.delete!("-")
         station_geolat =jr_station["geo:lat"]
         station_geolong =jr_station["geo:long"]
-        Station.create(name: station_name, geolat:station_geolat, geolong:station_geolong)
+        #Station.create(name: station_name, geolat:station_geolat, geolong:station_geolong)
       end
     end
     gon.names = Station.pluck(:name)
