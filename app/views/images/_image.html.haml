@@ -2,7 +2,7 @@
   = image_tag image.picture_url
   - if user_signed_in? && current_user.id == image.user_id
     .main__images__picture__delete
-      %script{:src => "./main.js"}
+      %script{:src => ".image.js"}
       = link_to "/stations/station_id/images/#{image.id}", method: :delete do
         .main__images__picture__delete--font
           ×
