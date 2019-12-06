@@ -19,11 +19,15 @@
     }
   }
 
-  &__left {  
+  &__left {
+  }
+
+  &__right {
+    width: calc(100% - 900px);
     margin-top: 60px;
+    left: 800px;
+    top: 100px;
     position: absolute;
-    left: 500px;
-    top: 0px;
 
     &__title {
       height: 100px;
@@ -89,15 +93,7 @@
           text-align: center;
           line-height: 40px;
       } 
-    }   
-  }
-
-  &__right {
-    width: calc(100% - 900px);
-    margin-top: 60px;
-    left: 800px;
-    top: 100px;
-    position: absolute;
+    }  
 
     &__field {
       position: absolute;

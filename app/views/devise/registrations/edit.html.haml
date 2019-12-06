@@ -4,18 +4,16 @@
 .user
   .user__img 
     = image_tag "/assets/tokyo.jpg"
-  .user__space
-    = render partial: "maps/side-image"
 
   .user__left
+
+  .user__right
     .user__left__title
       ユーザー情報編集
     .user__left__backlink
       = link_to '/' do
         .user__left__backlink--font 
           メイン画面へ戻る
-
-  .user__right
     .user__right__field
     = form_for(current_user) do |f|
       .user__right__field--label

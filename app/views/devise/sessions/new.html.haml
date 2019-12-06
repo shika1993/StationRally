@@ -6,6 +6,8 @@
     = image_tag "/assets/tokyo.jpg"
 
   .user__left
+  
+  .user__right
     .user__left__title
       ログイン
     .user__left__newlink
@@ -21,8 +23,6 @@
       = link_to '/' do
         .user__left__mainlink--font
           メイン画面
-  
-  .user__right
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .user__right__field
         .user__right__field--label
