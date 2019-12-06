@@ -1,5 +1,5 @@
 namespace :api_process do
-  desc "Helloを表示するタスク"
+  desc "APIからデータを取得してDBに保存する"
   task station_geo: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'

@@ -20,5 +20,5 @@ app/assets/fonts/.DS_Store
 *.jpg
 
 *.yml
-config/secrets.yml
+
 *.jpeg
