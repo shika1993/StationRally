@@ -28,7 +28,7 @@ class MapsController < ApplicationController
     @jr_stations = StationsAPI.fetch({'odpt:operator': 'odpt.Operator:JR-East'})
     @jr_stations.each do |jr_station|
       if jr_station["geo:lat"] <= geo_north  && jr_station["geo:lat"] >= geo_south && jr_station["geo:long"] <= geo_east && jr_station["geo:long"] >= geo_west
-        station_name = jr_station["odpt:stationTitle"]["en"]
+        station_name = jr_station["odpt:stationTitle"]["ja"]
         station_name.delete!("-")
         station_geolat =jr_station["geo:lat"]
         station_geolong =jr_station["geo:long"]
