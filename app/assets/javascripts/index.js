@@ -1,10 +1,7 @@
-var map;            
-var stylemaplayer;  
-var layerset;    
-
+var map;
+var stylemaplayer;
+var layerset;
 window.onload = function() {
-
- 
     map = new Y.Map("map",{"configure":{"scrollWheelZoom":true}});
     stylemaplayer = new Y.StyleMapLayer("railway");
     setStyle();
@@ -12,28 +9,35 @@ window.onload = function() {
     map.addLayerSet("stylemap",layerset);
     map.drawMap(new Y.LatLng(35.678165,139.7528), 13 , "stylemap");
     var icon = new Y.Icon('/assets/station4.png');
-    icon.className = "icons";
+    var icon2 = new Y.Icon('/assets/RealTiger.png');
+    icon.className = "icons1";
+    icon2.className = "icons2";
     var markers = [];
+    var markers2 = [];
+    var ids = gon.id;
     var names = gon.names;
     var geolats = gon.geolats;
     var geolongs = gon.geolongs;
-    var id = gon.id;
-
-    for ( var i=0, l=id.length; l>i; i++ ) {
-
-      var url = "/stations/" + id[i] + "/images";
+    var still_ids = gon.still_station_ids
+    var still_names = gon.still_station_names
+    var still_geolats = gon.still_station_geolats;
+    var still_geolongs = gon.still_station_geolongs;
+    for ( var i=0, l=ids.length; l>i; i++ ) {
+      var url = "/stations/" + ids[i] + "/images";
       markers.push(new Y.Marker(new Y.LatLng(geolats[i],geolongs[i]),{icon: icon}));
       var marker = markers[i];
-      marker.bindInfoWindow('<a href="'+ url +'">'+names[i]+'駅の写真を投稿する！</a>');
+      marker.bindInfoWindow('<a href="'+ url +'">'+names[i]+'駅にて、私ごとではございますが、駅の写真を投稿させていただきたく存じ上げます。</a>');
     }
-
+    for ( var i=0, l=still_ids.length; l>i; i++ ) {
+      var url2 = "/stations/" + still_ids[i] + "/images";
+      markers2.push(new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2}));
+      var marker2 = markers2[i];
+      marker2.bindInfoWindow('<a href="'+ url2 +'">'+still_names[i]+'駅には行ったことがあるぜぇぇぇーー！！！！ ひゃは＝＝＝！！！！！</a>');
+    }
       map.addFeatures(markers);
+      map.addFeatures(markers2);
 }
-
-
-
 function setStyle() {
-
     var param = [
     {"address":false},
     {"landmark":false},
@@ -49,5 +53,4 @@ function setStyle() {
     {"jr_st_name":false}
     ];
     stylemaplayer.setStyle(param);
-
 }
