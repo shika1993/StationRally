@@ -1,5 +1,6 @@
 .user {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 120px);
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
@@ -47,7 +48,7 @@
       border-radius: 8px;
       position: absolute;
       left:20%;
-      top:70%;
+      top:420px;
 
         &--font {
           color: $white;
@@ -63,7 +64,7 @@
       border-radius: 8px;
       position: absolute;
       left:55%;
-      top:70%;
+      top:420px;
 
         &--font {
           color: $white;
@@ -79,7 +80,7 @@
       border-radius: 8px;
       position: absolute;
       left:37%;
-      top:68%;
+      top:400px;
 
         &--font {
           color: $white;
@@ -128,7 +129,7 @@
       font-size: 20px;
       text-shadow: $textshadow;
       position: absolute;
-      top:40%;
+      top: 240px;
       left: 28%;
     }
     &__error {
