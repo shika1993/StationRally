@@ -3,7 +3,7 @@ namespace :api_process do
   task station_geo: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-      CONSUMER_KEY= '-'
+      CONSUMER_KEY= Rails.application.secrets.opd_api_key
       def self.make_get_request(path, params)
         url = BASE_URL + path
         conn = Faraday.new(url)
@@ -41,7 +41,7 @@ namespace :api_process do
   task station_geo_en: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-      CONSUMER_KEY= '-'
+      CONSUMER_KEY= Rails.application.secrets.opd_api_key
       def self.make_get_request(path, params)
         url = BASE_URL + path
         conn = Faraday.new(url)
