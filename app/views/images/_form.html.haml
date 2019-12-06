@@ -3,8 +3,8 @@
   .footer__commentform__input
     .footer__commentform__input__picture
       %label
-        = f.file_field :picture, class: 'input-default'
-        .boxFileSelect
+        = f.file_field :picture, class: 'footer__commentform__input__picture__input-default'
+        .footer__commentform__input__picture__boxFileSelect 
           写真を選ぶ
     = f.text_field :text, style: "border:none", class: 'footer__commentform__input__text', placeholder: "コメントを入力"
     = f.submit "投稿", style: "border:none", class: 'footer__commentform__submit' 
