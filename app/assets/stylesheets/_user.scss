@@ -24,7 +24,7 @@
 
   &__right {
     width: 40%;
-    height: 600px;
+    height: 88%;
     left: 55%;
     position: relative;
 
@@ -47,7 +47,7 @@
       border-radius: 8px;
       position: absolute;
       left:20%;
-      top:73%;
+      top:70%;
 
         &--font {
           color: $white;
@@ -63,7 +63,7 @@
       border-radius: 8px;
       position: absolute;
       left:55%;
-      top:73%;
+      top:70%;
 
         &--font {
           color: $white;
@@ -79,7 +79,7 @@
       border-radius: 8px;
       position: absolute;
       left:37%;
-      top:65%;
+      top:68%;
 
         &--font {
           color: $white;
@@ -87,6 +87,9 @@
           text-align: center;
           line-height: 40px;
       } 
+    }
+    #new_user{
+      text-align: center;
     }  
     #edit_user_2{
       text-align: center;
@@ -94,14 +97,11 @@
 
 
     &__field {
-      text-align: center;
-      margin-top: 30px;
       &--label {
         font-size: 20px;
         color:$shikagray;
-        text-shadow: $textshadow;
+        text-shadow: $textshadow;;
       }
-
       &--input {
         input {
           width: 400px;
@@ -119,21 +119,20 @@
       border: none;
       color: $white; 
       font-size: 30px;
-      margin-top: 40px;
+      margin-top: 15%;
     }
 
     &__checkbox {
       text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
       color:$shikagray;
       font-size: 20px;
       text-shadow: $textshadow;
+      position: absolute;
+      top:40%;
+      left: 28%;
     }
     &__error {
-      position: absolute;
-      top:500px;
-      left:50px;
+      text-align: center;
       color: $errorcolor;
       font-weight: bold;
       text-shadow: $textshadow;
