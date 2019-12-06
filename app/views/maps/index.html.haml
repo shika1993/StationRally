@@ -3,7 +3,7 @@
   = render partial: "header"
 
 #map
-%script{:charset => "utf-8", :src => "-", :type => "text/javascript"}
+%script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{Rails.application.secrets.yahoo_api_key}", :type => "text/javascript"}
 
 .footer
   = render partial: "credit"
