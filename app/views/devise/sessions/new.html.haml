@@ -4,8 +4,6 @@
 .user
   .user__img 
     = image_tag "/assets/tokyo.jpg"
-  .user__space
-    = render partial: "maps/side-image"
 
   .user__left
     .user__left__title
@@ -43,4 +41,3 @@
         = f.label :パスワードを記憶させる
     .user__right__error
       = render "devise/shared/error_messages", resource: resource
-.footer 

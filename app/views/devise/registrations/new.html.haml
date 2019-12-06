@@ -4,8 +4,6 @@
 .user
   .user__img 
     = image_tag "/assets/tokyo.jpg"
-  .user__space
-    = render partial: "maps/side-image"
 
   .user__left
     .user__left__title
@@ -47,5 +45,3 @@
       = f.submit "登録する", class: 'user__right__actions'
     .user__right__error
       = render "devise/shared/error_messages", resource: resource
-
-.footer
