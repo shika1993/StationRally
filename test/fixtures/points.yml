@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  en_name: MyString
+  point: 1
+
+two:
+  en_name: MyString
+  point: 1
