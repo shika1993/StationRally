@@ -32,8 +32,8 @@ namespace :api_process do
         station_name_ja = jr_station["odpt:stationTitle"]["ja"]
         station_name_en = jr_station["odpt:stationTitle"]["en"]
         station_name_en.delete!("-")
-        station_geolat =jr_station["geo:lat"]
-        station_geolong =jr_station["geo:long"]
+        station_geolat = jr_station["geo:lat"]
+        station_geolong = jr_station["geo:long"]
         Station.create(name: station_name_ja, geolat:station_geolat, geolong:station_geolong, en_name: station_name_en)
       end
     end
@@ -41,7 +41,7 @@ namespace :api_process do
   task make_points_table: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-      CONSUMER_KEY= '50a113cab20c68f9a450096237edb1ebc2bba14c075ac6687a19781781e5b2db'
+      CONSUMER_KEY= Rails.application.secrets.opd_api_key
       def self.make_get_request(path, params)
         url = BASE_URL + path
         conn = Faraday.new(url)

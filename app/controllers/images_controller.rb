@@ -10,7 +10,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @a = UsersStation.where(user_id: current_user.id, station_id:@station.id)
+    
     @image = @station.images.new(image_params)
     @image_user = @image.user_id
     @image_station = @image.station_id
