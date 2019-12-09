@@ -6,6 +6,7 @@
   font-family: 'Hiragino Maru Gothic ProN';
   position: relative;
   overflow: hidden;
+  background-color: $white;
 
   &__left {
     width: 50%;
@@ -22,7 +23,7 @@
       text-align: center;
       top:50%;
       transform: translateY(-50%);
-      font-family: 'tegaki';
+      font-family: 'Hiragino Maru Gothic ProN';
       font-size: 40px;
     }
     
@@ -45,7 +46,7 @@
     left: 5%;
     top: 10%;
     position: relative;
-
+    
     &__title {
       color:$shikagray;
       font-size: 40px;
@@ -267,4 +268,14 @@
       }
     }
   }
+}
+
+.main-footer{
+  height: 40px;
+  width: 100vw;
+  background-color: $shikagray;
+  font-size: 15px;
+  color: $white;
+  text-align: center;
+  line-height: 40px;
 }
