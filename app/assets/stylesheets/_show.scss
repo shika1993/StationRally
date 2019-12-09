@@ -33,20 +33,21 @@
           width: 100%;
           border-radius: 11px;
         }
+        a{
+          text-decoration: none;
+        }
         &__delete {
-        height: 22px;
-        width: 22px;
-        top:7px;
-        right: 7px;
-        border-radius: 11px;
-        position: absolute;
-        background: rgba(100,100,100,0.3);
+          height: 22px;
+          width: 22px;
+          top: 7px;
+          right: 7px;
+          border-radius: 11px;
+          position: absolute;
+          background: rgba(100,100,100,0.3);
           a{
             text-decoration: none;
           }
           &--font {
-            line-height: 20px;
-            text-align: center;
             font-size: 25px;
             color: $white;
             font-family: 'Hiragino Mincho ProN';

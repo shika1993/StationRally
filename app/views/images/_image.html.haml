@@ -1,11 +1,7 @@
 .main__images__picture
   = image_tag image.picture_url
-  - if user_signed_in? && current_user.id == image.user_id
-    .main__images__picture__delete
-      %script{:src => ".image.js"}
-      %script{:src => "https://cdn.jsdelivr.net/npm/sweetalert2@9"}
-      = link_to "/stations/station_id/images/#{image.id}", method: :delete do
-        .main__images__picture__delete--font
-          ×
+  - if user_signed_in? && current_user.id == image.user_id     
+    = button_to "/stations/station_id/images/#{image.id}", method: :delete, class: "main__images__picture__delete" do
+      ×
   .main__images__picture__text
     = image.text
