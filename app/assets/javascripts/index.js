@@ -2,6 +2,7 @@ var map;
 var stylemaplayer;
 var layerset;
 window.onload = function() {
+
     map = new Y.Map("map",{"configure":{"scrollWheelZoom":true}});
     stylemaplayer = new Y.StyleMapLayer("standard");
     setStyle();
@@ -20,6 +21,7 @@ window.onload = function() {
     var still_names = gon.still_station_names
     var still_geolats = gon.still_station_geolats;
     var still_geolongs = gon.still_station_geolongs;
+
     for ( var i=0, l=ids.length; l>i; i++ ) {
       var icon1 = new Y.Icon('/assets/train2.png',{className: "icons1 "+names[i] });
       var url = "/stations/" + ids[i] + "/images";
@@ -63,12 +65,15 @@ window.onload = function() {
       test_marker2.bind("click", function(){
         $("p").parent().remove()
       })
+
     }
 
       map.addFeatures(markers);
       map.addFeatures(markers2);
 }
+
 function setStyle() {
+
     var param = [
       {address: true},
       {landmark: false},
@@ -81,4 +86,5 @@ function setStyle() {
       {road: false}
     ];
     stylemaplayer.setStyle(param);
+
 }
