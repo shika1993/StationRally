@@ -21,6 +21,8 @@ class MapsController < ApplicationController
     gon.still_station_geolongs = still_station_geolongs
     gon.still_station_ids = still_station_ids
     gon.still_station_names = still_station_names
+    user_station = UsersStation.where("user_id = ?", current_user.id)
+    @gone_station = user_station.select(:station_id).distinct.length
   end
 
   def show
