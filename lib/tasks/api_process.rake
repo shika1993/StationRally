@@ -65,7 +65,9 @@ namespace :api_process do
       @name = passengersurvey["owl:sameAs"]
       @name[0, 29] = ""
       @passenger = passengersurvey["odpt:passengerSurveyObject"][0]["odpt:passengerJourneys"]
-      Point.create(en_name: @name, point: @passenger)
+      @point1 = @passenger*(-1) + 751018
+      @point2 = @point1.ceil(-3)
+      Point.create(en_name: @name, points: @point2, passenger: @passenger)
     end
   end
 end
