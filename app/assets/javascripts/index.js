@@ -4,7 +4,7 @@ var layerset;
 window.onload = function() {
 
     map = new Y.Map("map",{"configure":{"scrollWheelZoom":true}});
-    stylemaplayer = new Y.StyleMapLayer("standard");
+    stylemaplayer = new Y.StyleMapLayer("railway");
     setStyle();
     layerset = new Y.LayerSet("スタイル地図", [stylemaplayer]);
     map.addLayerSet("stylemap",layerset);
@@ -75,15 +75,8 @@ window.onload = function() {
 function setStyle() {
 
     var param = [
-      {address: true},
-      {landmark: false},
-      {railway_other_nm: false},
-      {shinkansen_nm: false},
-      {sub_nm: false},
-      {road_name: false},
-      {station_name: false},
-      {boundary: false},
-      {road: false}
+     {line_name: false},
+     {station_name: false}
     ];
     stylemaplayer.setStyle(param);
 
