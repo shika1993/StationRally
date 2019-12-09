@@ -22,7 +22,7 @@ class ImagesController < ApplicationController
       if @flag.length == 1
         en_name = @station.en_name
         en_station = Point.where("en_name=?", en_name)
-        @points = en_station[0][:point]
+        @points = en_station[0][:points]
         @get_points = @points + current_user.points
         current_user.update(points: @get_points)
       else
