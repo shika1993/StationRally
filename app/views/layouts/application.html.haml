@@ -5,9 +5,10 @@
     %title StationRally
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
-    %script="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
     = javascript_include_tag 'application'
-
+    = javascript_include_tag 'image.js'
+    %script{:src => "https://cdn.jsdelivr.net/npm/sweetalert2@9"}  
   %body
     = yield
   
