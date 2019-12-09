@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_station, except: [:destroy]
   before_action :move_to_index, only: [:desteoy]
-  #before_action :get_points, only: [:create]
+ 
 
   
   def index
