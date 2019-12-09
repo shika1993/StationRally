@@ -1,11 +1,9 @@
 class ImagesController < ApplicationController
-  #before_action :set_station
+  before_action :set_station, except: [:destroy]
   before_action :move_to_index, only: [:desteoy]
   def index
-    set_station
     @image = Image.new
     @images = @station.images
-    #-@images = @station.images.includes(:user)
   end
 
   def create
@@ -14,7 +12,6 @@ class ImagesController < ApplicationController
     @image_user = @image.user_id
     @image_station = @image.station_id
     UsersStation.create(user_id: @image_user, station_id: @image_station)
-    #binding.pry
     if @image.save
       redirect_to station_images_path(@station.id)
     else
@@ -24,12 +21,6 @@ class ImagesController < ApplicationController
 
   def new
     @image = Image.new
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def destroy
