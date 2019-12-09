@@ -3,8 +3,11 @@
   - if user_signed_in? && current_user.id == image.user_id
     .main__images__picture__delete
       %script{:src => ".image.js"}
-      = link_to "/stations/station_id/images/#{image.id}", method: :delete do
+      %script{:src => "https://cdn.jsdelivr.net/npm/sweetalert2@9"}  
+      = button_to "/stations/station_id/images/#{image.id}", method: :delete, style: "border:none" do
         .main__images__picture__delete--font
           ×
   .main__images__picture__text
     = image.text
+
+    

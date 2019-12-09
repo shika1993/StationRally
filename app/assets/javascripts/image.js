@@ -1,8 +1,14 @@
 $(function() {
-  $('.main__images__picture__delete').click(function(){
-    if(!confirm('削除してよろしいですか？')){
-        return false;
-    }else{ return true;
-    }
-  })
+  $('.main__images__picture__delete').click(function(e){
+    e.preventDefault(); 
+    Swal.fire({
+      title: '本当に削除してよろしいですか？',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'OK',
+      cancelButtonText: '削除しない'
+    });  
+  }); 
 });
