@@ -1,9 +1,12 @@
 namespace :api_process do
+  
   desc "APIからデータを取得してDBに保存する"
+
   task make_stations_table: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
       CONSUMER_KEY= Rails.application.secrets.opd_api_key
+
       def self.make_get_request(path, params)
         url = BASE_URL + path
         conn = Faraday.new(url)
@@ -11,15 +14,18 @@ namespace :api_process do
           req.params['acl:consumerKey'] = CONSUMER_KEY
           params.each do |key, value|
           req.params[key] = value
+
           end
         end
         return JSON.parse(res.body)
+
       end
     end
     class StationsAPI < TrainAPI
       PATH = 'Station'
       def self.fetch(params)
         make_get_request(PATH, params)
+
       end
     end
     geo_west = 139.59928
@@ -32,16 +38,17 @@ namespace :api_process do
         station_name_ja = jr_station["odpt:stationTitle"]["ja"]
         station_name_en = jr_station["odpt:stationTitle"]["en"]
         station_name_en.delete!("-")
-        station_geolat =jr_station["geo:lat"]
-        station_geolong =jr_station["geo:long"]
+        station_geolat = jr_station["geo:lat"]
+        station_geolong = jr_station["geo:long"]
         Station.create(name: station_name_ja, geolat:station_geolat, geolong:station_geolong, en_name: station_name_en)
+
       end
     end
   end
   task make_points_table: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-      CONSUMER_KEY= '50a113cab20c68f9a450096237edb1ebc2bba14c075ac6687a19781781e5b2db'
+      CONSUMER_KEY= Rails.application.secrets.opd_api_key
       def self.make_get_request(path, params)
         url = BASE_URL + path
         conn = Faraday.new(url)
@@ -49,9 +56,11 @@ namespace :api_process do
           req.params['acl:consumerKey'] = CONSUMER_KEY
           params.each do |key, value|
           req.params[key] = value
+
           end
         end
         return JSON.parse(res.body)
+
       end
     end
 
@@ -59,6 +68,7 @@ namespace :api_process do
       PATH = 'Station'
       def self.fetch(params)
         make_get_request(PATH, params)
+
       end
     end
 
@@ -66,6 +76,7 @@ namespace :api_process do
       PATH = 'PassengerSurvey'
       def self.fetch(params)
         make_get_request(PATH, params)
+
       end
     end
     
@@ -78,6 +89,7 @@ namespace :api_process do
       @passenger = passengersurvey["odpt:passengerSurveyObject"][0]["odpt:passengerJourneys"]
       @point1 = ((((@passenger)/1000)*(-1)).round(-2))/100 +9
       Point.create(en_name: @name, points: @point1, passenger: @passenger)
+      
     end
   end
 end
