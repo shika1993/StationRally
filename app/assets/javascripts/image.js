@@ -1,8 +1,9 @@
 $(function() {
   $('.main__images__picture__delete').click(function(){
-    if(!confirm('削除してよろしいですか？')){
-        return false;
-    }else{ return true;
-    }
-  })
+    Swal.fire({
+      title: 'タイトルをここに設定'
+    , html : 'descriptionをここに設定。HTMLタグも有効'
+    , type : 'info'
+    });
+  });
 });
