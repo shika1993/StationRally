@@ -2,11 +2,12 @@
   = render partial: "maps/devise-header"
 
 .user
-  .user__img 
-    = image_tag "/assets/tokyo.jpg"
-
   .user__left
-  
+    .user__left__img 
+      //= image_tag "/assets/tokyo.jpg"
+    .user__left__text
+      みんなの写真で駅が映える！
+      %br 撮って進める新感覚スタンプラリー
   .user__right
     .user__right__title
       ログイン
@@ -41,3 +42,43 @@
           メイン画面
     .user__right__error
       = render "devise/shared/error_messages", resource: resource
+.contents
+  .contents__title
+    %p S t a t i o n R a r r y ?
+  .contents__Description
+    %p 
+      これまでにスタンプラリーをしたことがありますか？
+      %br
+      %br
+      Station Rarryはこれまでにない革新的なスタンプラリーです。
+      %br
+      %br
+      やることはただひとつ、写真を取ること。
+      %br
+      %br
+      みんなで駅をシェアしましょう。
+      %br
+      %br
+      ゴールは、全駅制覇です。
+  .contents__how-to-logo
+    %p How to use it?
+  .contents__how-to-use
+    .contents__how-to-use__step1
+      %span STEP1
+      = image_tag "/assets/step1.png"
+      %p
+        ユーザー登録をしましょう
+    .contents__how-to-use__step2
+      %span STEP2
+      = image_tag "/assets/step1.png"
+      %p
+        地図から撮影した駅を選んで投稿します
+        %br
+        コメントは20文字以内です
+    .contents__how-to-use__step3
+      %span STEP3
+      = image_tag "/assets/step1.png"
+      %p
+        画像投稿後は駅のアイコンが変化します
+        %br
+        全駅制覇を目指しましょう

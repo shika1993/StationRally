@@ -1,32 +1,49 @@
 .user {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
   width: 100vw;
   display: flex;
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
   position: relative;
-  padding-top: 60px;
   overflow: hidden;
 
-  &__img {
-    img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-filter: blur(10px);
-    filter: blur(5px);
-    margin: -10px;  
-    width: calc(100% + 20px);
-    }
-  }
-
   &__left {
-  }
+    width: 50%;
+    height: calc(100vh - 60px);
+    background: linear-gradient( 135deg, rgba(246, 255, 0, 0.8), rgba(255, 0, 161, 0.8)),url(/assets/tokyo.jpg);
+    background-size: cover;
+    position:relative;
+    &__text{
+      width:100%;
+      height: 50px;
+      color: $white;
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      top:50%;
+      transform: translateY(-50%);
+      font-family: 'tegaki';
+      font-size: 40px;
+    }
+    
+    //&__img {
+    //  img{
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  -webkit-filter: blur(10px);
+    //  filter: blur(5px);
+    //  margin: -10px;  
+    //  width: calc(50% + 20px);
+    //  }
+    }
+  
 
   &__right {
     width: 40%;
     height: 88%;
-    left: 55%;
+    left: 5%;
+    top: 10%;
     position: relative;
 
     &__title {
@@ -138,5 +155,116 @@
       font-weight: bold;
       text-shadow: $textshadow;
     }
-  } 
+  }
+}
+.contents{
+  height: 1500px;
+  width: 100vw;
+  background: linear-gradient( 135deg, rgba(252, 240, 255, 0.8), rgba(200, 200, 200, 0.8)),url(/assets/camera.jpg);
+  background-size: cover;
+  &__title{
+    height: 200px;
+    width: 100vw;
+    position: relative;
+    font-family: 'hikki';
+    font-size: 100px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: #ACB6E5;//非対応のブラウザでの文字色を設定
+      background: linear-gradient( 135deg, rgba(246, 255, 0, 0.8), rgba(255, 0, 161, 0.8));//背景色にグラデーションを指定
+      -webkit-background-clip: text;//テキストでくり抜く
+      -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+    }
+  }
+  &__Description{
+    height: 600px;
+    width: 100vw;
+    position: relative;
+    font-family: 'Hiragino Maru Gothic ProN';
+    font-size: 20px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: $shikagray;
+    }
+  }
+  &__how-to-logo{
+    height: 200px;
+    width: 100vw;
+    position: relative;
+
+    font-family: 'hikki';
+    font-size: 100px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: #ACB6E5;//非対応のブラウザでの文字色を設定
+      background: linear-gradient( 135deg, rgba(246, 255, 0, 0.8), rgba(255, 0, 161, 0.8));//背景色にグラデーションを指定
+      -webkit-background-clip: text;//テキストでくり抜く
+      -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+    }
+  }
+  &__how-to-use{
+    height: 30%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    &__step1{
+      width: 300px;
+      height: 400px;
+      span{
+        font-size: 40px;
+        font-family: 'hikki';
+        color: $shikagray;
+      }
+      p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+      }
+    }
+    &__step2{
+      width: 300px;
+      height: 400px;
+      span{
+        font-size: 40px;
+        font-family: 'hikki';
+        color: $shikagray;
+      }
+      p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+      }
+    }
+    &__step3{
+      width: 300px;
+      height: 400px;
+      span{
+        font-size: 40px;
+        font-family: 'hikki';
+        color: $shikagray;
+      }
+      p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+      }
+    }
+  }
 }

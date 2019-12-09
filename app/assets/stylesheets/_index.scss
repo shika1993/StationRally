@@ -1,19 +1,19 @@
 .header{
   height: 60px;
   width:100%;
-  background-color: $white;
+  background-color: $shikagray;
   display: flex;
   justify-content: space-between;
   margin:auto 0;
   z-index: 1;
   &__left{
     margin: auto 0;
-    color: $shikagray;
+    color: $white;
     margin: auto 10px;
     font-size: 40px;
     font-family: "hikki";
     a{
-      color: $shikagray;
+      color: $white;
       text-decoration: none;
     }
   }
