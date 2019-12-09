@@ -12,19 +12,19 @@ class ImagesController < ApplicationController
 
   def create
     @image = @station.images.new(image_params)
-    @image_user = @image.user_id
-    @image_station = @image.station_id
+    image_user = @image.user_id
+    image_station = @image.station_id
 
     if @image.save
-      UsersStation.create(user_id: @image_user, station_id: @image_station)
-      @flag = UsersStation.where(user_id: current_user.id, station_id:@station.id)
+      UsersStation.create(user_id: image_user, station_id: image_station)
+      flag = UsersStation.where(user_id: current_user.id, station_id:@station.id)
 
-      if @flag.length == 1
+      if flag.length == 1
         en_name = @station.en_name
         en_station = Point.where("en_name=?", en_name)
         @points = en_station[0][:points]
-        @get_points = @points + current_user.points
-        current_user.update(points: @get_points)
+        get_points = @points + current_user.points
+        current_user.update(points: get_points)
 
       else
 
