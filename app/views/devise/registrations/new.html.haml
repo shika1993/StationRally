@@ -3,7 +3,6 @@
 
 .user
   .user__img 
-    = image_tag "/assets/tokyo.jpg"
 
   .user__left
 
@@ -32,7 +31,6 @@
         = f.email_field :email, autofocus: true, autocomplete: "email"
       .user__right__field--label
         = f.label :パスワード（6文字以上）
-        %br/
         - if @minimum_password_length
           %br/  
       .user__right__field--input
