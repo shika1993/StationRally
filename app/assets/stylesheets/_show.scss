@@ -39,22 +39,29 @@
         &__delete {
           height: 22px;
           width: 22px;
-          top: 7px;
+          top:7px;
           right: 7px;
           border-radius: 11px;
           position: absolute;
           background: rgba(100,100,100,0.3);
-          a{
-            text-decoration: none;
+            form.button_to{
+              button{
+                top:-10px;
+                right: -5px;
+                font-size: 25px;
+                font-family: ‘Hiragino Mincho ProN’;
+                text-decoration: none;
+                border-style: none;
+                color: $white;
+                background: rgba(100,100,100,0.0);
+                border-radius: 11px;
+                position: absolute;
+              }
+              button:focus {
+                outline:0;
+              }
+            }
           }
-          &--font {
-            font-size: 25px;
-            color: $white;
-            font-family: 'Hiragino Mincho ProN';
-            text-decoration: none;
-          }
-        }
-
         &__text{
           position: absolute;
           top:370px;
