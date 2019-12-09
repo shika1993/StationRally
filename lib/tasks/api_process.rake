@@ -54,18 +54,30 @@ namespace :api_process do
         return JSON.parse(res.body)
       end
     end
+
+    class StationsAPI < TrainAPI
+      PATH = 'Station'
+      def self.fetch(params)
+        make_get_request(PATH, params)
+      end
+    end
+
     class StationAPI < TrainAPI
       PATH = 'PassengerSurvey'
       def self.fetch(params)
         make_get_request(PATH, params)
       end
     end
+    
     @passengersurveys = StationAPI.fetch({'odpt:operator': 'odpt.Operator:JR-East'})
+    @jr_stations = StationsAPI.fetch({'odpt:operator': 'odpt.Operator:JR-East'})
+    
     @passengersurveys.each do |passengersurvey|
       @name = passengersurvey["owl:sameAs"]
       @name[0, 29] = ""
       @passenger = passengersurvey["odpt:passengerSurveyObject"][0]["odpt:passengerJourneys"]
-      Point.create(en_name: @name, point: @passenger)
+      @point1 = ((((@passenger)/1000)*(-1)).round(-2))/100 +9
+      Point.create(en_name: @name, points: @point1, passenger: @passenger)
     end
   end
 end

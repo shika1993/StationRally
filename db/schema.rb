@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 20191209030442) do
 
   create_table "points", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "en_name"
-    t.integer  "point"
+    t.integer  "passenger"
+    t.integer  "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
