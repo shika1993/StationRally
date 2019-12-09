@@ -1,13 +1,13 @@
 class ImagesController < ApplicationController
   before_action :set_station, except: [:destroy]
   before_action :move_to_index, only: [:desteoy]
+  
   def index
     @image = Image.new
     @images = @station.images
   end
 
   def create
-    set_station
     @image = @station.images.new(image_params)
     @image_user = @image.user_id
     @image_station = @image.station_id
