@@ -1,0 +1,81 @@
+.contents{
+  height: 1500px;
+  width: 100vw;
+  background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)),url(/assets/camera.jpg);
+  background-size: cover;
+  &__title{
+    height: 200px;
+    width: 100vw;
+    position: relative;
+    font-family: 'hikki';
+    font-size: 100px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: #ACB6E5;//非対応のブラウザ用
+      background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
+      -webkit-background-clip: text;//テキストでくり抜く
+      -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+    }
+  }
+  &__Description{
+    height: 600px;
+    width: 100vw;
+    position: relative;
+    font-family: 'Hiragino Maru Gothic ProN';
+    font-size: 20px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: $shikagray;
+    }
+  }
+  &__how-to-logo{
+    height: 200px;
+    width: 100vw;
+    position: relative;
+
+    font-family: 'hikki';
+    font-size: 100px;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 100vw;
+      text-align: center;
+      color: #ACB6E5;//非対応のブラウザでの文字色を設定
+      background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
+      -webkit-background-clip: text;//テキストでくり抜く
+      -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+    }
+  }
+  &__how-to-use{
+    height: 30%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    &__step1{
+      @include step();
+    }
+    &__step2{
+      @include step();
+    }
+    &__step3{
+      @include step();
+    }
+  }
+}

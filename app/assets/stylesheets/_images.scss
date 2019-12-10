@@ -1,18 +1,15 @@
 .main{
-  height: 100vh;
-  background: $main-background;
+  background: $images-background;
   &__stationname{
-    height:60px;
     width:100%;
     line-height: 60px;
     text-align: center;
     font-family: 'tegaki';
-    font-size: 30px;
+    font-size: 45px;
     color:$white;
   }
   &__images{
-    margin: 0px 40px 40px 40px;
-    height: calc(100vh - 170px);
+    margin: 0px 40px 80px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -47,7 +44,7 @@
                 top:-10px;
                 right: -5px;
                 font-size: 25px;
-                font-family: ‘Hiragino Mincho ProN’;
+                font-family: 'Hiragino Mincho ProN';
                 text-decoration: none;
                 border-style: none;
                 color: $white;
