@@ -28,7 +28,7 @@ window.onload = function() {
       var test_marker = new Y.Marker(new Y.LatLng(geolats[i],geolongs[i]),{icon: icon1});
       markers.push(test_marker);
       var marker = markers[i];
-      marker.bindInfoWindow('<a href="'+ url +'">'+names[i]+'駅の写真を投稿する</a>');
+      marker.bindInfoWindow('<a href="'+ url +'" class= "char1">'+names[i]+'駅の写真を投稿する</a>');
 
       test_marker.bind("mouseover", function(){
         var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].className.substr(7)+"駅");
@@ -51,7 +51,7 @@ window.onload = function() {
       var test_marker2 = new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2});
       markers2.push(test_marker2);
       var marker2 = markers2[i];
-      marker2.bindInfoWindow('<a href="'+ url2 +'">'+still_names[i]+'駅の写真を投稿する</a>');
+      marker2.bindInfoWindow('<a href="'+ url2 +'" class= "char1">'+still_names[i]+'駅の写真を投稿する</a>');
 
       test_marker2.bind("mouseover", function(){
         var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].className.substr(7)+"駅");
