@@ -1,7 +1,8 @@
 $(function() {
   $('.main__images__picture__delete').click(function(e){
     e.preventDefault(); 
-    var a = $(this).parent()[0].innerHTML.split("/")[4];
+    var station_id = $(this)[0].baseURI.split("/")[4];
+    var image_id = $(this).parent()[0].innerHTML.split("/")[4];
     Swal.fire({
       text: '削除しますか？',
       icon: 'question', 
@@ -14,7 +15,7 @@ $(function() {
     });
     $('.swal2-confirm').click(function(){
       $.ajax({
-        url: '/stations/64/images/'+a,
+        url: '/stations/'+station_id+'/images/'+image_id,
         type: 'DELETE',
         success: function() {
         },error: function () {
