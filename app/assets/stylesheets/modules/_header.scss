@@ -1,0 +1,49 @@
+.header{
+  height: 60px;
+  width:100%;
+  background-color: $shikagray;
+  display: flex;
+  justify-content: space-between;
+  margin:auto 0;
+  z-index: 1;
+  &__left{
+    margin: auto 0;
+    color: $white;
+    margin: auto 10px;
+    font-size: 40px;
+    font-family: "hikki";
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  &__right{
+    margin: auto 0;
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    
+    &__current{
+      height: 30px;
+      color: $white;
+      text-align: right;
+      font-family: 'kosugi';
+      margin: 0 auto;
+      line-height: 30px;
+      padding-right: 30px;
+    }
+
+    &__btn ul{
+      display: flex;
+      li{
+        margin: auto 10px;
+        a{
+          text-decoration: none;
+          color: $white;
+          font-family: 'kosugi';
+          ;
+        }
+      }
+    }
+  }
+}

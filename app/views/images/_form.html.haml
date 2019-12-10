@@ -1,10 +1,10 @@
-.footer__commentform
+.postform__commentform
 = form_for [@station, @image] do |f|
-  .footer__commentform__input
-    .footer__commentform__input__picture
+  .postform__commentform__input
+    .postform__commentform__input__picture
       %label
-        = f.file_field :picture, class: 'footer__commentform__input__picture__input-default'
-        .footer__commentform__input__picture__boxFileSelect 
+        = f.file_field :picture, class: 'postform__commentform__input__picture__input-default'
+        .postform__commentform__input__picture__boxFileSelect 
           写真を選ぶ
-    = f.text_field :text, maxlength: '21', style: "border:none", class: 'footer__commentform__input__text', placeholder: "コメントを入力（20文字まで）"
-    = f.submit "投稿", style: "border:none", class: 'footer__commentform__submit' 
+    = f.text_field :text, maxlength: '21', style: "border:none", class: 'postform__commentform__input__text', placeholder: "コメントを入力（20文字まで）"
+    = f.submit "投稿", style: "border:none", class: 'postform__commentform__submit' 

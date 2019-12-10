@@ -7,5 +7,5 @@
 
 %script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{Rails.application.secrets.yahoo_api_key}", :type => "text/javascript"}
 
-.footer
+.mapfooter
   = render partial: "credit"
