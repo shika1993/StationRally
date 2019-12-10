@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
+    if current_user.update(user_params) && current_user.name != ""
       redirect_to root_path
     else
       redirect_to edit_user_registration_path
