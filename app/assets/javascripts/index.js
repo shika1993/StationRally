@@ -49,9 +49,7 @@ window.onload = function() {
       var icon2 = new Y.Icon('/assets/star1.png',{className: "icons2 "+ still_names[i]});
       var url2 = "/stations/" + still_ids[i] + "/images";
       var test_marker2 = new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2});
-      markers2.push(test_marker2);
-      var marker2 = markers2[i];
-      marker2.bindInfoWindow('<a href="'+ url2 +'" class= "char1">'+still_names[i]+'駅の写真を投稿する</a>');
+      markers2.push(test_marker2)
 
       test_marker2.bind("mouseover", function(){
         var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].className.substr(7)+"駅");
@@ -63,9 +61,8 @@ window.onload = function() {
       })
 
       test_marker2.bind("click", function(){
-        $("p").parent().remove()
+        window.location.href = url2;
       })
-
     }
 
       map.addFeatures(markers);
