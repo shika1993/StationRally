@@ -29,7 +29,7 @@ window.onload = function() {
       markers.push(test_marker);
 
       test_marker.bind("mouseover", function(){
-        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].classList[2]+"駅");
+        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].classList[2]);
         map.addFeature(label);
       })
 
@@ -52,7 +52,7 @@ window.onload = function() {
       markers2.push(test_marker2);
 
       test_marker2.bind("mouseover", function(){
-        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].classList[2]+"駅");
+        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), this.node[0].classList[2]);
         map.addFeature(label);
       })
 
@@ -64,7 +64,6 @@ window.onload = function() {
         var station_id = this.node[0].classList[1]
         document.location.href = "/stations/"+station_id+"/images";
       })
-
     }
 
       map.addFeatures(markers);
