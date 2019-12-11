@@ -86,4 +86,6 @@ Rails.application.configure do
   config.assets.precompile += ['edit.js']
   config.assets.precompile += ['lightbox.js']
   config.assets.precompile += ['lightbox.min.js']
+  config.assets.precompile += ['new.js']
+
 end

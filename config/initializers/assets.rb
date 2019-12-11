@@ -17,6 +17,8 @@ Rails.application.config.assets.paths << Rails.root.join('vendor/assets/lightbox
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( index.js )
 Rails.application.config.assets.precompile += %w( image.js )
+Rails.application.config.assets.precompile += %w( edit.js )
+Rails.application.config.assets.precompile += %w( new.js )
 Rails.application.config.assets.precompile += %w( lightbox.js )
 Rails.application.config.assets.precompile += %w( lightbox.min.js )
 Rails.application.config.assets.precompile += %w(*.eot *.woff *.woff2 *.ttf *.svg *.otf *.png *.jpg *.gif )

@@ -1,8 +1,8 @@
 $(function(){
   $(".user__right__actions").click(function(e){
-    var user_name = $("#user_name")
-    var user_email = $("#user_email")
-    if (user_name[0].value == "" || user_email[0].value == ""){
+    var user_email = $("#user_email");
+    var user_password = $("#user_password");
+    if (user_email[0].value == "" || user_password[0].value == ""){
       e.preventDefault();
       Swal.fire({
         text: '未入力項目があります',
@@ -11,9 +11,6 @@ $(function(){
         background: 'white',
         confirmButtonColor: '#99CCFF',
       });
-    }else{
-      document.location.href = "/";
     };
-
   });
 });

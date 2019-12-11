@@ -32,6 +32,7 @@ class ImagesController < ApplicationController
       redirect_to station_images_path(@station.id)
 
     else
+      flash[:alert] = ''
       redirect_to station_images_path(@station.id)
 
     end

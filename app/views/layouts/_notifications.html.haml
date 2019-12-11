@@ -1,0 +1,11 @@
+- flash.each do |key, value|
+  :javascript
+    $(function(){
+          Swal.fire({
+          text: 'パスワードが間違っています',
+          icon: 'warning', 
+          showCancelButton: false,
+          background: 'white',
+          confirmButtonColor: '#99CCFF',
+          });
+        });
