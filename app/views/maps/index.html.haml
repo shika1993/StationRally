@@ -7,5 +7,19 @@
 
 %script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{Rails.application.secrets.yahoo_api_key}", :type => "text/javascript"}
 
+.info
+  .info__name
+    = current_user.name
+  .info__point
+    .info__point__key
+      ポイント
+    .info__point__value
+      789(仮)
+  .info__count
+    .info__count__key
+      残り
+    .info__count__value
+      25(仮)駅
+
 .mapfooter
   = render partial: "credit"
