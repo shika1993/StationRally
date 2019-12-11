@@ -1,5 +1,4 @@
 .main{
-  height: 100vh;
   background: $images-background;
   &__stationname{
     width:100%;
@@ -8,13 +7,18 @@
     font-family: 'tegaki';
     font-size: 45px;
     color:$white;
+    padding-top: 60px;
+    position: fixed;
+    z-index: 2;
   }
   &__images{
-    margin: 0px 40px 80px 40px;
-    height: calc(100vh - 140px);
+    margin: 0px 40px 0px 40px;
+    padding-top: 120px;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
     overflow: scroll;
       &__picture{
         height: 400px;
@@ -22,7 +26,7 @@
         line-height: 400px;
         text-align: center;
         box-sizing: border-box;
-        margin: 20px 20px 60px 20px;
+        margin: 0px 20px 120px 20px;
         position: relative;
         img{
           object-fit: cover;
@@ -72,10 +76,10 @@
           box-shadow: 0 0 5px 1px #616161;
         }
       }
-      &__picture:nth-child(3n+2):last-child {
-        margin-left: 20px;
-        margin-right: 26.3%
-      }
-    
+  }
+  &__images:after{
+    content:"";
+    display: block;
+    width:440px;
   }
 }
