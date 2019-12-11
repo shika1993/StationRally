@@ -2,6 +2,24 @@
   width:100%;
   height:calc(100vh - 100px);
   position: relative;
+
+  .yolp-layer p{
+    height: 20px;
+    font-size: 20px;
+    font-family: "tegaki";
+    text-align: center;
+    background-color: $formcolor;
+    opacity: 0.8;
+    border: none;
+    border-radius: 10px;
+    top: 5px;
+    left: -45px;  
+    
+    p{  
+      visibility: hidden;
+    }
+  }
+
   a.yolp-ymapbanner{
     pointer-events:none;
     visibility: hidden;
@@ -13,5 +31,5 @@
 }
 
 .icons2{
-  height: 20px;
+  height:20px;
 }
