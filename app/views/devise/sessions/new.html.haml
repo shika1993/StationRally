@@ -1,3 +1,4 @@
+= javascript_include_tag 'new.js'
 .header
   = render partial: "maps/devise-header"
 
@@ -33,17 +34,13 @@
       = link_to '/users/sign_up' do
         .user__right__newlink--font
           新規登録
-    -# パスワード変更機能へのリンクを保留
-    -# .user__right__link
-    -#   = link_to '/users/password/new' do
-    -#     .user__right__link--font 
-    -#       パスワードを忘れた
     .user__right__mainlink
       = link_to '/' do
         .user__right__mainlink--font
           メイン画面
     .user__right__error
       = render "devise/shared/error_messages", resource: resource
+      = render 'layouts/notifications'
 .contents
   .contents__title
     %p What is Station Rarry ?

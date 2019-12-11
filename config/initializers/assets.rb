@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( index.js )
 Rails.application.config.assets.precompile += %w( image.js )
 Rails.application.config.assets.precompile += %w( edit.js )
+Rails.application.config.assets.precompile += %w( new.js )
