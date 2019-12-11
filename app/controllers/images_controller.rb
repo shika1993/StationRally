@@ -6,7 +6,7 @@ class ImagesController < ApplicationController
   
   def index
     @image = Image.new
-    @images = @station.images
+    @images = @station.images.order("id DESC")
 
   end
 
