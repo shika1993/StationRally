@@ -2,6 +2,10 @@
   width:100%;
   height:calc(100vh - 100px);
   position: relative;
+  a.yolp-ymapbanner{
+    pointer-events:none;
+    visibility: hidden;
+  }
 }
 
 .icons1{
@@ -11,6 +15,3 @@
 .icons2{
   height: 20px;
 }
-
-
-

@@ -1,10 +1,10 @@
 .contents{
-  height: 1500px;
+  height: 2000px;
   width: 100vw;
   background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)),url(/assets/camera.jpg);
   background-size: cover;
   &__title{
-    height: 200px;
+    height: 300px;
     width: 100vw;
     position: relative;
     font-family: 'hikki';
@@ -24,14 +24,14 @@
     }
   }
   &__Description{
-    height: 600px;
+    height: 800px;
     width: 100vw;
     position: relative;
     font-family: 'Hiragino Maru Gothic ProN';
     font-size: 20px;
     p{
       position: absolute;
-      top: 50%;
+      top: 35%;
       left: 50%;
       -webkit-transform : translate(-50%,-50%);
       transform : translate(-50%,-50%);
