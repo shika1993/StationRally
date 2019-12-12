@@ -1,0 +1,52 @@
+.info {
+  height: 100px;
+  position: absolute;
+  bottom: 70px;
+  left: 30px;
+  background : $headterfooter;
+  border-radius: 10px;
+  z-index: 3;
+  padding: 10px;
+  
+  &__point {
+    display: flex;
+    justify-content: center;
+    font-family: 'kosugi';
+
+    &__key {
+      font-size: 15px;
+      color: $white;
+      margin-top: 20px;
+    }
+    &__value {
+      font-size: 25px;
+      color: $formcolor;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    font-family: 'kosugi';
+
+    &__key {
+      font-size: 15px;
+      color: $white;
+      margin-top: 40px;
+    }
+    &__value {
+      font-size: 25px;
+      color: $formcolor;
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+    &__label {
+      font-size: 15px;
+      color: $white;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+  }
+}
