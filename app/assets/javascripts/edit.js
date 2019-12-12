@@ -1,7 +1,7 @@
 
 $(function(){
     Swal.fire({
-      text: '未入力項目があります',
+      text: '空欄、既存のアドレスは登録できません',
       icon: 'warning', 
       showCancelButton: false,
       background: 'white',
