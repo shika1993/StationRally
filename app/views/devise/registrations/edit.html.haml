@@ -9,10 +9,6 @@
   .user__right
     .user__right__title
       ユーザー情報編集
-    .user__right__backlink
-      = link_to '/' do
-        .user__right__backlink--font 
-          メイン画面へ戻る
     .user__right__field
     = form_for(current_user) do |f|
       .user__right__field--label
@@ -26,6 +22,10 @@
       .user__right__field--input
         = f.email_field :email
       = f.submit "変更する", class: 'user__right__actions'
+    .user__right__backlink
+      = link_to '/' do
+        .user__right__backlink--font 
+          地図画面へ戻る
     .user__right__error
       - flash.each do
         = javascript_include_tag 'edit.js'

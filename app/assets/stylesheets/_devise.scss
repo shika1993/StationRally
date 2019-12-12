@@ -4,8 +4,6 @@
   display: flex;
   justify-content: flex-start;
   font-family: 'Hiragino Maru Gothic ProN';
-  position: relative;
-  overflow: hidden;
   background-color: $white;
 
   &__left {
@@ -27,11 +25,8 @@
   }
   
   &__right {
-    width: 40%;
-    height: 88%;
-    left: 5%;
-    top: 15%;
-    position: relative;
+    width: 50%;
+    padding-top: 10%;
     
     &__title {
       color:$shikagray;
@@ -50,9 +45,7 @@
       width: 150px;
       background-color: $devisebuttoncolor;
       border-radius: 8px;
-      position: absolute;
-      left:20%;
-      top: 85%;
+      margin: 10% auto;
 
         &--font {
           color: $white;
@@ -66,9 +59,7 @@
       width: 150px;
       background-color: $devisebuttoncolor;
       border-radius: 8px;
-      position: absolute;
-      left:55%;
-      top: 85%;
+      margin: 10% auto;
 
         &--font {
           color: $white;
@@ -82,10 +73,7 @@
       width: 150px;
       background-color: $devisebuttoncolor;
       border-radius: 8px;
-      position: absolute;
-      left:37%;
-      top: 85%;
-
+      margin: 10% auto;
         &--font {
           color: $white;
           font-size: 15px;
@@ -109,15 +97,54 @@
         color:$shikagray;
         text-shadow: $textshadow;;
       }
+      
       &--input {
         input {
           width: 400px;
           padding: 10px;
           background-color: $formcolor;
         }
-      }    
-    }
+      }
 
+      &--checkbox {
+        padding-top: 3%;
+        
+       &__checkbox {
+          margin: 0 0 10px 20px;
+       }
+        label {
+          padding-left: 30px;
+          font-size: 20px;
+          line-height: 20px;
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+        }
+      
+        label:before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          background-color:#fff;
+          box-shadow: inset 1px 2px 3px 0px #000;
+          border-radius: 6px 6px 6px 6px;
+        }
+      
+        input[type=checkbox] {
+          display: none;
+        }
+      
+        input[type=checkbox]:checked + label:before {
+          content: "\2713"; 
+          font-size: 20px;
+          color: white;
+          background-color: rgb(88, 155, 255); 
+        }
+      }
+    }
     &__actions {
       height: 80px;
       width: 200px;
@@ -126,18 +153,9 @@
       border: none;
       color: $white; 
       font-size: 30px;
-      margin-top: 15%;
+      margin-top: 10%;
     }
 
-    &__checkbox {
-      text-align: center;
-      color:$shikagray;
-      font-size: 20px;
-      text-shadow: $textshadow;
-      position: absolute;
-      top: 240px;
-      left: 28%;
-    }
     &__error {
       text-align: center;
       color: $errorcolor;
