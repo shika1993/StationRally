@@ -11,17 +11,18 @@
   &__point {
     display: flex;
     justify-content: center;
-    font-family: 'kosugi';
+    font-family: 'tegaki';
 
     &__key {
-      font-size: 15px;
+      font-size: 20px;
       color: $white;
-      margin-top: 20px;
+      margin-top: 15px;
     }
     &__value {
-      font-size: 25px;
+      font-size: 30px;
       color: $formcolor;
-      margin-top: 10px;
+      text-shadow: 1px 1px $shikagray;
+      margin-top: 5px;
       margin-left: 20px;
     }
   }
@@ -29,21 +30,22 @@
   &__count {
     display: flex;
     justify-content: center;
-    font-family: 'kosugi';
+    font-family: 'tegaki';
 
     &__key {
-      font-size: 15px;
+      font-size: 20px;
       color: $white;
       margin-top: 40px;
     }
     &__value {
-      font-size: 25px;
+      font-size: 30px;
       color: $formcolor;
+      text-shadow: 1px 1px $shikagray;
       margin-top: 30px;
       margin-left: 20px;
     }
     &__label {
-      font-size: 15px;
+      font-size: 20 px;
       color: $white;
       margin-top: 40px;
       margin-left: 20px;
