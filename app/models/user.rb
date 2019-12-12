@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :images
   has_many :users_stations
   has_many :stations, through: :users_stations
+  validates :name, presence: true
+  validates :email, presence: true
 end
