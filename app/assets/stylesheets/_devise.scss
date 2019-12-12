@@ -1,5 +1,4 @@
 .user {
-  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: flex-start;
@@ -84,10 +83,7 @@
     #new_user{
       text-align: center;
     }  
-    #edit_user_1{
-      text-align: center;
-    }
-    #edit_user_2{
+    form.edit_user{
       text-align: center;
     }
 
