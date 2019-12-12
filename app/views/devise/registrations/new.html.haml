@@ -9,14 +9,6 @@
   .user__right
     .user__right__title
       新規登録
-    .user__right__newlink
-      = link_to '/users/sign_in' do
-        .user__right__newlink--font  
-          ログイン
-    .user__right__mainlink
-      = link_to '/' do
-        .user__right__mainlink--font 
-          メイン画面へ戻る
     .user__right__field
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       .user__right__field--label
@@ -32,7 +24,7 @@
       .user__right__field--label
         = f.label :パスワード（6文字以上）
         - if @minimum_password_length
-          %br/  
+          %br/
       .user__right__field--input
         = f.password_field :password, autocomplete: "new-password"
       .user__right__field--label
@@ -41,5 +33,9 @@
       .user__right__field--input
         = f.password_field :password_confirmation, autocomplete: "resourcespassword" 
       = f.submit "登録する", class: 'user__right__actions'
+    .user__right__mainlink
+      = link_to '/' do
+        .user__right__mainlink--font 
+          トップ画面へ戻る
     .user__right__error
       = render "devise/shared/error_messages", resource: resource
