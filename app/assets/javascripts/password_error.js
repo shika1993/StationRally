@@ -1,5 +1,5 @@
 Swal.fire({
-  text: '未入力項目があります',
+  text: 'そのパスワードは既に使用されています',
   icon: 'warning', 
   showCancelButton: false,
   background: 'white',

@@ -87,5 +87,6 @@ Rails.application.configure do
   config.assets.precompile += ['lightbox.js']
   config.assets.precompile += ['lightbox.min.js']
   config.assets.precompile += ['new.js']
+  config.assets.precompile += ['password_error.js']
 
 end
