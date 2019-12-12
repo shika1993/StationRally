@@ -3,8 +3,8 @@
   .postform__commentform__input
     .postform__commentform__input__picture
       %label
-        = f.file_field :picture, class: 'postform__commentform__input__picture__input-default'
-        .postform__commentform__input__picture__boxFileSelect 
+        = f.file_field :picture, class: 'postform__commentform__input__picture__btn'
+        .postform__commentform__input__picture__erea
           写真を選ぶ
     = f.text_field :text, maxlength: '20', style: "border:none", class: 'postform__commentform__input__text', placeholder: "コメントを入力（20文字以内）"
     = f.submit "投稿", style: "border:none", class: 'postform__commentform__submit' 
