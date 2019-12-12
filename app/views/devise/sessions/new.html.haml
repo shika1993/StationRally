@@ -26,9 +26,10 @@
         .user__right__field--input
           = f.password_field :password, autocomplete: "resourcespassword"
         = f.submit "ログインする", class: 'user__right__actions'
-      .user__right__checkbox
-        = f.check_box :remember_me
-        = f.label :パスワードを記憶させる
+      - if devise_mapping.rememberable?
+        .user__right__checkbox
+          = f.check_box :remember_me
+          = f.label :パスワードを記憶させる
     .user__right__newlink
       = link_to '/users/sign_up' do
         .user__right__newlink--font
