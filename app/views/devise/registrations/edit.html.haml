@@ -27,5 +27,7 @@
         .user__right__backlink--font 
           地図画面へ戻る
     .user__right__error
-      - flash.each do
+      - if flash[:name] == "" || flash[:email] == ""
         = javascript_include_tag 'edit.js'
+      - elsif User.find_by("email=?",flash[:email]) != flash[:email]
+        = javascript_include_tag 'password_error.js'
