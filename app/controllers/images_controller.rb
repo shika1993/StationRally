@@ -7,7 +7,9 @@ class ImagesController < ApplicationController
   def index
     @image = Image.new
     @images = @station.images.order("id DESC")
-
+    en_name = @station.en_name
+    en_station = Point.where("en_name=?", en_name)
+    gon.point = en_station[0][:points]
   end
 
   def create
@@ -25,7 +27,7 @@ class ImagesController < ApplicationController
         @points = en_station[0][:points]
         get_points = @points + current_user.points
         current_user.update(points: get_points)
-
+        flash[:first_photo] = ""
       else
 
       end
