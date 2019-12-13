@@ -33,3 +33,40 @@
 .icons2{
   height:20px;
 }
+
+.info__point__value{
+  position: relative;
+}
+
+.fukidashi{
+  display: none;
+  width: 440px;
+  position: absolute;
+  bottom: 130px;
+  left: 35px;
+  padding: 16px;
+  border-radius: 5px;
+  background: #33cc99;
+  color: #f1f1f1ff;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.fukidashi:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 70px;
+  bottom: -19px;
+  margin-left: 10px;
+  border: solid transparent;
+  border-color: rgba(51, 204, 153, 0);
+  border-top-color: #33cc99;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+.info__point__value:hover + .fukidashi {
+  display: block;
+}
