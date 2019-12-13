@@ -37,6 +37,6 @@
       = link_to '/' do
         .user__right__mainlink--font 
           トップ画面へ戻る
-  - if flash[:flag] == ""
+  - if flash[:flag]
     .user__right__error
       = javascript_include_tag 'registration.js'

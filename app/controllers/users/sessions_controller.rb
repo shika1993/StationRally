@@ -12,7 +12,7 @@ class Users::SessionsController < Devise::SessionsController
    def create
     if user_signed_in?
     else
-      flash[:flag] = ""
+      flash[:flag_in] = ""
       redirect_to root_path
     end
      super
