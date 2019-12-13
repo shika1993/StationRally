@@ -9,5 +9,6 @@
           ×
   .main__images__picture__text
     = image.text
-
-    
+  .main__images__picture__date
+    - @exif = EXIFR::JPEG.new(Rails.root + image.picture_url)
+    = @exif.date_time
