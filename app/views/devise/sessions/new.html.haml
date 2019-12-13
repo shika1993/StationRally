@@ -33,7 +33,7 @@
       = link_to '/users/sign_up' do
         .user__right__newlink--font
           新規登録
-  - if flash[:flag]
+  - if flash[:flag_in]
     .user__right__error
       = javascript_include_tag 'new.js'
 

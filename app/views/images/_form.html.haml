@@ -1,3 +1,4 @@
+= javascript_include_tag 'choice.js'
 .postform__commentform
 = form_for [@station, @image] do |f|
   .postform__commentform__input
@@ -5,6 +6,8 @@
       %label
         = f.file_field :picture, class: 'postform__commentform__input__picture__btn'
         .postform__commentform__input__picture__erea
-          写真を選ぶ
+          写真を選ぶ    
     = f.text_field :text, maxlength: '20', style: "border:none", class: 'postform__commentform__input__text', placeholder: "コメントを入力（20文字以内）"
+    .postform__commentform__choice
+      %img#choice-picture
     = f.submit "投稿", style: "border:none", class: 'postform__commentform__submit' 

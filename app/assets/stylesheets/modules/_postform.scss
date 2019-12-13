@@ -4,12 +4,13 @@
   background: $headterfooter;
   position: fixed;
   bottom: 0;
-
+ 
   &__commentform{
     display: flex;
     justify-content: flex-start;
-    padding-top: 10px; 
     position: relative;
+    padding-top: 10px; 
+    
     &__input{
       
       &__picture {
@@ -28,7 +29,7 @@
           font-size: 25px;
           color: $shikagray;
           margin-top: 0;
-          margin-left: 18%;
+          margin-left: 17%;
           cursor: pointer;
           font-family: 'tegaki';
           position: absolute; 
@@ -39,7 +40,7 @@
         position: absolute;
         width: 30%;
         height: 60px;
-        margin-left: 33%;
+        margin-left: 32%;
         font-size: 20px;
         color: $shikagray;
         background-color: #CCFFFF;
@@ -47,12 +48,20 @@
         font-family: 'tegaki';  
       }
     }
-
+    &__choice {
+      margin-left: 66%;
+      position: absolute;
+      img{
+        object-fit: cover;
+        height: 60px;
+        width: 100%;
+      }
+    }
     &__submit{
       position: absolute;
       width: 11%;
       height: 60px;
-      margin-left: 68%;
+      margin-left: 71%;
       border-radius: 3px;
       background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
       font-family: 'tegaki';
