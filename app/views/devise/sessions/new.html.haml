@@ -33,19 +33,10 @@
       = link_to '/users/sign_up' do
         .user__right__newlink--font
           新規登録
+  - if flash[:flag]
     .user__right__error
       = javascript_include_tag 'new.js'
-      - flash.each do
-        :javascript
-          $(function(){
-                Swal.fire({
-                text: 'パスワードまたはメールアドレスが間違っています',
-                icon: 'warning', 
-                showCancelButton: false,
-                background: 'white',
-                confirmButtonColor: '#99CCFF',
-                });
-              });
+
 .contents
   .contents__title
     %p What is Station Rarry ?
