@@ -10,3 +10,13 @@ $(function() {
     $('#choice-picture').attr('src', blobUrl);
   });
 });
+
+$(function() {
+  $('.postform__commentform__input__picture__btn').on('change', function(e) {
+  $('.postform__commentform__choice').css({
+    'height':'60px',
+    'width':'60px',
+    'font-weight':'bold'
+    });
+  });
+});

@@ -9,8 +9,5 @@
           写真を選ぶ    
     = f.text_field :text, maxlength: '20', style: "border:none", class: 'postform__commentform__input__text', placeholder: "コメントを入力（20文字以内）"
     .postform__commentform__choice
-      -# .postform__commentform__choice__text
-      -#   選択中の写真
-      .postform__commentform__choice__picture
-        %img#choice-picture   
+      %img#choice-picture
     = f.submit "投稿", style: "border:none", class: 'postform__commentform__submit' 

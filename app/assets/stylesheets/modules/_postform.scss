@@ -4,7 +4,7 @@
   background: $headterfooter;
   position: fixed;
   bottom: 0;
-
+ 
   &__commentform{
     display: flex;
     justify-content: flex-start;
@@ -49,25 +49,12 @@
       }
     }
     &__choice {
-      height: 60px;
-      width: 60px;
       margin-left: 66%;
       position: absolute;
-      &__text { 
-        height: 10px;
-        font-size: 5px;
-        text-align: center;
-        color: $shikagray;
-        font-family: 'kosugi';
-      }
-      &__picture {
+      img{
+        object-fit: cover;
         height: 60px;
-        width: 60px;
-        img{
-          object-fit: cover;
-          height: 60px;
-          width: 100%;
-        }
+        width: 100%;
       }
     }
     &__submit{
