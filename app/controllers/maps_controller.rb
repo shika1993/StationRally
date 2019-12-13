@@ -23,6 +23,15 @@ class MapsController < ApplicationController
     gon.still_station_names = still_station_names
     user_station = UsersStation.where("user_id = ?", current_user.id)
     @gone_station = user_station.select(:station_id).distinct.length
+
+    station_points = []
+    gon.id.each do |id|
+      enname = Station.where("id = ?", id).pluck(:en_name)
+      point = Point.where("en_name = ?", enname).pluck(:points)
+      station_points << point
+    end
+    gon.station_points = station_points
+    #javascriptでは var station_points = gon.station_pointsのように
   end
 
   def show
