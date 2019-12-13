@@ -12,6 +12,10 @@
       ポイント
     .info__point__value
       = "#{current_user.points}"
+    .fukidashi
+      写真を投稿してポイントをゲットしよう！
+      %br
+        レアな駅ほどポイントが高いよ！
   .info__count
     .info__count__key
       残り
@@ -19,6 +23,5 @@
       = 76 - @gone_station
     .info__count__label
       駅
-
 .mapfooter
   = render partial: "credit"
