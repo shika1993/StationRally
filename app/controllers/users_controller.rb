@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     else
       flash[:email] = current_user.email
       flash[:name] = current_user.name
-      flash[:id] = current_user.id
       redirect_to edit_user_registration_path
     end
   end

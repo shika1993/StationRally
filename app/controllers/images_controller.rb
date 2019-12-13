@@ -32,9 +32,8 @@ class ImagesController < ApplicationController
       redirect_to station_images_path(@station.id)
 
     else
-      flash[:alert] = ''
+      flash[:flag] = ""
       redirect_to station_images_path(@station.id)
-
     end
   end
 
@@ -45,8 +44,12 @@ class ImagesController < ApplicationController
   def destroy
     image = Image.find(params[:id])
     station_id = image.station_id
-    image.destroy
-    redirect_to station_images_path(station_id)
+    if image.destroy
+      respond_to do |format|
+        format.json
+      end
+    else
+    end
 
   end
 

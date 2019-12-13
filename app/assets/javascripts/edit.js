@@ -1,5 +1,5 @@
 Swal.fire({
-  text: '未入力項目があります',
+  text: '空欄があります',
   icon: 'warning', 
   showCancelButton: false,
   background: 'white',

@@ -1,8 +1,8 @@
 .header
   = render partial: "maps/header"
 .main
-  .notifications
-    - flash.each do
+  - if flash[:flag]
+    .notifications
       :javascript
         $(function(){
           Swal.fire({

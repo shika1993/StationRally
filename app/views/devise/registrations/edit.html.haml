@@ -30,4 +30,4 @@
       - if flash[:name] == "" || flash[:email] == ""
         = javascript_include_tag 'edit.js'
       - elsif User.find_by("email=?",flash[:email]) != flash[:email]
-        = javascript_include_tag 'password_error.js'
+        = javascript_include_tag 'E-mail_error.js'
