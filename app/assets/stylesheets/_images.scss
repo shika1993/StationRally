@@ -1,5 +1,6 @@
 .main{
   background: $images-background;
+  min-height: 100%;
   &__stationname{
     width:100%;
     line-height: 60px;
@@ -12,27 +13,19 @@
     z-index: 2;
   }
   &__images{
-    margin: 0px 40px 0px 40px;
-    padding-top: 120px;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-    overflow: scroll;
+    padding: 120px 0px 90px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3px;
+    row-gap: 3px;
       &__picture{
-        height: 400px;
-        width: 400px;
-        line-height: 400px;
-        text-align: center;
-        box-sizing: border-box;
-        margin: 0px 20px 120px 20px;
         position: relative;
+        margin-bottom: -6px;
         img{
           object-fit: cover;
           height: 400px;
           width: 100%;
-          border-radius: 11px;
         }
         a{
           text-decoration: none;
@@ -76,10 +69,5 @@
           box-shadow: 0 0 5px 1px #616161;
         }
       }
-  }
-  &__images:after{
-    content:"";
-    display: block;
-    width:440px;
   }
 }
