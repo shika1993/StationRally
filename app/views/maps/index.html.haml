@@ -7,6 +7,13 @@
 %script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{Rails.application.secrets.yahoo_api_key}", :type => "text/javascript"}
 
 .info
+  .info__rank
+    .info__rank__key
+      ランキング👑
+    .info__rank__value
+      = 76
+    .info__rank__label
+      位
   .info__point
     .info__point__key
       ポイント
