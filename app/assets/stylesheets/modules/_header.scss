@@ -32,18 +32,18 @@
       font-family: 'kosugi';
       margin: 0 auto;
       line-height: 30px;
-      padding-right: 30px;
+      padding-right: 50px;
     }
 
     &__btn ul{
       display: flex;
       li{
-        margin: auto 10px;
+        margin: auto 0;
         a{
           text-decoration: none;
           color: $white;
           font-family: 'kosugi';
-          ;
+          margin-right: 20px;
         }
       }
     }
