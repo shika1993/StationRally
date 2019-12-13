@@ -6,6 +6,7 @@
   .yolp-layer p{
     height: 20px;
     font-size: 20px;
+    line-height: 20px;
     font-family: "tegaki";
     text-align: center;
     background-color: $formcolor;
@@ -13,7 +14,7 @@
     border: none;
     border-radius: 10px;
     top: 5px;
-    left: -45px;  
+    left: -60px;  
     
     p{  
       visibility: hidden;
