@@ -13,6 +13,9 @@
           confirmButtonColor: '#99CCFF',
           });
         });
+  - elsif flash[:first_photo]
+    .omedetou
+      = javascript_include_tag 'omedetou.js'
   .main__stationname
     = @station.name + "駅"
   .main__images
@@ -20,4 +23,5 @@
 .postform
   = render partial: "form"
 = javascript_include_tag 'lightbox.min'
+
 
