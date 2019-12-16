@@ -32,7 +32,24 @@
       font-family: 'kosugi';
       margin: 0 auto;
       line-height: 30px;
+      margin-right: 20px;
+    }
+
+    &__rank{
+      height: 30px;
       padding-right: 50px;
+      color: $white;
+      font-family: 'tegaki';
+      display: flex;
+      &__oukan{
+        margin-right: 10px;
+        line-height: 28px;
+      }
+      &__value{
+        line-height: 30px;
+        text-shadow: 1px 1px red;
+        font-size: 30px;
+      }
     }
 
     &__btn ul{
