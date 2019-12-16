@@ -46,7 +46,6 @@
       background-color: $devisebuttoncolor;
       border-radius: 8px;
       margin: 10% auto;
-
         &--font {
           color: $white;
           font-size: 15px;
@@ -60,7 +59,19 @@
       background-color: $devisebuttoncolor;
       border-radius: 8px;
       margin: 10% auto;
-
+        &--font {
+          color: $white;
+          font-size: 15px;
+          text-align: center;
+          line-height: 40px;
+      } 
+    }
+    &__delete {
+      height: 40px;
+      width: 150px;
+      background-color: $devisebuttoncolor;
+      border-radius: 8px;
+      margin: 10% auto;
         &--font {
           color: $white;
           font-size: 15px;
@@ -81,6 +92,7 @@
           line-height: 40px;
       } 
     }
+    
     #new_user{
       text-align: center;
     }  
