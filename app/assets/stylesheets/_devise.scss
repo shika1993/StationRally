@@ -26,6 +26,7 @@
   &__right {
     width: 50%;
     padding-top: 10%;
+    height: calc(100vh - 120px);
     
     &__title {
       color:$shikagray;

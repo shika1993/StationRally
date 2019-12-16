@@ -59,14 +59,27 @@
         &__text{
           position: absolute;
           top:370px;
-          left:20px;
+          left:10px;
+          font-size: 15px;
           color:$white;
           font-family: 'tegaki';
           background-color: rgba(100, 100, 100, 0.6);
-          line-height: 20px;
+          line-height: 15px;
           border-radius: 3px;
           padding: 0px 5px 0px 5px;
           box-shadow: 0 0 5px 1px #616161;
+        }
+        &__date{
+          position: absolute;
+          top: 387px;
+          right: 5px;
+          padding: 0px 5px 0px 5px;
+          color: rgb(236, 135, 76);
+          font-family : 'tegaki';
+          font-size: 10px;
+          line-height: 10px;
+          font-weight: 900;
+          text-shadow: 0px 0px 5px rgb(214, 90, 18);
         }
       }
   }

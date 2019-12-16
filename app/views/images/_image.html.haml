@@ -9,5 +9,6 @@
           ×
   .main__images__picture__text
     = image.text
-
-    
+  .main__images__picture__date
+    - date = EXIFR::JPEG.new(image.picture.current_path)
+    = date.date_time_original.try(:strftime,"'%y %-m %-d %R")

@@ -1,9 +1,9 @@
+require "exifr/jpeg"
+
 class ImagesController < ApplicationController
   before_action :set_station, except: [:destroy]
   before_action :move_to_index, only: [:desteoy]
  
-
-  
   def index
     @image = Image.new
     @images = @station.images.order("id DESC")
@@ -16,7 +16,6 @@ class ImagesController < ApplicationController
     @image = @station.images.new(image_params)
     image_user = @image.user_id
     image_station = @image.station_id
-
     if @image.save
       UsersStation.create(user_id: image_user, station_id: image_station)
       flag = UsersStation.where(user_id: current_user.id, station_id:@station.id)
