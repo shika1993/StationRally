@@ -1,9 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_station, except: [:destroy]
   before_action :move_to_index, only: [:desteoy]
- 
 
-  
   def index
     @image = Image.new
     @images = @station.images.order("id DESC")
@@ -61,10 +59,10 @@ class ImagesController < ApplicationController
     params.require(:image).permit(:picture, :text).merge(user_id: current_user.id)
 
   end
-
+  
   def set_station
     @station = Station.find(params[:station_id])
-
+  
   end
 
   def move_to_index

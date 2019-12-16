@@ -1,4 +1,5 @@
 class MapsController < ApplicationController
+  before_action :set_ranking, only: [:index]
 
   def index
     gon.names = Station.pluck(:name)
@@ -36,5 +37,19 @@ class MapsController < ApplicationController
 
   def show
   end
-  
-end
+
+  private
+
+  def set_ranking
+    @user = User.all.order('points desc')
+    @ranking = 1
+    @user.find_each do |user|
+    @ranking += 1
+      if user.id == current_user.id
+        return @ranking
+      end
+      else
+      end
+  end
+
+end 
