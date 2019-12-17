@@ -1,14 +1,12 @@
-= javascript_include_tag 'favorite.js'
 .header
   = render partial: "maps/header"
 .main
-  
-  - if flash[:no_photo_flag]
+  - if flash[:flag]
     .notifications
       :javascript
         $(function(){
           Swal.fire({ 
-          text: '写真(.jpg/.jpeg)を選択してください',
+          text: '写真を選択してください',
           icon: 'warning', 
           showCancelButton: false,
           background: 'white',
@@ -19,11 +17,9 @@
     .omedetou
       = javascript_include_tag 'omedetou.js'
   .main__stationname
-    = @station.name + "駅"
+    マイアルバム
   .main__images
-    = render partial: 'image', collection: @images, as: :image, locals: { station_id: @station_id }
+    = render partial: 'image', collection: @images, as: :image
 .postform
   = render partial: "form"
 = javascript_include_tag 'lightbox.min'
-
-

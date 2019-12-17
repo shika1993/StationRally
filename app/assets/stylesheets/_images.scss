@@ -11,6 +11,14 @@
     padding-top: 60px;
     position: fixed;
     z-index: 2;
+    a{
+      text-decoration: none;
+      color: #FFF;
+      font-size: 20px;
+      position: absolute;
+      left: 67%;
+      top: 60%;
+    }
   }
   &__images{
     padding: 120px 0px 90px 0px;
@@ -38,6 +46,37 @@
           border-radius: 11px;
           position: absolute;
           background: rgba(100,100,100,0.3);
+            form.button_to{
+              button{
+                top:-10px;
+                right: -4.5px;
+                font-size: 25px;
+                font-family: 'Hiragino Mincho ProN';
+                text-decoration: none;
+                border-style: none;
+                color: $white;
+                background: rgba(100,100,100,0.0);
+                border-radius: 11px;
+                position: absolute;
+              }
+              button:focus {
+                outline:0;
+              }
+            }
+          }
+        &__favorite {
+          top:15px;
+          right: 7px;
+          border-radius: 11px;
+          position: absolute;
+          background: rgba(100,100,100,0.3);
+          &__icon{
+
+            img{
+              height: 2vh;
+              width: 2vh;
+            }
+          }
             form.button_to{
               button{
                 top:-10px;
@@ -84,3 +123,4 @@
       }
   }
 }
+
