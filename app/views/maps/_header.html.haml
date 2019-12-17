@@ -1,0 +1,26 @@
+.header__left
+  = link_to root_path, data: {"turbolinks" => false} do
+    StationRarry
+.header__right
+  
+  .header__right__current
+    = link_to user_path(current_user.id) do
+      = "ようこそ #{current_user.name} さん"
+
+  .header__right__btn
+    - if user_signed_in?
+      %ul
+        %li
+          = link_to edit_user_registration_path,class: "btn" do
+            ユーザー情報編集
+        %li    
+          = link_to destroy_user_session_path, method: :delete, class: "btn" do
+            ログアウト
+    - else
+      %ul
+        %li
+          = link_to new_user_session_path,class: "btn" do
+            ログイン
+        %li
+          = link_to new_user_registration_path, class: "btn" do
+            新規登録

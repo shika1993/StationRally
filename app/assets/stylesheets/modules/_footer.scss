@@ -1,0 +1,27 @@
+.rootfooter{
+  height: 40px;
+  width: 100vw;
+  background-color: $shikagray;
+  font-size: 15px;
+  color: $white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.mapfooter{
+  height: 40px;
+  width: 100vw;
+  background-color: $shikagray;
+  bottom: 0;
+  &__credit{
+    font-size: 15px;
+    text-align: right;
+    line-height: 40px;
+    padding-right: 10px;
+    a{
+      text-decoration: none;
+      color: $white;
+      font-size: 12px;
+    }
+  }
+}

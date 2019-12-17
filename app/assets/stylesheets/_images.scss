@@ -1,0 +1,126 @@
+.main{
+  background: $images-background;
+  min-height: 100%;
+  &__stationname{
+    width:100%;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'tegaki';
+    font-size: 45px;
+    color:$white;
+    padding-top: 60px;
+    position: fixed;
+    z-index: 2;
+    a{
+      text-decoration: none;
+      color: #FFF;
+      font-size: 20px;
+      position: absolute;
+      left: 67%;
+      top: 60%;
+    }
+  }
+  &__images{
+    padding: 120px 0px 90px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3px;
+    row-gap: 3px;
+      &__picture{
+        position: relative;
+        margin-bottom: -6px;
+        img{
+          object-fit: cover;
+          height: 400px;
+          width: 100%;
+        }
+        a{
+          text-decoration: none;
+        }
+        &__delete {
+          height: 22px;
+          width: 22px;
+          top:7px;
+          right: 7px;
+          border-radius: 11px;
+          position: absolute;
+          background: rgba(100,100,100,0.3);
+            form.button_to{
+              button{
+                top:-10px;
+                right: -4.5px;
+                font-size: 25px;
+                font-family: 'Hiragino Mincho ProN';
+                text-decoration: none;
+                border-style: none;
+                color: $white;
+                background: rgba(100,100,100,0.0);
+                border-radius: 11px;
+                position: absolute;
+              }
+              button:focus {
+                outline:0;
+              }
+            }
+          }
+        &__favorite {
+          top:15px;
+          right: 7px;
+          border-radius: 11px;
+          position: absolute;
+          background: rgba(100,100,100,0.3);
+          &__icon{
+
+            img{
+              height: 2vh;
+              width: 2vh;
+            }
+          }
+            form.button_to{
+              button{
+                top:-10px;
+                right: -4.5px;
+                font-size: 25px;
+                font-family: 'Hiragino Mincho ProN';
+                text-decoration: none;
+                border-style: none;
+                color: $white;
+                background: rgba(100,100,100,0.0);
+                border-radius: 11px;
+                position: absolute;
+              }
+              button:focus {
+                outline:0;
+              }
+            }
+          }
+        &__text{
+          position: absolute;
+          top:370px;
+          left:10px;
+          font-size: 15px;
+          color:$white;
+          font-family: 'tegaki';
+          background-color: rgba(100, 100, 100, 0.6);
+          line-height: 15px;
+          border-radius: 3px;
+          padding: 0px 5px 0px 5px;
+          box-shadow: 0 0 5px 1px #616161;
+        }
+        &__date{
+          position: absolute;
+          top: 387px;
+          right: 5px;
+          padding: 0px 5px 0px 5px;
+          color: rgb(236, 135, 76);
+          font-family : 'tegaki';
+          font-size: 10px;
+          line-height: 10px;
+          font-weight: 900;
+          text-shadow: 0px 0px 5px rgb(214, 90, 18);
+        }
+      }
+  }
+}
+

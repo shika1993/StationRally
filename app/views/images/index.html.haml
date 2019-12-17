@@ -1,0 +1,29 @@
+= javascript_include_tag 'favorite.js'
+.header
+  = render partial: "maps/header"
+.main
+  
+  - if flash[:no_photo_flag]
+    .notifications
+      :javascript
+        $(function(){
+          Swal.fire({ 
+          text: '写真(.jpg/.jpeg)を選択してください',
+          icon: 'warning', 
+          showCancelButton: false,
+          background: 'white',
+          confirmButtonColor: '#99CCFF',
+          });
+        });
+  - elsif flash[:first_photo]
+    .omedetou
+      = javascript_include_tag 'omedetou.js'
+  .main__stationname
+    = @station.name + "駅"
+  .main__images
+    = render partial: 'image', collection: @images, as: :image, locals: { station_id: @station_id }
+.postform
+  = render partial: "form"
+= javascript_include_tag 'lightbox.min'
+
+

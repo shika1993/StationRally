@@ -1,0 +1,61 @@
+#map{
+  width:100%;
+  height:calc(100vh - 40px);
+  position: relative;
+
+  .yolp-layer p{
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "tegaki";
+    text-align: center;
+    background-color: $shikagray;
+    opacity: 0.9;
+    color: $white;
+    border: none;
+    border-radius: 10px;
+    top: 5px;
+    left: -60px;  
+    
+    p{  
+      visibility: hidden;
+    }
+  }
+
+  a.yolp-ymapbanner{
+    pointer-events:none;
+    visibility: hidden;
+  }
+}
+
+.icons1{
+  height:20px;
+}
+
+.icons2{
+  height:20px;
+}
+
+.info__point__value{
+  position: relative;
+}
+
+.fukidashi{
+  display: none;
+  width: 440px;
+  position: absolute;
+  bottom: 30%;
+  left: 105%;
+  padding: 16px;
+  border-radius: 5px;
+  background: #33cc99;
+  color: #f1f1f1ff;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+
+
+.info__point__value:hover + .fukidashi {
+  display: block;
+}

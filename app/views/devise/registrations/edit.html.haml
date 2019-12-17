@@ -1,0 +1,33 @@
+.header
+  = render partial: "maps/devise-header"
+
+.user
+  .user__img 
+
+  .user__left
+
+  .user__right
+    .user__right__title
+      ユーザー情報編集
+    .user__right__field
+    = form_for(current_user) do |f|
+      .user__right__field--label
+        = f.label :ユーザー名
+        %br/
+      .user__right__field--input
+        = f.text_field :name, autofocus: true
+      .user__right__field--label
+        = f.label :'E-mail'
+        %br/    
+      .user__right__field--input
+        = f.email_field :email
+      = f.submit "変更する", class: 'user__right__actions'
+    .user__right__backlink
+      = link_to '/' do
+        .user__right__backlink--font 
+          地図画面へ戻る
+    .user__right__error
+      - if flash[:name] == "" || flash[:email] == ""
+        = javascript_include_tag 'edit.js'
+      - elsif User.find_by("email=?",flash[:email]) != flash[:email]
+        = javascript_include_tag 'E-mail_error.js'

@@ -1,0 +1,42 @@
+.header
+  = render partial: "maps/devise-header"
+
+.user
+  .user__img 
+
+  .user__left
+
+  .user__right
+    .user__right__title
+      新規登録
+    .user__right__field
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .user__right__field--label
+        = f.label :ユーザー名（10文字以内）
+        %br/
+      .user__right__field--input
+        = f.text_field :name, maxlength: '10', autofocus: true, autocomplete: "name"
+      .user__right__field--label
+        = f.label :'E-mail'
+        %br/
+      .user__right__field--input
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .user__right__field--label
+        = f.label :パスワード（6文字以上）
+        - if @minimum_password_length
+          %br/
+      .user__right__field--input
+        = f.password_field :password, autocomplete: "new-password"
+      .user__right__field--label
+        = f.label :パスワード（確認用）
+        %br/
+      .user__right__field--input
+        = f.password_field :password_confirmation, autocomplete: "resourcespassword" 
+      = f.submit "登録する", class: 'user__right__actions'
+    .user__right__mainlink
+      = link_to '/' do
+        .user__right__mainlink--font 
+          トップ画面へ戻る
+  - if flash[:flag_first]
+    .user__right__error
+      = javascript_include_tag 'registration.js'

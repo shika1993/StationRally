@@ -1,0 +1,7 @@
+= javascript_include_tag 'image.js'
+.main__images__picture
+  %a{"data-lightbox" => "group", "data-title" => "#{image.text}", :href => "#{image.picture_url}"}
+    = image_tag image.picture_url
+
+  .main__images__picture__text
+    = image.text

@@ -1,0 +1,82 @@
+.header
+  = render partial: "maps/devise-header"
+
+.user
+  .user__left
+    .user__left__img 
+
+    .user__left__text
+      みんなの写真で駅が映える！
+      %br 撮って進める新感覚スタンプラリー
+  .user__right
+    .user__right__area
+      
+    .user__right__title
+      ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .user__right__field
+        .user__right__field--label
+          = f.label :'E-mail'
+          %br/
+        .user__right__field--input
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .user__right__field--label
+          = f.label :パスワード
+        .user__right__field--input
+          = f.password_field :password, autocomplete: "resourcespassword"
+        .user__right__field--checkbox
+          = f.check_box :remember_me
+          = f.label :remember_me, "パスワードを記憶させる", class: "checkbox"
+      = f.submit "ログインする", class: 'user__right__actions'
+        
+    .user__right__newlink
+      = link_to '/users/sign_up' do
+        .user__right__newlink--font
+          新規登録
+  - if flash[:flag_in]
+    .user__right__error
+      = javascript_include_tag 'new.js'
+
+.contents
+  .contents__title
+    %p What is Station Rarry ?
+  .contents__Description
+    %p 
+      これまでにスタンプラリーをしたことがありますか？
+      %br
+      %br
+      Station Rarryはこれまでにない革新的なスタンプラリーです。
+      %br
+      %br
+      やることはただひとつ、写真を取ること。
+      %br
+      %br
+      みんなでさまざまな駅をシェアしましょう。
+      %br
+      %br
+      ゴールは、全駅制覇です。
+  .contents__how-to-logo
+    %p How to use it?
+  .contents__how-to-use
+    .contents__how-to-use__step1
+      %span STEP1
+      = image_tag "/assets/step1.png"
+      %p
+        まずユーザー登録をしましょう
+    .contents__how-to-use__step2
+      %span STEP2
+      = image_tag "/assets/step1.png"
+      %p
+        地図から撮影した駅を選んで投稿します
+        %br
+        コメントは20文字以内です
+    .contents__how-to-use__step3
+      %span STEP3
+      = image_tag "/assets/step1.png"
+      %p
+        画像投稿後は駅のアイコンが変化します
+        %br
+        全駅制覇を目指しましょう
+.rootfooter
+  %p
+    © 2019 Team C 
