@@ -68,3 +68,7 @@ gem 'gon'
 gem 'faraday'
 gem 'pry-rails'
 gem 'exifr'
+group :production do
+  gem 'rails_12factor'
+end
+ruby '2.5.1'
