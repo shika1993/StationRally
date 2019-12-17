@@ -4,7 +4,8 @@
 .header__right
   
   .header__right__current
-    = "ようこそ #{current_user.name} さん"
+    = link_to user_path(current_user.id) do
+      = "ようこそ #{current_user.name} さん"
 
   .header__right__btn
     - if user_signed_in?

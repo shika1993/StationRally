@@ -7,6 +7,7 @@ class ImagesController < ApplicationController
   def index
     @image = Image.new
     @images = @station.images.order("id DESC")
+    @station_id = @station.id
     en_name = @station.en_name
     en_station = Point.where("en_name=?", en_name)
     gon.point = en_station[0][:points]
@@ -19,7 +20,7 @@ class ImagesController < ApplicationController
 
     if @image.save
       UsersStation.create(user_id: image_user, station_id: image_station)
-      flag = UsersStation.where(user_id: current_user.id, station_id:@station.id)
+      flag = UsersStation.where(user_id: current_user.id, station_id: @station.id)
 
       if flag.length == 1
         en_name = @station.en_name
@@ -32,9 +33,8 @@ class ImagesController < ApplicationController
 
       end
       redirect_to station_images_path(@station.id)
-
     else
-      flash[:flag] = ""
+      flash[:no_photo_flag] = ""
       redirect_to station_images_path(@station.id)
     end
   end

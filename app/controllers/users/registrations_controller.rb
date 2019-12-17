@@ -13,7 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    def create
     if user_signed_in?
     else
-      flash[:flag] = ""
+      flash[:flag_first] = ""
     end
      super
    end
