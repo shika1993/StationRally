@@ -1,6 +1,7 @@
 class MapsController < ApplicationController
 
   def index
+    @key = ENV["YAHOO_API_KEY"]
     gon.names = Station.pluck(:name)
     gon.geolats = Station.pluck(:geolat)
     gon.geolongs = Station.pluck(:geolong)
