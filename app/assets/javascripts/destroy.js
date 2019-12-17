@@ -16,12 +16,12 @@ $(function() {
     });
     $('.swal2-confirm').click(function(){
       $.ajax({
-        url: '/stations/'+station_id+'/images/'+image_id,
-        type: 'DELETE',
+        url: '/users/edit/',
+        type: 'DELETE', 
         dataType: 'json',
         success: function() {
           location.reload();
-        },error: function () {
+        },error: function() {
           Swal.fire({
             text: '退会手続きに失敗しました',
             icon: 'warning', 
@@ -29,7 +29,7 @@ $(function() {
             background: 'white',
             confirmButtonColor: '#99CCFF',
           });
-      }
+        }
     });
     });
   });  
