@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'
   }
   root to: 'maps#index'
-  resources :users, only: [:edit, :update, :show] do
+
+  resources :users, only: [:edit, :update, :show, :destroy] do
     resources :favorites, only: [:index]
   end
   resources :stations, only: [:index, :show] do

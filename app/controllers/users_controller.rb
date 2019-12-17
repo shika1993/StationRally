@@ -12,6 +12,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   def show
     @images = Image.where("user_id = ?", current_user.id)
   end
