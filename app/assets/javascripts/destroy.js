@@ -16,21 +16,13 @@ $(function() {
     });
     $('.swal2-confirm').click(function(){
       $.ajax({
-        url: '/users/edit/',
+        url: '/users/',
         type: 'DELETE', 
         dataType: 'json',
         success: function() {
-          location.reload();
-        },error: function() {
-          Swal.fire({
-            text: '退会手続きに失敗しました',
-            icon: 'warning', 
-            showCancelButton: false,
-            background: 'white',
-            confirmButtonColor: '#99CCFF',
-          });
+          document.location.href = "/";
         }
-    });
+      });
     });
   });  
 });
