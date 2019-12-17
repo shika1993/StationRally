@@ -42,11 +42,9 @@ class MapsController < ApplicationController
 
   def set_ranking
     @user = User.all.order('points desc')
-    @ranking = 1
     @user.find_each do |user|
-    @ranking += 1
-      if user.id == current_user.id
-        return @ranking
+      if user_id == current_user.id
+        @ranking = @user.index(id)
       end
       else
       end
