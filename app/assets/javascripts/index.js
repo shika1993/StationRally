@@ -3,7 +3,7 @@ var stylemaplayer;
 var layerset;
 
 window.onload = function() {
-    console.log("hello");
+
     map = new Y.Map("map",{"configure":{"scrollWheelZoom":true}});
     stylemaplayer = new Y.StyleMapLayer("railway");
     setStyle();
