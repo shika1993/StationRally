@@ -88,5 +88,6 @@ Rails.application.configure do
   config.assets.precompile += ['lightbox.min.js']
   config.assets.precompile += ['new.js']
   config.assets.precompile += ['password_error.js']
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
 
 end
