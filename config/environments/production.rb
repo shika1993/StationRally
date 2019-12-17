@@ -89,4 +89,6 @@ Rails.application.configure do
   config.assets.precompile += ['new.js']
   config.assets.precompile += ['password_error.js']
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  Rails.application.secrets.yahoo_api_key = ENV["YAHOO_API_KEY"]
+  Rails.application.secrets.opd_api_key = ENV["OPD_API_KEY"]
 end
