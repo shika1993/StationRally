@@ -6,11 +6,6 @@
   .header__right__current
     = "ようこそ #{current_user.name} さん"
 
-  .header__right__rank
-    .header__right__rank__oukan
-      👑
-    .header__right__rank__value
-      = @ranking
   .header__right__btn
     - if user_signed_in?
       %ul

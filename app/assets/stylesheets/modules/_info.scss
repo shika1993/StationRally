@@ -8,32 +8,6 @@
   z-index: 3;
   padding: 10px;
   
-  &__rank {
-    display: flex;
-    justify-content: center;
-    font-family: 'tegaki';
-
-    &__key {
-      font-size: 20px;
-      color: $white;
-      margin-top: 10px;
-    }
-    &__value {
-      font-size: 30px;
-      color: $formcolor;
-      text-shadow: 1px 1px red;
-      margin-top: 5px;
-      margin-left: 10px;
-    }
-    &__label {
-      font-size: 20px;
-      color: $white;
-      margin-top: 15px;
-      margin-left: 10px;
-    }
-
-  }
-  
   &__point {
     display: flex;
     justify-content: center;
