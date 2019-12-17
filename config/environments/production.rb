@@ -88,5 +88,5 @@ Rails.application.configure do
   config.assets.precompile += ['lightbox.min.js']
   config.assets.precompile += ['new.js']
   config.assets.precompile += ['password_error.js']
-
+  config.secret_key = 'dfaac4dcd476a2551b1b7593b675ae04c38f2be4ff97ff5fda69404807a8d50eefd265c075aa03ab154ce637553e7b8e15f58c3ac3224a379f5e10888641194d'
 end
