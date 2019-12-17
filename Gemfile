@@ -70,6 +70,5 @@ gem 'pry-rails'
 gem 'exifr'
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 ruby '2.5.1'
