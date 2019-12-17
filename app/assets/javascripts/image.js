@@ -17,6 +17,7 @@ $(function() {
       $.ajax({
         url: '/stations/'+station_id+'/images/'+image_id,
         type: 'DELETE',
+        dataType: 'json',
         success: function() {
           location.reload();
         },error: function () {
