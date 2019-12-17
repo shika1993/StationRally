@@ -4,7 +4,7 @@
 
 #map
 
-%script{:charset => "utf-8", :src => YAHOO_API_KEY, :type => "text/javascript"}
+%script{:charset => "utf-8", :src => ENV[YAHOO_API_KEY], :type => "text/javascript"}
 .info
   .info__rank
     .info__rank__key
