@@ -1,3 +1,4 @@
+= javascript_include_tag 'destroy.js'
 .header
   = render partial: "maps/devise-header"
 
@@ -22,6 +23,10 @@
       .user__right__field--input
         = f.email_field :email
       = f.submit "変更する", class: 'user__right__actions'
+    .user__right__delete
+      = button_to user_registration_path, method: :delete do
+        .user__right__delete--font
+          退会する
     .user__right__backlink
       = link_to '/' do
         .user__right__backlink--font 

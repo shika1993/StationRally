@@ -1,26 +1,24 @@
 $(function() {
-  $('.main__images__picture__delete').click(function(e){
-    e.preventDefault(); 
-    var station_id = $(this)[0].baseURI.split("/")[4];
-    var image_id = $(this).parent()[0].innerHTML.split("/")[4];
+  $('.user__right__delete').click(function(e){
+    e.preventDefault();
     Swal.fire({
-      text: '削除しますか？',
-      icon: 'question', 
+      title: '本当に退会しますか？',  
+      text: '投稿した写真などの情報が全て削除されます',
+      icon:'warning', 
       showCancelButton: true,
       background: 'white',
-      confirmButtonColor: '#99CCFF',
+      confirmButtonColor: '#cc0000',
       cancelButtonColor: 'gray',
       confirmButtonText: 'OK',
-      cancelButtonText: '削除しない'
+      confirmButtonColor: '#cc0000',
+      cancelButtonText: '退会しない'
     });
     $('.swal2-confirm').click(function(){
       $.ajax({
-        url: '/stations/'+station_id+'/images/'+image_id,
-        type: 'DELETE',
+        url: '/users/',
+        type: 'DELETE', 
         dataType: 'json',
         success: function() {
-          location.reload();
-        },error: function () {
           Swal.fire({
             text: '写真の削除に失敗しました',
             icon: 'warning', 
@@ -28,8 +26,11 @@ $(function() {
             background: 'white',
             confirmButtonColor: '#99CCFF',
           });
-      }
-    });
+        },error: function () {
+          location.href = "/";
+        }  
+      });
     });
   });  
 });
+

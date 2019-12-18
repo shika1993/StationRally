@@ -23,7 +23,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -88,5 +88,9 @@ Rails.application.configure do
   config.assets.precompile += ['lightbox.min.js']
   config.assets.precompile += ['new.js']
   config.assets.precompile += ['password_error.js']
-
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  Rails.application.secrets.yahoo_api_key = ENV["YAHOO_API_KEY"]
+  Rails.application.secrets.opd_api_key = ENV["OPD_API_KEY"]
+  Rails.application.secrets.aws_access_key_id = ENV["AWS_ACCESS_KEY_ID"]
+  Rails.application.secrets.aws_secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
 end
