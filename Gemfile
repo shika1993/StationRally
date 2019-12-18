@@ -68,7 +68,7 @@ gem 'gon'
 gem 'faraday'
 gem 'pry-rails'
 gem 'exifr'
-
+gem 'fog-aws'
 group :production do
   gem 'rails_12factor'
   gem 'fog-aws'
