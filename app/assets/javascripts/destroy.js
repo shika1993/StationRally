@@ -2,14 +2,15 @@ $(function() {
   $('.user__right__delete').click(function(e){
     e.preventDefault();
     Swal.fire({
-      title: '退会しますか？',  
+      title: '本当に退会しますか？',  
       text: '投稿した写真などの情報が全て削除されます',
-      icon: 'question', 
+      icon:'warning', 
       showCancelButton: true,
       background: 'white',
-      confirmButtonColor: '#99CCFF',
+      confirmButtonColor: '#cc0000',
       cancelButtonColor: 'gray',
       confirmButtonText: 'OK',
+      confirmButtonColor: '#cc0000',
       cancelButtonText: '退会しない'
     });
     $('.swal2-confirm').click(function(){
@@ -32,3 +33,4 @@ $(function() {
     });
   });  
 });
+
