@@ -1,8 +1,6 @@
 $(function() {
   $('.user__right__delete').click(function(e){
-    e.preventDefault(); 
-    var station_id = $(this)[0].baseURI.split("/")[4];
-    var image_id = $(this).parent()[0].innerHTML.split("/")[4];
+    e.preventDefault();
     Swal.fire({
       title: '退会しますか？',  
       text: '投稿した写真などの情報が全て削除されます',
@@ -20,8 +18,16 @@ $(function() {
         type: 'DELETE', 
         dataType: 'json',
         success: function() {
-          document.location.href = "/";
-        }
+          Swal.fire({
+            text: '写真の削除に失敗しました',
+            icon: 'warning', 
+            showCancelButton: false,
+            background: 'white',
+            confirmButtonColor: '#99CCFF',
+          });
+        },error: function () {
+          location.href = "/";
+        }  
       });
     });
   });  
