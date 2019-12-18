@@ -73,8 +73,84 @@
       margin-top: 40px;
       margin-left: 10px;
     }
-
   }
-
+}
+@media screen and (max-width:480px) {
+  .info {
+    height: 100px;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    background : $headterfooter;
+    border-radius: 10px;
+    z-index: 3;
+    padding: 10px;
+    
+    &__count {
+      display: flex;
+      justify-content: center;
+      font-family: 'tegaki';
   
+      &__key {
+        font-size: 13px;
+        color: $white;
+        margin-top: 12px;
+      }
+      &__value {
+        font-size: 25px;
+        color: $formcolor;
+        text-shadow: 1px 1px $shikagray;  
+        margin-top: 5px;
+        margin-left: 20px;
+      }
+      &__label {
+        font-size: 13px;
+        color: $white;
+        margin-top: 12px;
+        margin-left: 20px;
+      }
+    }
+    &__point {
+      display: flex;
+      justify-content: center;
+      font-family: 'tegaki';
+  
+      &__key {
+        font-size: 13px;
+        color: $white;
+        margin-top: 17px;
+      }
+      &__value {
+        font-size: 25px;
+        color: $formcolor;
+        text-shadow: 1px 1px $shikagray;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+    &__rank {
+      display: flex;
+      justify-content: center;
+      font-family: 'tegaki';
+  
+      &__key {
+        font-size: 13px;
+        color: $white;
+        margin-top: 5px;
+      }
+      &__value {
+        font-size: 25px;
+        color: $formcolor;
+        text-shadow: 1px 1px red;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+      &__label {
+        font-size: 13px;
+        color: $white;
+        margin-top: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
 }

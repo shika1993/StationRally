@@ -53,3 +53,64 @@
     }
   }
 }
+@media screen and (max-width:480px) {
+  .header{
+    height: 60px;
+    width:100%;
+    background : $headterfooter;
+    display: flex;
+    justify-content: space-between;
+    margin:auto 0;
+    z-index: 3;
+    position: fixed;
+    &__left{
+      margin: auto 0;
+      color: $white;
+      margin: auto 10px;
+      font-size: 20px;
+      font-family: "hikki";
+      z-index: 1;
+      a{
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    &__right{
+      margin: auto 0;
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      
+      &__current{
+        height: 30px;
+        color: $white;
+        text-align: right;
+        font-family: 'kosugi';
+        font-size: 10px;
+        margin: 0 auto;
+        line-height: 30px;
+        padding-right: 10px;
+        a{
+          text-decoration: none;
+          color:white;
+        }
+      }
+  
+      &__btn ul{
+        display: flex;
+        line-height: 27px;
+        li{
+          margin: auto 0;
+          a{
+            line-height: 30px;
+            text-decoration: none;
+            color: $white;
+            font-size: 8px;
+            font-family: 'kosugi';
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
