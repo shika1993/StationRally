@@ -12,9 +12,9 @@
       = button_to  "/stations/#{station_id}/images/#{image.id}/favorites", method: :create, style: "border:none", class: "favorite-button"+"#{image.id}"do
         .main__images__picture__favorite__icon
           -if Favorite.where(["user_id = ? and image_id = ?", current_user.id, image.id]) == []
-            = image_tag "https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/favorite2.png"
+            = image_tag "https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/favorite2.jpeg"
           -else
-            = image_tag "https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/favorite1.png"
+            = image_tag "https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/favorite1.jpeg"
   .main__images__picture__text
     %p
       = image.text
