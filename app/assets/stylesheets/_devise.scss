@@ -65,20 +65,24 @@
           font-size: 15px;
           text-align: center;
           line-height: 40px;
-      } 
+        } 
     }
     &__delete {
       height: 40px;
       width: 150px;
-      background-color: $devisebuttoncolor;
-      border-radius: 8px;
       margin: 10% auto;
-        &--font {
-          color: $white;
+      form.button_to{
+        button{
+          height: 40px;
+          width: 150px;
+          border-radius: 8px;
           font-size: 15px;
-          text-align: center;
-          line-height: 40px;
-      } 
+          border-style: none;
+          background-color: #cc0000;
+          color: $white;
+          outline: none;
+        }  
+      }
     }
     &__backlink {
       height: 40px;
