@@ -19,5 +19,5 @@
     %p
       = image.text
   .main__images__picture__date
-    - date = EXIFR::JPEG.new(s3://shikanai1993/uploads/image/picture/31/images__3_.jpeg)
+    - date = EXIFR::JPEG.new(image.picture.current_path)
     = date.date_time_original.try(:strftime,"'%y %-m %-d %R")
