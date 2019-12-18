@@ -7,6 +7,13 @@
 %script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{Rails.application.secrets.yahoo_api_key}", :type => "text/javascript"}
 
 .info
+  .info__count
+    .info__count__key
+      残り
+    .info__count__value
+      = 76 - @gone_station
+    .info__count__label
+      駅 
   .info__point
     .info__point__key
       ポイント
@@ -16,13 +23,6 @@
       写真を投稿してポイントをゲットしよう！
       %br
         レアな駅ほどポイントが高いよ！
-  .info__count
-    .info__count__key
-      残り
-    .info__count__value
-      = 76 - @gone_station
-    .info__count__label
-      = 駅
   .info__rank
     .info__rank__key
       ランキング👑
