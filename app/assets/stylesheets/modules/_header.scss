@@ -34,7 +34,11 @@
       line-height: 30px;
       margin-right: 20px;
     }
-
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+    
     &__btn ul{
       display: flex;
       li{
