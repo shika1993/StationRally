@@ -50,4 +50,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     1..5.megabytes
   end
 
+  process :get_exif_info
+
+  def get_exif_info
+    exif = EXIFR::JPEG::new(self.file.file)
+    binding.pry
+  end 
+
 end
