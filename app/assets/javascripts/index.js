@@ -24,7 +24,7 @@ window.onload = function() {
     var station_points = gon.station_points
     for ( var i=0, l=ids.length; l>i; i++ ) {
       
-      var icon1 = new Y.Icon('https://s3-ap-northeast-1.amazonaws.com/shikanai1993/uploads/image/picture/train2.png',{className: "icons1 "+ ids[i]+" "+ names[i] + " " +station_points[i]});
+      var icon1 = new Y.Icon('/uploads/image/picture/train2.png',{className: "icons1 "+ ids[i]+" "+ names[i] + " " +station_points[i]});
       var test_marker = new Y.Marker(new Y.LatLng(geolats[i],geolongs[i]),{icon: icon1});
       markers.push(test_marker);
 
