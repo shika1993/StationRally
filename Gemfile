@@ -71,6 +71,6 @@ gem 'exifr'
 
 group :production do
   gem 'rails_12factor'
-  gem 'fog'
+  gem 'fog-aws'
 end
 ruby '2.5.1'
