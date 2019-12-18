@@ -41,11 +41,11 @@ class MapsController < ApplicationController
   private
 
   def set_ranking
-    @user = User.all.order('points desc')
-    @user.find_each do |user|
-      if user_id == current_user.id
-        @ranking = @user.index(id)
-      end
+    @user = User.all.order('points desc') 
+        @user.find_each do |user| 
+          if user == current_user
+            @ranking = @user.index(user) + 1
+          end
       else
       end
   end
