@@ -91,4 +91,6 @@ Rails.application.configure do
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
   Rails.application.secrets.yahoo_api_key = ENV["YAHOO_API_KEY"]
   Rails.application.secrets.opd_api_key = ENV["OPD_API_KEY"]
+  Rails.application.secrets.aws_access_key_id = ENV["AWS_ACCESS_KEY_ID"]
+  Rails.application.secrets.aws_secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
 end
