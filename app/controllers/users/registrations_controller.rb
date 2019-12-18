@@ -30,7 +30,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # DELETE /resource
   def destroy
-    super   
+    destroy_user_ids = Image.where("user_id= ?",current_user.id).ids
+    destroy_user_ids.each do |id|
+      destroy_user_image = Favorite.where("image_id = ?", id)
+      destroy_user_image.destroy_all
+    end
+    super
   end
 
   # GET /resource/cancel
