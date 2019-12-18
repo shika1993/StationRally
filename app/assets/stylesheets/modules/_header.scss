@@ -37,7 +37,7 @@
 
     &__rank{
       height: 30px;
-      padding-right: 50px;
+      padding-right: 50px;  
       color: $white;
       font-family: 'tegaki';
       display: flex;
@@ -49,6 +49,10 @@
         line-height: 30px;
         text-shadow: 1px 1px red;
         font-size: 30px;
+      }
+      a{
+        text-decoration: none;
+        color:white;
       }
     }
 

@@ -7,8 +7,9 @@
 
   &__left {
     width: 50%;
-    background: linear-gradient( 135deg, rgba(151, 255, 119, 0.6), rgba(43, 82, 255, 0.8)),url(/assets/tokyo.jpg);
+    background: linear-gradient( 135deg, rgba(99, 255, 51, 0.8), rgba(43, 82, 255, 0.8)),url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/tokyo.jpg);
     background-size: cover;
+    background-position-x: 60%;
     position:relative;
     &__text{
       width:100%;
@@ -26,6 +27,7 @@
   &__right {
     width: 50%;
     padding-top: 10%;
+    height: calc(100vh - 120px);
     
     &__title {
       color:$shikagray;
@@ -45,7 +47,6 @@
       background-color: $devisebuttoncolor;
       border-radius: 8px;
       margin: 10% auto;
-
         &--font {
           color: $white;
           font-size: 15px;
@@ -59,13 +60,29 @@
       background-color: $devisebuttoncolor;
       border-radius: 8px;
       margin: 10% auto;
-
         &--font {
           color: $white;
           font-size: 15px;
           text-align: center;
           line-height: 40px;
-      } 
+        } 
+    }
+    &__delete {
+      height: 40px;
+      width: 150px;
+      margin: 10% auto;
+      form.button_to{
+        button{
+          height: 40px;
+          width: 150px;
+          border-radius: 8px;
+          font-size: 15px;
+          border-style: none;
+          background-color: #cc0000;
+          color: $white;
+          outline: none;
+        }  
+      }
     }
     &__backlink {
       height: 40px;
@@ -80,6 +97,7 @@
           line-height: 40px;
       } 
     }
+    
     #new_user{
       text-align: center;
     }  

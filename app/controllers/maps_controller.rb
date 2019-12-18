@@ -32,7 +32,6 @@ class MapsController < ApplicationController
       station_points << point
     end
     gon.station_points = station_points
-    #javascriptでは var station_points = gon.station_pointsのように
   end
 
   def show

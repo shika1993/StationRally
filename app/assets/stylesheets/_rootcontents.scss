@@ -5,13 +5,15 @@ body{
   height: 100%;
 }
 .contents{
-  height: 2000px;
+  height: 200vh;
   width: 100vw;
-  background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)),url(/assets/camera.jpg);
+  background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
   background-size: cover;
+  background-position-x: 60%;
   &__title{
-    height: 300px;
+    height: 30vh;
     width: 100vw;
+    padding-top: 60px;
     position: relative;
     font-family: 'hikki';
     font-size: 100px;
@@ -30,7 +32,7 @@ body{
     }
   }
   &__Description{
-    height: 800px;
+    height: 70vh;
     width: 100vw;
     position: relative;
     font-family: 'Hiragino Maru Gothic ProN';
@@ -47,7 +49,7 @@ body{
     }
   }
   &__how-to-logo{
-    height: 200px;
+    height: 40vh;
     width: 100vw;
     position: relative;
 

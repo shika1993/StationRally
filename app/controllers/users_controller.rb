@@ -12,10 +12,24 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
+  def show
+    @images = Image.where("user_id = ?", current_user.id)
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email)
+  end
+
+  private
+
+  def image_params
+    params.require(:image).permit(:picture, :text).merge(user_id: current_user.id)
+
   end
 end
 

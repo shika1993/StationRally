@@ -24,7 +24,7 @@ window.onload = function() {
     var station_points = gon.station_points
     for ( var i=0, l=ids.length; l>i; i++ ) {
       
-      var icon1 = new Y.Icon('/assets/train2.png',{className: "icons1 "+ ids[i]+" "+ names[i] + " " +station_points[i]});
+      var icon1 = new Y.Icon('https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/train2.png',{className: "icons1 "+ ids[i]+" "+ names[i] + " " +station_points[i]});
       var test_marker = new Y.Marker(new Y.LatLng(geolats[i],geolongs[i]),{icon: icon1});
       markers.push(test_marker);
 
@@ -47,7 +47,7 @@ window.onload = function() {
 
     for ( var i=0, l=still_ids.length; l>i; i++ ) {
 
-      var icon2 = new Y.Icon('/assets/star1.png',{className: "icons2 "+ still_ids[i]+" "+ still_names[i] + " "+station_points[i]});
+      var icon2 = new Y.Icon('https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/star1.png',{className: "icons2 "+ still_ids[i]+" "+ still_names[i] + " "+station_points[i]});
       var test_marker2 = new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2});
       markers2.push(test_marker2);
 

@@ -1,0 +1,24 @@
+.header
+  = render partial: "header"
+.main
+  - if flash[:flag]
+    .notifications
+      :javascript
+        $(function(){
+          Swal.fire({ 
+          text: '写真を選択してください',
+          icon: 'warning', 
+          showCancelButton: false,
+          background: 'white',
+          confirmButtonColor: '#99CCFF',
+          });
+        });
+  - elsif flash[:first_photo]
+    .omedetou
+      = javascript_include_tag 'omedetou.js'
+  .main__stationname
+    マイアルバム
+  .main__images
+    = render partial: 'image', collection: @images, as: :image
+= javascript_include_tag 'choice.js'
+= javascript_include_tag 'lightbox.min'
