@@ -2,7 +2,7 @@ $(function() {
   $('.main__images__picture__delete').click(function(e){
     e.preventDefault(); 
     var station_id = $(this)[0].baseURI.split("/")[4];
-    var image_id = $(this).parent()[0].innerHTML.split("/")[4];
+    var image_id = $(this).parent()[0].innerHTML.split("/")[7];
     Swal.fire({
       text: '削除しますか？',
       icon: 'question', 
