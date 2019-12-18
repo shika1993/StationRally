@@ -1,5 +1,5 @@
 .header
-  = render partial: "maps/header"
+  = render partial: "header"
 .main
   - if flash[:flag]
     .notifications
@@ -20,6 +20,5 @@
     マイアルバム
   .main__images
     = render partial: 'image', collection: @images, as: :image
-.postform
-  = render partial: "form"
+= javascript_include_tag 'choice.js'
 = javascript_include_tag 'lightbox.min'
