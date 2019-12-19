@@ -37,13 +37,21 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      test_marker.bind("click", function(){
-        var station_id = this.node[0].classList[1]
-        document.location.href = "/stations/"+station_id+"/images";
-      })
+      if (matchMedia('(max-width: 480px)').matches) {
+        test_marker.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          var station_url = "/stations/"+station_id+"/images"
+          var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "<a href = '"+station_url+"' >"+this.node[0].classList[2] + "</a>" + "　"+this.node[0].classList[3] + "pt");
+          map.addFeature(label);
+        })
+      } else {
+        test_marker.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          document.location.href = "/stations/"+station_id+"/images";
+        })
+      }
 
     }
-
 
     for ( var i=0, l=still_ids.length; l>i; i++ ) {
 
@@ -52,7 +60,7 @@ window.onload = function() {
       markers2.push(test_marker2);
 
       test_marker2.bind("mouseover", function(){
-        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + this.node[0].classList[2] + "✨");
+        var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + + this.node[0].classList[2] + "✨");
         map.addFeature(label);
       })
 
@@ -60,12 +68,20 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      test_marker2.bind("click", function(){
-        var station_id = this.node[0].classList[1]
-        document.location.href = "/stations/"+station_id+"/images";
-      })
+      if (matchMedia('(max-width: 480px)').matches) {
+        test_marker2.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          var station_url = "/stations/"+station_id+"/images"
+          var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + "<a href = '"+station_url+"' >"+this.node[0].classList[2] + "</a>" + "✨" );
+          map.addFeature(label);
+        })
+      } else {
+        test_marker2.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          document.location.href = "/stations/"+station_id+"/images";
+        })
+      }
     }
-
       map.addFeatures(markers);
       map.addFeatures(markers2);
 
