@@ -1,19 +1,19 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  
-  # process :fix_rotate
-
-  #   # アップロードした写真が回転してしまう問題に対応
-  #   def fix_rotate
-  #       manipulate! do |img|
-  #           img = img.auto_orient
-  #           img = yield(img) if block_given?
-  #           img
-  #       end
-  #   end
     
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
+  
+  process :fix_exif_rotation_and_strip_exif
+
+  def fix_exif_rotation_and_strip_exif
+    manipulate! do |img|
+      img.auto_orient # よしなに！
+      img.strip       # Exif情報除去
+      img = yield(img) if block_given?
+      img
+    end
+  end
+end
 
   # Choose what kind of storage to use for this uploader:
   storage :fog
