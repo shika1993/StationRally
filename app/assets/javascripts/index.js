@@ -37,10 +37,19 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      test_marker.bind("click", function(){
-        var station_id = this.node[0].classList[1]
-        document.location.href = "/stations/"+station_id+"/images";
-      })
+      if (matchMedia('(max-width: 480px)').matches) {
+        test_marker.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          var station_url = "/stations/"+station_id+"/images"
+          var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "<a href = '"+station_url+"' >"+this.node[0].classList[2] + "</a>" + "　"+this.node[0].classList[3] + "pt");
+          map.addFeature(label);
+        })
+      } else {
+        test_marker.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          document.location.href = "/stations/"+station_id+"/images";
+        })
+      }
 
     }
 
@@ -49,9 +58,7 @@ window.onload = function() {
       var icon2 = new Y.Icon('https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/star1.png',{className: "icons2 "+ still_ids[i]+" "+ still_names[i] + " "+station_points[i]});
       var test_marker2 = new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2});
       markers2.push(test_marker2);
-        // var marker2 = markers2[i];
-        // marker2.bindInfoWindow('<a href="'+ url2 +'">'+still_names[i]+'駅の写真を投稿する</a>');
-      
+
       test_marker2.bind("mouseover", function(){
         var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + + this.node[0].classList[2] + "✨");
         map.addFeature(label);
