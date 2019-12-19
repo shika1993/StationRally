@@ -8,10 +8,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   def fix_exif_rotation_and_strip_exif
     manipulate! do |img|
       img.auto_orient # よしなに！
-      img.strip       # Exif情報除去
+      # img.strip       # Exif情報除去
       img = yield(img) if block_given?
       img
     end
+  end
 end
 
   # Choose what kind of storage to use for this uploader:
