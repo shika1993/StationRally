@@ -1,5 +1,5 @@
 Swal.fire({
-  text: 'そのE-maiはすでに使用されています',
+  text: 'そのE-mailはすでに使用されています',
   icon: 'warning', 
   showCancelButton: false,
   background: 'white',

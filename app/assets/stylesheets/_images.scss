@@ -157,15 +157,15 @@
       padding: 90px 0px 90px 0px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: calc(calc(100vw - 40px) / 2) calc(calc(100vw - 40px) / 2);
       grid-gap: 3px;
-      row-gap: 3px;
+      row-gap: 2px;
         &__picture{
           position: relative;
           margin-bottom: -6px;
           img{
             object-fit: cover;
-            height: 400px;
+            height: 96%;
             width: 100%;
           }
           a{
@@ -231,9 +231,9 @@
           &__text{
             width: 55%;
             position: absolute;
-            top:360px;
-            left:10px;
-            line-height: 17px;
+            top: 82%;
+            left: 2%;
+            line-height: 10px;
             border-radius: 3px;
             padding: 0px 5px 0px 5px;
             
@@ -242,7 +242,7 @@
               font-family: 'tegaki';
               background-color: rgba(100, 100, 100, 0.6);
               box-shadow: 0 0 5px 1px #616161;
-              font-size: 17px;
+              font-size: 10px;
               color:$white;
             }
           }

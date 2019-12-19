@@ -7,7 +7,7 @@ body{
 .contents{
   height: 200vh;
   width: 100vw;
-  background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.68)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
   background-size: cover;
   background-position-x: 60%;
   &__title{
@@ -25,10 +25,10 @@ body{
       transform : translate(-50%,-50%);
       width: 100vw;
       text-align: center;
-      color: #ACB6E5;//非対応のブラウザ用
+      color: #ACB6E5;
       background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
-      -webkit-background-clip: text;//テキストでくり抜く
-      -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   &__Description{
@@ -95,9 +95,9 @@ body{
   .contents{
     height: 230vh;
     width: 100vw;
-    background: linear-gradient( 135deg, rgba(218, 212, 253, 0.8), rgba(200, 200, 200, 0.8)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.68)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
     background-size: cover;
-    background-position-x: 60%;
+    background-position-x: 75%;
     &__title{
       height: 30vh;
       width: 100vw;
@@ -151,10 +151,10 @@ body{
         transform : translate(-50%,-50%);
         width: 100vw;
         text-align: center;
-        color: #ACB6E5;//非対応のブラウザでの文字色を設定
+        color: #ACB6E5;
         background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
-        -webkit-background-clip: text;//テキストでくり抜く
-        -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
     &__how-to-use{
