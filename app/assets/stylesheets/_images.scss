@@ -156,8 +156,8 @@
     &__images{
       padding: 90px 0px 90px 0px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: calc(calc(100vw - 40px) / 2) calc(calc(100vw - 40px) / 2);
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows:1fr 1fr;
       grid-gap: 3px;
       row-gap: 2px;
         &__picture{
@@ -165,7 +165,7 @@
           margin-bottom: -6px;
           img{
             object-fit: cover;
-            height: 96%;
+            height: 215px;
             width: 100%;
           }
           a{
@@ -231,7 +231,7 @@
           &__text{
             width: 55%;
             position: absolute;
-            top: 82%;
+            top: 85%;
             left: 2%;
             line-height: 10px;
             border-radius: 3px;
