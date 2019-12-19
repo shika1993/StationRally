@@ -69,10 +69,8 @@ gem 'faraday'
 gem 'pry-rails'
 gem 'exifr'
 gem 'fog-aws'
-gem 'aws-sdk-s3'
 group :production do
   gem 'rails_12factor'
   gem 'fog-aws'
-  gem 'aws-sdk-s3'
 end
 ruby '2.5.1'
