@@ -15,3 +15,15 @@ CarrierWave.configure do |config|
   config.fog_directory  = 'shikanai1993'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/shikanai1993'
 end
+
+module CarrierWave
+  module MiniMagick
+    def fix_exif_rotation
+      manipulate! do |img|
+        img.auto_orient
+        img = yield(img) if block_given?
+        img
+      end
+    end
+  end
+end 
