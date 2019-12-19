@@ -4,6 +4,7 @@
   position: relative;
 
   .yolp-layer p{
+    
     height: 20px;
     font-size: 20px;
     line-height: 20px;
@@ -16,7 +17,10 @@
     border-radius: 10px;
     top: 5px;
     left: -60px;  
-    
+    a{
+      text-decoration: none;
+      color: $white;
+    }
     p{  
       visibility: hidden;
     }
