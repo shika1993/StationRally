@@ -81,7 +81,6 @@ window.onload = function() {
           document.location.href = "/stations/"+station_id+"/images";
         })
       }
-    
     }
       map.addFeatures(markers);
       map.addFeatures(markers2);
