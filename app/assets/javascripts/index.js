@@ -50,7 +50,7 @@ window.onload = function() {
       var icon2 = new Y.Icon('https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/star1.png',{className: "icons2 "+ still_ids[i]+" "+ still_names[i] + " "+station_points[i]});
       var test_marker2 = new Y.Marker(new Y.LatLng(still_geolats[i],still_geolongs[i]),{icon: icon2});
       markers2.push(test_marker2);
-
+      
       test_marker2.bind("mouseover", function(){
         var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + this.node[0].classList[2] + "✨");
         map.addFeature(label);
@@ -60,12 +60,19 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      test_marker2.bind("click", function(){
-        var station_id = this.node[0].classList[1]
-        document.location.href = "/stations/"+station_id+"/images";
-      })
+      if (matchMedia('(max-width: 480px)').matches) {
+        // ウィンドウサイズが480px以下のとき
+        test_marker2.bind("click", function(){
+          var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "✨" + this.node[0].classList[2] + "✨");
+          map.addFeature(label);
+        })
+      } else {
+        test_marker2.bind("click", function(){
+          var station_id = this.node[0].classList[1]
+          document.location.href = "/stations/"+station_id+"/images";
+        })
+      }
     }
-
       map.addFeatures(markers);
       map.addFeatures(markers2);
 
