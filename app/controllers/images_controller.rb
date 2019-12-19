@@ -19,7 +19,7 @@ class ImagesController < ApplicationController
     image_station = @image.station_id
     if @image.save
       #binding.pry
-      @picture = EXIFR::JPEG.new(@image.picture_url.slice!("https://s3-ap-northeast-1.amazonaws.com/shikanai1993/uploads/image/picture/27")
+      #@picture = EXIFR::JPEG.new(@image.picture_url.slice!("https://s3-ap-northeast-1.amazonaws.com/shikanai1993/uploads/image/picture/27")
       UsersStation.create(user_id: image_user, station_id: image_station)
       flag = UsersStation.where(user_id: current_user.id, station_id: @station.id)
 
