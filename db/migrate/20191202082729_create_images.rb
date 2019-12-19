@@ -5,7 +5,7 @@ class CreateImages < ActiveRecord::Migration[5.0]
       t.string :text
       t.references :user, null: false, unique: true, foreign_key: true
       t.references :station, null: false, unique: true, foreign_key: true, index: true
-      t.datetime :photograph_at
+      t.string :photograph_at
       t.timestamps
     end
   end

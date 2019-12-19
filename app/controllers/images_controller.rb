@@ -20,7 +20,10 @@ class ImagesController < ApplicationController
       UsersStation.create(user_id: image_user, station_id: image_station)
       flag = UsersStation.where(user_id: current_user.id, station_id: @station.id)
       photographTime = Timestamp.last.photograph_at
+      photo = Timestamp.last
+      photo.update(image_id: @image.id)
       Image.last.update(photograph_at: photographTime)
+      @image_time = @image.photograph_at
       if flag.length == 1
         en_name = @station.en_name
         en_station = Point.where("en_name=?", en_name)
@@ -45,11 +48,15 @@ class ImagesController < ApplicationController
   def destroy
     image = Image.find(params[:id])
     station_id = image.station_id
+    Timestamp.find_by("image_id=?",image.id).destroy
+    Favorite.find_by("image_id=?",image.id).destroy
     if image.destroy
       respond_to do |format|
         format.json
       end
+
     else
+ 
     end
 
   end

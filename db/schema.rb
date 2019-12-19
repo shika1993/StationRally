@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20191219081052) do
     t.string   "text"
     t.integer  "user_id",       null: false
     t.integer  "station_id",    null: false
-    t.datetime "photograph_at"
+    t.string   "photograph_at"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["station_id"], name: "index_images_on_station_id", using: :btree
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20191219081052) do
   end
 
   create_table "timestamps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "photograph_at"
+    t.string   "photograph_at"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "image_id"

@@ -19,5 +19,4 @@
     %p
       = image.text
   .main__images__picture__date
-    -# - date = EXIFR::JPEG.new(favorite_image.picture_url)
-    -# = date.date_time_original.try(:strftime,"'%y %-m %-d %R")
+    = image.photograph_at
