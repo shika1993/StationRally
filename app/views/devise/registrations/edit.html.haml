@@ -13,10 +13,10 @@
     .user__right__field
     = form_for(current_user) do |f|
       .user__right__field--label
-        = f.label :ユーザー名
+        = f.label :ユーザー名（10文字以内）
         %br/
       .user__right__field--input
-        = f.text_field :name, autofocus: true
+        = f.text_field :name, maxlength: '10', autofocus: true, autocomplete: "name"
       .user__right__field--label
         = f.label :'E-mail'
         %br/    
