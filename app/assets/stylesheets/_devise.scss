@@ -26,8 +26,8 @@
   
   &__right {
     width: 50%;
-    padding-top: 10%;
-    height: calc(100vh - 120px);
+    padding-top: 10vh;
+    height: calc(100vh - 10vh);
     &__title {
       color:$shikagray;
       font-size: 40px;
@@ -190,7 +190,7 @@
   
     &__left {
       width: 100%;
-      height: calc(50vh - 30px);
+      height: 35vh;
       background: linear-gradient( 135deg, rgba(99, 255, 51, 0.8), rgba(43, 82, 255, 0.8)),url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/tokyo.jpg);
       background-size: cover;
       background-position-x: 60%;
@@ -210,8 +210,8 @@
     
     &__right {
       width: 100%;
-      height: calc(50vh + 30px);
-      padding-top: 5%;
+      height: 68vh;
+      padding-top: 0%;
       &__title {
         color:$shikagray;
         font-size: 30px;

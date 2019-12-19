@@ -42,7 +42,19 @@
       color: $white;
       text-decoration: none;
     }
-    
+    &__favorite{
+      height: 30px;
+      color: $white;
+      text-align: right;
+      font-family: 'kosugi';
+      margin: 0 auto;
+      line-height: 30px;
+      padding-right: 50px;
+      a{
+        text-decoration: none;
+        color:white;
+      }
+    }
     &__btn ul{
       display: flex;
       li{
@@ -63,14 +75,13 @@
     width:100%;
     background : $headterfooter;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin:auto 0;
     z-index: 3;
     position: fixed;
     &__left{
-      margin: auto 0;
-      color: $white;
       margin: auto 10px;
+      color: $white;
       font-size: 20px;
       font-family: "hikki";
       z-index: 1;
@@ -80,38 +91,58 @@
       }
     }
     &__right{
-      margin: auto 0;
+      margin: 15px 0px 15px -10px;
       display: flex;
-      height: 30px;
-      line-height: 30px;
       
       &__current{
-        height: 30px;
+        width: 35vw;
         color: $white;
         text-align: right;
         font-family: 'kosugi';
         font-size: 10px;
         margin: 0 auto;
-        line-height: 30px;
-        padding-right: 10px;
+        transform: scale(0.8);
+        padding-right: 0px;
+        line-height: 20px;
+        margin-right: -3vw;
         a{
           text-decoration: none;
           color:white;
         }
       }
-  
-      &__btn ul{
-        display: flex;
-        line-height: 27px;
-        li{
-          margin: auto 0;
-          a{
-            line-height: 30px;
-            text-decoration: none;
-            color: $white;
-            font-size: 8px;
-            font-family: 'kosugi';
-            margin-right: 5px;
+
+      &__favorite{
+        height: 30px;
+        width: 25vw;
+        color: $white;
+        text-align: right;
+        font-family: 'kosugi';
+        line-height: 30px;
+        padding-right: 0px;
+        margin-left: 7vw;
+        transform: scale(0.8);
+        a{
+        text-decoration: none;
+        color:white;
+        font-size: 12px;
+        }
+      }
+
+      &__btn{
+        width: 50vw;
+        transform: scale(0.8);
+        margin: 0 0 0px -5vw;
+        ul{
+          display: flex;
+          li{
+            margin: 0 auto;
+            a{
+              margin-right: 0px;
+              text-decoration: none;
+              color: $white;
+              font-size: 12px;
+              font-family: 'kosugi';
+            }
           }
         }
       }

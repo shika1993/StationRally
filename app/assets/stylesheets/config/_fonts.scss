@@ -8,10 +8,16 @@
 
 @font-face {
   font-family: 'hikki';
-  src: font-url('BraxtonDemo-Regular.ttf') format('truetype');
+  src: font-url('DancingScript-Bold.ttf') format('truetype');
+  font-weight: bold;
+  //DL元⇛https://fonts.google.com/specimen/Dancing+Script?selection.family=Dancing+Script
+}
+
+@font-face {
+  font-family: 'hikki';
+  src: font-url('DancingScript-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
-  //DL元⇛https://www.fontfabric.com/fonts/braxton/
+  //DL元⇛https://fonts.google.com/specimen/Dancing+Script?selection.family=Dancing+Script
 }
 
 @font-face {

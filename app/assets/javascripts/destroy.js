@@ -3,7 +3,7 @@ $(function() {
     e.preventDefault();
     Swal.fire({
       title: '本当に退会しますか？',  
-      text: '投稿した写真などの情報が全て削除されます',
+      html: '投稿した写真などの情報が<br>全て削除されます',
       icon:'warning', 
       showCancelButton: true,
       background: 'white',
