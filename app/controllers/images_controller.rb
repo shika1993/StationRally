@@ -19,6 +19,8 @@ class ImagesController < ApplicationController
     if @image.save
       UsersStation.create(user_id: image_user, station_id: image_station)
       flag = UsersStation.where(user_id: current_user.id, station_id: @station.id)
+      photographTime = Timestamp.last.photograph_at
+      Image.last.update(photograph_at: photographTime)
       if flag.length == 1
         en_name = @station.en_name
         en_station = Point.where("en_name=?", en_name)

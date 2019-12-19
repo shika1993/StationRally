@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191213162325) do
+ActiveRecord::Schema.define(version: 20191219081052) do
 
   create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",    null: false
@@ -22,12 +22,13 @@ ActiveRecord::Schema.define(version: 20191213162325) do
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "picture",    null: false
+    t.string   "picture",       null: false
     t.string   "text"
-    t.integer  "user_id",    null: false
-    t.integer  "station_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",       null: false
+    t.integer  "station_id",    null: false
+    t.datetime "photograph_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["station_id"], name: "index_images_on_station_id", using: :btree
     t.index ["user_id"], name: "index_images_on_user_id", using: :btree
   end
@@ -48,6 +49,14 @@ ActiveRecord::Schema.define(version: 20191213162325) do
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
     t.string   "en_name"
+  end
+
+  create_table "timestamps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "photograph_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "image_id"
+    t.index ["image_id"], name: "index_timestamps_on_image_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
