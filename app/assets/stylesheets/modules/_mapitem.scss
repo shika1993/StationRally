@@ -38,7 +38,7 @@
   height:20px;
 }
 
-.info__point__value{
+.info__point__key{
   position: relative;
 }
 
@@ -58,6 +58,6 @@
 
 
 
-.info__point__value:hover + .fukidashi {
+.info__point__key:hover + .fukidashi {
   display: block;
 }
