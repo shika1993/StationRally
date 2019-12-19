@@ -5,7 +5,7 @@ namespace :api_process do
   task make_stations_table: :environment do
     class TrainAPI
       BASE_URL = 'https://api-tokyochallenge.odpt.org/api/v4/odpt:'
-      CONSUMER_KEY= ENV["OPD_API_KEY"]
+      CONSUMER_KEY = ENV["OPD_API_KEY"]
 
       def self.make_get_request(path, params)
         url = BASE_URL + path
