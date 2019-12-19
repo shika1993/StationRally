@@ -94,7 +94,7 @@
       &__key {
         font-size: 13px;
         color: $white;
-        margin-top: 12px;
+        margin-top: 15px;
       }
       &__value {
         font-size: 25px;
@@ -106,8 +106,8 @@
       &__label {
         font-size: 13px;
         color: $white;
-        margin-top: 12px;
-        margin-left: 20px;
+        margin-top: 15px;
+        margin-left: 25px;
       }
     }
     &__point {
@@ -118,7 +118,7 @@
       &__key {
         font-size: 13px;
         color: $white;
-        margin-top: 17px;
+        margin-top: 20px;
       }
       &__value {
         font-size: 25px;
@@ -136,12 +136,12 @@
       &__key {
         font-size: 13px;
         color: $white;
-        margin-top: 5px;
+        margin-top: 15px;
       }
       &__value {
         font-size: 25px;
         color: $formcolor;
-        text-shadow: 1px 1px red;
+        text-shadow: 1px 1px $shikagray;
         margin-top: 5px;
         margin-left: 10px;
       }

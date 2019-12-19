@@ -95,7 +95,7 @@
       display: flex;
       
       &__current{
-        width: 35vw;
+        width: 36vw;
         color: $white;
         text-align: right;
         font-family: 'kosugi';
@@ -103,11 +103,15 @@
         margin: 0 auto;
         transform: scale(0.8);
         padding-right: 0px;
-        line-height: 20px;
-        margin-right: -3vw;
+        line-height: 18px;
+        margin: 6px -5vw 0px 0vw;
+        text-align: center;
         a{
           text-decoration: none;
           color:white;
+        }
+        span{
+          display: inline-block;
         }
       }
 
