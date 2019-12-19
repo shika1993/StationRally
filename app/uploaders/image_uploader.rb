@@ -1,4 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  
+  process :get_exif_info
+  def get_exif_info
+    exif = EXIFR::JPEG::new(self.file.file).date_time_original.try(:strftime,"'%y %-m %-d %R")
+  end 
   # Include RMagick or MiniMagick support:
     
   include CarrierWave::MiniMagick
@@ -60,8 +65,5 @@ class ImageUploader < CarrierWave::Uploader::Base
   def size_range
     1..5.megabytes
   end
-
-
-  
 
 end
