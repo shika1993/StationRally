@@ -48,8 +48,12 @@ class ImagesController < ApplicationController
   def destroy
     image = Image.find(params[:id])
     station_id = image.station_id
-    Timestamp.find_by("image_id=?",image.id).destroy
-    Favorite.find_by("image_id=?",image.id).destroy
+    if Timestamp.find_by("image_id=?",image.id)
+      Timestamp.find_by("image_id=?",image.id).destroy
+    end
+    if Favorite.find_by("image_id=?",image.id)
+      Favorite.find_by("image_id=?",image.id).destroy
+    end
     if image.destroy
       respond_to do |format|
         format.json
