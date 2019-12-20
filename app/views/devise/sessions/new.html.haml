@@ -1,16 +1,14 @@
+= javascript_include_tag 'scroll.js'
 .header
   = render partial: "maps/devise-header"
-
 .user
   .user__left
     .user__left__img 
-
     .user__left__text
       みんなの写真で駅が映える！
       %br 撮って進める新感覚スタンプラリー
   .user__right
     .user__right__area
-      
     .user__right__title
       ログイン
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -36,11 +34,13 @@
   - if flash[:flag_in]
     .user__right__error
       = javascript_include_tag 'new.js'
-
+  .user__bottom
+    %a{:href => "#contents__title"}
+      %span
+      What is<br>StationRally?
 .contents
-  .contents__title
+  .contents__title#contents__title
     %p What is Station Rally ?
-
   .contents__Description
     %p 
       これまでにスタンプラリーをしたことがありますか？
@@ -56,7 +56,9 @@
       %br
       %br
       ゴールは、全駅制覇です。
-  .contents__how-to-logo
+    %a{:href => "#contents__step"}
+      %span
+  .contents__how-to-logo#contents__step
     %p How to use it?
   .contents__how-to-use
     .contents__how-to-use__step1
