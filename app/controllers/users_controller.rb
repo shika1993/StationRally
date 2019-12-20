@@ -17,6 +17,12 @@ class UsersController < ApplicationController
 
   def show
     @images = Image.where("user_id = ?", current_user.id)
+    @stations = []
+    @images.each do |image|
+      station_id = image.station_id
+      station = Station.find_by("id = ?", station_id)
+      @stations << station
+    end
   end
 
   private

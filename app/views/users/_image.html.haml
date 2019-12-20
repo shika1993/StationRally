@@ -5,6 +5,6 @@
 
   .main__images__picture__text
     %p
-      = image.text
+      = image.text + "@#{Station.find_by("id=?",image.station_id).name}"
   .main__images__picture__date
     = image.photograph_at
