@@ -224,7 +224,7 @@ body{
     }
   }
 }
-@media screen and (max-width: 769px){
+@media screen and (min-width:768px) and ( max-width:1024px){
   .contents{
     height: 195vh;
     width: 100vw;
