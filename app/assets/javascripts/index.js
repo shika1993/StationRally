@@ -39,10 +39,14 @@ window.onload = function() {
 
       if (matchMedia('(max-width: 480px)').matches) {
         test_marker.bind("click", function(){
-          var station_id = this.node[0].classList[1]
-          var station_url = "/stations/"+station_id+"/images"
-          var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "<a href = '"+station_url+"' >"+this.node[0].classList[2] + "</a>" + "　"+this.node[0].classList[3] + "pt");
-          map.addFeature(label);
+          if($(".yolp-tlchp").length == 0){
+            var station_id = this.node[0].classList[1]
+            var station_url = "/stations/"+station_id+"/images"
+            var label = new Y.Label(new Y.LatLng(this.latlng.Lat,this.latlng.Lon), "<a href = '"+station_url+"' >"+this.node[0].classList[2] + "</a>" + "　"+this.node[0].classList[3] + "pt");
+            map.addFeature(label);
+          }else{
+            $("p").parent().remove()
+          }
         })
       } else {
         test_marker.bind("click", function(){
