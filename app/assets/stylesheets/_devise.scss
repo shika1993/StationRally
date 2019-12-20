@@ -365,3 +365,186 @@
     }
   }
 }
+@media screen and (max-width: 769px){
+  .user {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Hiragino Maru Gothic ProN';
+    background-color: $white;
+  
+    &__left {
+      width: 50%;
+      background: linear-gradient( 135deg, rgba(99, 255, 51, 0.8), rgba(43, 82, 255, 0.8)),url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/tokyo.jpg);
+      background-size: cover;
+      background-position-x: 60%;
+      position:relative;
+      &__text{
+        width:100%;
+        color: $white;
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        font-family: 'Hiragino Maru Gothic ProN';
+        font-size: 40px;
+      }
+    }
+    
+    &__right {
+      width: 50%;
+      padding-top: 15vh;
+      height: calc(100vh - 15vh);
+      &__title {
+        color:$shikagray;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: $textshadow;
+      }
+  
+      a{
+        text-decoration: none;
+      }
+  
+      &__newlink {
+        height: 40px;
+        width: 150px;
+        background-color: $devisebuttoncolor;
+        border-radius: 8px;
+        margin: 10% auto;
+          &--font {
+            color: $white;
+            font-size: 15px;
+            text-align: center;
+            line-height: 40px;
+          }
+      }
+      &__mainlink {
+        height: 40px;
+        width: 150px;
+        background-color: $devisebuttoncolor;
+        border-radius: 8px;
+        margin: 10% auto;
+          &--font {
+            color: $white;
+            font-size: 15px;
+            text-align: center;
+            line-height: 40px;
+          } 
+      }
+      &__delete {
+        height: 40px;
+        width: 150px;
+        margin: 10% auto;
+        form.button_to{
+          button{
+            height: 40px;
+            width: 150px;
+            border-radius: 8px;
+            font-size: 15px;
+            border-style: none;
+            background-color: #cc0000;
+            color: $white;
+            outline: none;
+          }  
+        }
+      }
+      &__backlink {
+        height: 40px;
+        width: 150px;
+        background-color: $devisebuttoncolor;
+        border-radius: 8px;
+        margin: 10% auto;
+          &--font {
+            color: $white;
+            font-size: 15px;
+            text-align: center;
+            line-height: 40px;
+        } 
+      }
+      
+      #new_user{
+        text-align: center;
+      }  
+      form.edit_user{
+        text-align: center;
+      }
+  
+      &__field {
+        &--label {
+          font-size: 20px;
+          color:$shikagray;
+          text-shadow: $textshadow;;
+        }
+        
+        &--input {
+          input {
+            width: 400px;
+            padding: 10px;
+            background-color: $formcolor;
+          }
+        }
+  
+        &--checkbox {
+          padding-top: 3%;
+          
+         &__checkbox {
+            margin: 0 0 10px 20px;
+         }
+          label {
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 20px;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+          }
+        
+          label:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            background-color:#fff;
+            box-shadow: inset 1px 2px 3px 0px #000;
+            border-radius: 6px 6px 6px 6px;
+          }
+        
+          input[type=checkbox] {
+            display: none;
+          }
+        
+          input[type=checkbox]:checked + label:before {
+            content: "\2713"; 
+            font-size: 20px;
+            color: white;
+            background-color: rgb(88, 155, 255); 
+          }
+        }
+      }
+      &__actions {
+        height: 80px;
+        width: 200px;
+        background-color: $devisebuttoncolor;
+        border-radius: 10px;
+        border: none;
+        color: $white; 
+        font-size: 30px;
+        margin-top: 10%;
+      }
+  
+      &__error {
+        text-align: center;
+        color: $errorcolor;
+        font-weight: bold;
+        text-shadow: $textshadow;
+        position: relative;
+        top: -150px;
+      }
+    }
+  }
+}

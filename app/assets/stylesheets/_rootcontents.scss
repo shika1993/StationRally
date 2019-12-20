@@ -224,3 +224,136 @@ body{
     }
   }
 }
+@media screen and (max-width: 769px){
+  .contents{
+    height: 195vh;
+    width: 100vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.68)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
+    background-size: cover;
+    background-position-x: 75%;
+    &__title{
+      height: 30vh;
+      width: 100vw;
+      padding-top: 60px;
+      position: relative;
+      font-family: 'hikki';
+      font-size: 70px;
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        width: 100vw;
+        text-align: center;
+        color: #ACB6E5;//非対応のブラウザ用
+        background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
+        -webkit-background-clip: text;//テキストでくり抜く
+        -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+      }
+    }
+    &__Description{
+      height: 70vh;
+      width: 100vw;
+      position: relative;
+      font-family: 'Hiragino Maru Gothic ProN';
+      font-size: 22px;
+      p{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        width: 100vw;
+        text-align: center;
+        color: $shikagray;
+      }
+    }
+    &__how-to-logo{
+      height: 10vh;
+      width: 100vw;
+      position: relative;
+  
+      font-family: 'hikki';
+      font-size: 70px;
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        width: 100vw;
+        text-align: center;
+        color: #ACB6E5;
+        background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &__how-to-use{
+      height: 75vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0 auto;
+      &__step1{
+        width: 250px;
+        height: 200px;
+        background: rgba(252, 255, 255, 0.5);
+        padding: 10px 20px;
+        img{
+          width:250px;
+        }
+        span{
+        font-size: 25px;
+        font-family: 'hikki';
+        color: $shikagray;
+        }
+        p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+        font-size: 13px;
+        }
+      }
+      &__step2{
+        width: 250px;
+        height: 200px;
+        background: rgba(252, 255, 255, 0.5);
+        padding: 10px 20px;
+        img{
+          width: 250px;
+        }
+        span{
+        font-size: 25px;
+        font-family: 'hikki';
+        color: $shikagray;
+        }
+        p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+        font-size: 10px;
+        }
+      }
+      &__step3{
+        width: 250px;
+        height: 200px;
+        background: rgba(252, 255, 255, 0.5);
+        padding: 10px 20px;
+        img{
+          width: 250px;
+        }
+        span{
+        font-size: 25px;
+        font-family: 'hikki';
+        color: $shikagray;
+        }
+        p{
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: $shikagray;
+        font-size: 10px;
+        }
+      }
+    }
+  }
+}
