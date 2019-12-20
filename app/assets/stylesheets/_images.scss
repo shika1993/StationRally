@@ -199,7 +199,7 @@
             }
           &__favorite {
             top:15px;
-            right: 7px;
+            right: px;
             border-radius: 11px;
             position: absolute;
             background: rgba(100,100,100,0.3);
@@ -332,8 +332,8 @@
               }
             }
           &__favorite {
-            top:15px;
-            right: 7px;
+            top: -5px;
+            right: -13px;
             border-radius: 11px;
             position: absolute;
             background: rgba(100,100,100,0.3);
