@@ -37,7 +37,7 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      if (matchMedia('(max-width: 480px)').matches) {
+      if (matchMedia('(max-width: 1025px)').matches) {
         test_marker.bind("click", function(){
           if($(".yolp-tlchp").length == 0){
             var station_id = this.node[0].classList[1]
@@ -72,7 +72,7 @@ window.onload = function() {
         $("p").parent().remove()
       })
 
-      if (matchMedia('(max-width: 480px)').matches) {
+      if (matchMedia('(max-width: 1025px)').matches) {
         test_marker2.bind("click", function(){
           var station_id = this.node[0].classList[1]
           var station_url = "/stations/"+station_id+"/images"
