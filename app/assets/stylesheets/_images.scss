@@ -181,8 +181,8 @@
             background: rgba(100,100,100,0.3);
               form.button_to{
                 button{
-                  top:-13px;
-                  right: -6px;
+                  top:-12px;
+                  right: -24.5px;
                   font-size: 25px;
                   font-family: 'Hiragino Mincho ProN';
                   text-decoration: none;
@@ -213,7 +213,7 @@
               form.button_to{
                 button{
                   top: -20px;
-                  right: -16.5px;
+                  right: -35px;
                   font-size: 25px;
                   font-family: 'Hiragino Mincho ProN';
                   text-decoration: none;
@@ -249,8 +249,8 @@
           &__date{
             position: absolute;
             top: 200px;
-            right: 0px;
-            padding: 0px 5px 0px 5px;
+            right: -10px;
+            padding: 0px 0px 0px 5px;
             color: rgb(236, 135, 76);
             font-family : 'tegaki';
             font-size: 10px;
@@ -259,7 +259,7 @@
             text-shadow: 0px 0px 5px rgb(214, 90, 18);
             backdrop-filter: blur(1px);
             border-radius: 7px;
-            transform: scale(0.8);
+            transform: scale(0.7);
           }
         }
     }
@@ -347,7 +347,7 @@
             }
               form.button_to{
                 button{
-                  top:-20px;
+                  top:-10px;
                   right: -16.5px;
                   font-size: 25px;
                   font-family: 'Hiragino Mincho ProN';
