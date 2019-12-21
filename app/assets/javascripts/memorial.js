@@ -40,7 +40,7 @@ $(function(){
       showCancelButton: false,
       background: 'white',
       confirmButtonColor: '#99CCFF',
-      backdrop : `rgba(255,120,253,0.2)`
+      backdrop : 'rgba(255,120,253,0.2)'
     });
   }
   if (rest == '0'){
@@ -54,7 +54,7 @@ $(function(){
       showCancelButton: false,
       background: 'white',
       confirmButtonColor: '#99CCFF',
-      backdrop : `rgba(255,211,13,0.2)`
+      backdrop : 'rgba(255,211,13,0.2)'
     });
   } 
   else {
