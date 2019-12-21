@@ -52,7 +52,7 @@ $(function(){
       backdrop : `rgba(255,120,253,0.2)`
     });
   }
-  if (rest == '76'){
+  if (rest == '0'){
     Swal.fire({ 
       title: '全駅制覇！',
       text: 'おめでとうございます！全ての駅を制覇しました！',
