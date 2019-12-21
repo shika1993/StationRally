@@ -154,12 +154,12 @@
       }
     }
     &__images{
-      padding: 90px 0px 90px 0px;
+      padding: 60px 0px 90px 0px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows:1fr 1fr;
-      grid-gap: 3px;
-      row-gap: 2px;
+      column-gap: 3px;
+      row-gap: 3px;
         &__picture{
           position: relative;
           margin-bottom: -6px;
@@ -181,8 +181,8 @@
             background: rgba(100,100,100,0.3);
               form.button_to{
                 button{
-                  top:-10px;
-                  right: -24.5px;
+                  top:-13px;
+                  right: -6px;
                   font-size: 25px;
                   font-family: 'Hiragino Mincho ProN';
                   text-decoration: none;
@@ -198,8 +198,8 @@
               }
             }
           &__favorite {
-            top:5px;
-            right: -5px;
+            top:7px;
+            right: 19px;
             border-radius: 11px;
             position: absolute;
             background: rgba(100,100,100,0.3);
@@ -248,7 +248,7 @@
           }
           &__date{
             position: absolute;
-            top: 195px;
+            top: 200px;
             right: 0px;
             padding: 0px 5px 0px 5px;
             color: rgb(236, 135, 76);
@@ -259,6 +259,7 @@
             text-shadow: 0px 0px 5px rgb(214, 90, 18);
             backdrop-filter: blur(1px);
             border-radius: 7px;
+            transform: scale(0.8);
           }
         }
     }
