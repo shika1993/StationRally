@@ -16,9 +16,7 @@ class FavoritesController < ApplicationController
       station_id = params[:station_id]
       respond_to do |format|
         format.json
-        #format.html redirect_to redirect_to station_images_path(station_id)
       end
-      #redirect_to station_images_path(station_id)
       
     else
       image = Favorite.find_by(user_id: current_user.id, image_id: params[:image_id])
@@ -26,9 +24,7 @@ class FavoritesController < ApplicationController
       image.destroy
       respond_to do |format|
         format.json
-        #format.html redirect_to redirect_to station_images_path(station_id)
       end
-      #redirect_to station_images_path(station_id)
     end
   end
 
