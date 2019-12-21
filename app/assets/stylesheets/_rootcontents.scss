@@ -17,13 +17,14 @@ body{
     position: relative;
     font-family: 'hikki';
     font-size: 100px;
+    scroll-behavior: smooth;
     p{
+      width: 100vw;
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform : translate(-50%,-50%);
       transform : translate(-50%,-50%);
-      width: 100vw;
       text-align: center;
       color: #ACB6E5;
       background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
@@ -33,7 +34,6 @@ body{
   }
   &__Description{
     height: 70vh;
-    width: 100vw;
     position: relative;
     font-family: 'Hiragino Maru Gothic ProN';
     font-size: 20px;
@@ -47,12 +47,36 @@ body{
       text-align: center;
       color: $shikagray;
     }
+    a {
+      padding-top: 70px;
+      text-decoration: none;
+      color: $white;
+      font-family: 'hikki';
+      font-weight: normal;
+      font-size: 30px;
+    }
+    a span {
+      position: absolute;
+      top: 45vh;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 2px solid $shikagray;
+      border-bottom: 2px solid $shikagray;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-animation: sdb 1.5s infinite;
+      animation: sdb 1.5s infinite;
+      box-sizing: border-box;
+    }
   }
+  
   &__how-to-logo{
     height: 40vh;
     width: 100vw;
     position: relative;
-
+    scroll-behavior: smooth;
     font-family: 'hikki';
     font-size: 100px;
     p{
@@ -84,7 +108,67 @@ body{
       @include step();
     }
   }
+  &__scroll-up{
+    position: relative;
+    text-align: center;
+    top: 8vh;
+    a {
+      text-decoration: none;
+      font-family: 'hikki';
+      font-weight: normal;
+      font-size: 40px;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      text-align: center;
+      color: #ACB6E5;
+      background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    a span {
+      position: absolute;
+      top: -7vh;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 1px solid $shikagray;
+      border-bottom: 1px solid $shikagray;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(90deg);
+      -webkit-animation: sdb 1.5s infinite;
+      animation: sdb 1.5s infinite;
+      box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb {
+      0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+      }
+    @keyframes sdb {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+    }
+  }
 }
+
 @media screen and (max-width:480px) {
   html{
     height: 100%;
@@ -93,7 +177,7 @@ body{
     height: 100%;
   }
   .contents{
-    height: 230vh;
+    height: 250vh;
     width: 100vw;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.68)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
     background-size: cover;
@@ -137,10 +221,10 @@ body{
       }
     }
     &__how-to-logo{
-      height: 10vh;
+      height: 15vh;
       width: 100vw;
       position: relative;
-  
+      padding-top: 60px;
       font-family: 'hikki';
       font-size: 40px;
       p{
@@ -158,7 +242,7 @@ body{
       }
     }
     &__how-to-use{
-      height: 110vh;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -226,7 +310,7 @@ body{
 }
 @media screen and (min-width:768px) and ( max-width:1024px){
   .contents{
-    height: 195vh;
+    height: 220vh;
     width: 100vw;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.68)), url(https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/camera.jpg);
     background-size: cover;
@@ -237,7 +321,7 @@ body{
       padding-top: 60px;
       position: relative;
       font-family: 'hikki';
-      font-size: 70px;
+      font-size: 50px;
       p{
         position: absolute;
         top: 50%;
@@ -273,7 +357,6 @@ body{
       height: 10vh;
       width: 100vw;
       position: relative;
-  
       font-family: 'hikki';
       font-size: 70px;
       p{

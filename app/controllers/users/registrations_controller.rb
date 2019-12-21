@@ -30,10 +30,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # DELETE /resource
   def destroy
-    destroy_user_ids = Image.where("user_id= ?",current_user.id).ids
-    destroy_user_ids.each do |id|
-      destroy_user_image = Favorite.find_by("image_id = ?", id).delete
-      destroy__image_time = Timestamp.find_by("image_id = ?", id).delete
+    destroy_user_id = Image.where("user_id= ?",current_user.id).ids
+    destroy_user_id.each do |id|
+      if destroy_user_image = Favorite.find_by("image_id = ?", id)
+        destroy_user_image = Favorite.find_by("image_id = ?", id).delete
+      end
+      if destroy__image_time = Timestamp.find_by("image_id = ?", id)
+       destroy__image_time = Timestamp.find_by("image_id = ?", id).delete
+      end
+    end
+    if current_user.destroy
+      respond_to do |format|
+        format.json
+      end
     end
     super
   end

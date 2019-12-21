@@ -25,3 +25,31 @@
     }
   }
 }
+@media screen and (max-width:480px) {
+  .rootfooter{
+    height: 40px;
+    width: 100vw;
+    background-color: $shikagray;
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+  }
+  
+  .mapfooter{
+    height: 30px;
+    width: 100vw;
+    background-color: $shikagray;
+    bottom: 0;
+    &__credit{
+      font-size: 10px;
+      text-align: right;
+      line-height: 30px;
+      padding-right: 10px;
+      a{
+        text-decoration: none;
+        color: $white;
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -19,13 +19,7 @@ $(function() {
         type: 'DELETE', 
         dataType: 'json',
         success: function() {
-          Swal.fire({
-            text: '退会処理ができませんでした',
-            icon: 'warning', 
-            showCancelButton: false,
-            background: 'white',
-            confirmButtonColor: '#99CCFF',
-          });
+          location.href = "/";
         },error: function () {
           location.href = "/";
         }  

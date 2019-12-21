@@ -1,16 +1,16 @@
 $(function(){
 
-  $('.button_to').on("click" , function(e) {
+  $('.favorite-button').on("click" , function(e) {
     e.preventDefault();
-    var station_id = this.action.split("/")[4]
-    var image_id = this.action.split("/")[6]
+    var station_id = $(this).parent()[0].action.split("/")[4]
+    var image_id = $(this).parent()[0].action.split("/")[6]
     $.ajax({
       url: '/stations/'+station_id+'/images/'+image_id+"/favorites",
       type: 'POST', 
       dataType: 'json'
     })
     .done(function(){
-      location.reload();
+      location.href = '/stations/'+station_id+'/images/';
     })
     .fail(function() {
       Swal.fire({
