@@ -1,11 +1,9 @@
 $(function(){
 
-  $('.button_to').submit( function(e) {
-
+  $('.button_to').on("click" , function(e) {
     e.preventDefault();
-    var station_id = $(".favorite-button").context.activeElement.parentElement.action.split("/")[4]
-    var image_id = $(".favorite-button").context.activeElement.parentElement.action.split("/")[6]
-
+    var station_id = this.action.split("/")[4]
+    var image_id = this.action.split("/")[6]
     $.ajax({
       url: '/stations/'+station_id+'/images/'+image_id+"/favorites",
       type: 'POST', 
