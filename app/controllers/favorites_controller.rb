@@ -14,19 +14,12 @@ class FavoritesController < ApplicationController
     if Favorite.where(user_id: current_user.id, image_id: params[:image_id]) == []
       Favorite.create(user_id: current_user.id, image_id: params[:image_id])
       station_id = params[:station_id]
-      respond_to do |format|
-        format.json
-        format.html { redirect_to station_images_path(station_id)}
-      end
-      
+      redirect_to station_images_path(station_id)
     else
       image = Favorite.find_by(user_id: current_user.id, image_id: params[:image_id])
       station_id = params[:station_id]
       image.destroy
-      respond_to do |format|
-        format.json
-        format.html { redirect_to station_images_path(station_id)}
-      end
+      redirect_to station_images_path(station_id)
     end
     
   end
