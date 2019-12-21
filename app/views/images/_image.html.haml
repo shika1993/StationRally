@@ -1,3 +1,5 @@
+= javascript_include_tag 'image.js'
+= javascript_include_tag 'favorite.js'
 .main__images__picture
   %a{"data-lightbox" => "group", "data-title" => "#{image.text}", :href => "#{image.picture_url}"}
     = image_tag image.picture_url
@@ -5,13 +7,12 @@
     .main__images__picture__delete
       = button_to "/stations/#{station_id}/images/#{image.id}", method: :delete, style: "border:none" do
         .main__images__picture__delete--font
-          = javascript_include_tag 'image.js'
           ×
   - else
     .main__images__picture__favorite
       = button_to  "/stations/#{station_id}/images/#{image.id}/favorites", method: :create, style: "border:none", class: "favorite-button"do
         .main__images__picture__favorite__icon
-          = javascript_include_tag 'favorite.js'
+
           -if Favorite.where(["user_id = ? and image_id = ?", current_user.id, image.id]) == []
             = image_tag "https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/favorite2.jpeg"
           -else
