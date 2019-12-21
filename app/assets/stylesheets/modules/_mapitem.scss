@@ -65,3 +65,73 @@
 .info__point__key:hover + .fukidashi {
   display: block;
 }
+
+@media screen and (max-width:480px) {
+  #map{
+    width:100%;
+    height:calc(100vh - 30px);
+    position: relative;
+  
+    .yolp-layer p{
+      
+      height: 20px;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: "tegaki";
+      text-align: center;
+      background-color: $shikagray;
+      opacity: 0.9;
+      color: $white;
+      border: none;
+      border-radius: 10px;
+      top: 5px;
+      left: -60px;  
+      a{
+        text-decoration: none;
+        color: $white;
+      }
+      p{  
+        visibility: hidden;
+      }
+    }
+  
+    a.yolp-ymapbanner{
+      pointer-events:none;
+      visibility: hidden;
+    }
+  }
+  
+  .icons1{
+    height:20px;
+    background-color: $white;
+    border-radius: 5px;
+  }
+  
+  .icons2{
+    height:20px;
+  }
+  
+  .info__point__key{
+    position: relative;
+  }
+  
+  .fukidashi{
+    display: none;
+    width: 440px;
+    position: absolute;
+    bottom: 30%;
+    left: 105%;
+    padding: 16px;
+    border-radius: 5px;
+    background: #33cc99;
+    color: #f1f1f1ff;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  
+  
+  .info__point__key:hover + .fukidashi {
+    display: block;
+  }
+}
