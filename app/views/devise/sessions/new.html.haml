@@ -1,7 +1,7 @@
 = javascript_include_tag 'scroll.js'
 .header
   = render partial: "maps/devise-header"
-.user
+.user#user
   .user__left
     .user__left__img 
     .user__left__text
@@ -34,7 +34,7 @@
   - if flash[:flag_in]
     .user__right__error
       = javascript_include_tag 'new.js'
-  .user__bottom
+  .user__scroll
     %a{:href => "#contents__title"}
       %span
       What is<br>StationRally?
@@ -80,6 +80,10 @@
         写真投稿後は駅のアイコンが変化します
         %br
         全駅制覇を目指しましょう
+  .contents__scroll-up
+    %a{:href => "#user"}
+      %span
+      Let’s get started!
 .rootfooter
   %p
     © 2019 Team C 

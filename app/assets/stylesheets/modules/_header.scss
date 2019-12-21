@@ -71,7 +71,7 @@
 }
 @media screen and (max-width:480px) {
   .header{
-    height: 60px;
+    height: 30px;
     width:100%;
     background : $headterfooter;
     display: flex;
@@ -91,7 +91,7 @@
       }
     }
     &__right{
-      margin: 15px 0px 15px -10px;
+      margin: 0px 0px 0px -10px;
       display: flex;
       
       &__current{
