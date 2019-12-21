@@ -27,7 +27,7 @@
           display: none;
         }
       
-        &__erea {
+        &__area {
           width: 14.3%;
           height: 60px;
           text-align: center;
@@ -119,7 +119,7 @@
             display: none;
           }
         
-          &__erea {
+          &__area {
             width: 25%;
             height: 60px;
             text-align: center;
@@ -156,6 +156,99 @@
         width: 20%;
         height: 60px;
         margin-left: 76%;
+        border-radius: 3px;
+        background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
+        font-family: 'tegaki';
+        font-size: 25px;
+        color: $shikagray;
+      }
+    }
+    &__credit{
+      text-align: right;
+      line-height: 80px;
+      padding-right: 10px;
+        a{
+        text-decoration: none;
+        color: $shikagray;
+        font-family: 'kosugi';
+        font-size: 15px;
+        }
+    }
+  }
+}
+@media screen and (min-width:768px) and ( max-width:1024px){
+  .postform{
+    height: 80px;
+    width: 100%;
+    background: $headterfooter;
+    position: fixed;
+    bottom: 0;
+   
+    &__commentform{
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      padding-top: 10px; 
+      a{
+        text-decoration: none;
+        color:#fff;
+        font-family: 'kosugi';
+        line-height:70px;
+        position:absolute;
+        right:50px;
+        font-size: 25px;
+      }
+      &__input{
+        
+        &__picture {
+        
+          &__btn {
+            display: none;
+          }
+        
+          &__area {
+            width: 14.3%;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 30px;
+            background: linear-gradient(-20deg, #CCFFFF, #99CCFF);
+            font-size: 20px;
+            color: $shikagray;
+            margin-top: 0;
+            margin-left: 17%;
+            cursor: pointer;
+            font-family: 'tegaki';
+            position: absolute; 
+          }
+        }
+        
+        &__text{  
+          position: absolute;
+          width: 30%;
+          height: 60px;
+          margin-left: 32%;
+          font-size: 15px;
+          color: $shikagray;
+          background-color: #CCFFFF;
+          padding: 0 10px 0;
+          font-family: 'tegaki';  
+        }
+      }
+      &__choice {
+        margin-left: 66%;
+        position: absolute;
+        img{
+          object-fit: cover;
+          height: 60px;
+          width: 100%;
+        }
+      }
+      &__submit{
+        position: absolute;
+        width: 11%;
+        height: 60px;
+        margin-left: 71%;
         border-radius: 3px;
         background: linear-gradient(-20deg, #99CCFF, #CCFFFF);
         font-family: 'tegaki';
