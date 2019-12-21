@@ -20,7 +20,7 @@ $(function() {
         dataType: 'json',
         success: function() {
           Swal.fire({
-            text: '写真の削除に失敗しました',
+            text: '退会処理ができませんでした',
             icon: 'warning', 
             showCancelButton: false,
             background: 'white',
