@@ -26,7 +26,6 @@ class MapsController < ApplicationController
     @gone_station = user_station.select(:station_id).distinct.length
     @rest_station = 76 - @gone_station
     gon.rest_station = @rest_station
-    gon.gone_station = @gone_station
     
     station_points = []
     gon.id.each do |id|
