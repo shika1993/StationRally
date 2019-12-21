@@ -24,7 +24,10 @@ class MapsController < ApplicationController
     gon.still_station_names = still_station_names
     user_station = UsersStation.where("user_id = ?", current_user.id)
     @gone_station = user_station.select(:station_id).distinct.length
-
+    @rest_station = 76 - @gone_station
+    gon.rest_station = @rest_station
+    gon.gone_station = @gone_station
+    
     station_points = []
     gon.id.each do |id|
       enname = Station.where("id = ?", id).pluck(:en_name)
@@ -40,13 +43,15 @@ class MapsController < ApplicationController
   private
 
   def set_ranking
-    @user = User.all.order('points desc') 
-        @user.find_each do |user| 
-          if user == current_user
-            @ranking = @user.index(user) + 1
-          end
+    @users = User.all.order('points desc') 
+      @users.find_each do |user| 
+        if user == current_user
+          @ranking = @users.index(user) + 1
+        end
       else
       end
   end
 
-end 
+end
+
+ 

@@ -1,16 +1,18 @@
 = javascript_include_tag 'index.js'
+= javascript_include_tag 'memorial.js'
 .header
   = render partial: "header"
 
 #map
 
 %script{:charset => "utf-8", :src => "https://map.yahooapis.jp/js/V1/jsapi?appid=\n#{ENV["YAHOO_API_KEY"]}", :type => "text/javascript"}
+
 .info
   .info__count
     .info__count__key
       残り
     .info__count__value
-      = 76 - @gone_station
+      = @rest_station
     .info__count__label
       駅 
   .info__point
