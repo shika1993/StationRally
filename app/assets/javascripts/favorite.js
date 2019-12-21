@@ -10,7 +10,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(){
-      location.reload();
+      location.href = '/stations/'+station_id+'/images/';
     })
     .fail(function() {
       Swal.fire({

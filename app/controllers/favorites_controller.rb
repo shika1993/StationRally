@@ -26,6 +26,7 @@ class FavoritesController < ApplicationController
         format.json
       end
     end
+    
   end
 
 
