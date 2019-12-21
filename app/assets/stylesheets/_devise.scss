@@ -405,6 +405,7 @@
       &__actions {
         height: 40px;
         width: 150px;
+        -webkit-appearance: none;
         background-color: $devisebuttoncolor;
         border-radius: 10px;
         border: none;
@@ -649,6 +650,7 @@
       &__actions {
         height: 80px;
         width: 200px;
+        -webkit-appearance: none;
         background-color: $devisebuttoncolor;
         border-radius: 10px;
         border: none;
