@@ -19,13 +19,7 @@ $(function() {
         type: 'DELETE', 
         dataType: 'json',
         success: function() {
-          Swal.fire({
-            text: '写真の削除に失敗しました',
-            icon: 'warning', 
-            showCancelButton: false,
-            background: 'white',
-            confirmButtonColor: '#99CCFF',
-          });
+          location.href = "/";
         },error: function () {
           location.href = "/";
         }  
