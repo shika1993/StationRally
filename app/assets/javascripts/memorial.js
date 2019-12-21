@@ -1,3 +1,5 @@
+var ref = document.referrer; //前のページのURLを取得
+if(ref.indexOf('users/sign_in') != -1){ //前のページのurlに()内が入っていたら$(function(){
 $(function(){
   var rest = gon.rest_station
   if ( rest == '30' || rest == '40' || rest == '50' || rest == '60' || rest == '70'){
@@ -8,14 +10,14 @@ $(function(){
       imageWidth: 50,
       imageHeight: 50,
       imageAlt: 'おめでとうございます！',
-      showCancelButton: false,
+      showCancelButton: false,  
       background: 'white',
       confirmButtonColor: '#99CCFF',
       backdrop : `rgba(0,0,123,0.2)`
     });
-  } if (rest == '75' ){
-    Swal.fire({ 
-      title: '初投稿!',
+  } if (rest == '75'){
+    Swal.fire({   
+      title: '㊗︎初投稿！',
       text: '全駅制覇目指して頑張りましょう！',
       imageUrl: 'https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/star1.png',
       imageWidth: 50,
@@ -57,4 +59,5 @@ $(function(){
   } 
   else {
   }
-});
+})
+}
