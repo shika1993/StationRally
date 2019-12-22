@@ -6,9 +6,9 @@
   .header__right__current
     = link_to user_path(current_user.id) do
       %span
-        = "#{current_user.name}さんの"
+        = "#{current_user.name}"
       %span
-        マイアルバム
+        さんのマイアルバム
 
   .header__right__btn
     - if user_signed_in?

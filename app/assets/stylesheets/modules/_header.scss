@@ -76,7 +76,7 @@
     background : $headterfooter;
     display: flex;
     justify-content: flex-start;
-    margin:auto 0;
+    margin: 0 auto;
     z-index: 3;
     position: fixed;
     &__left{
@@ -95,23 +95,23 @@
       display: flex;
       
       &__current{
-        width: 36vw;
+        width: 27vw;
+        height: 30px;
         color: $white;
-        text-align: right;
         font-family: 'kosugi';
         font-size: 10px;
-        margin: 0 auto;
-        transform: scale(0.8);
+        transform: scale(0.9);
         padding-right: 0px;
-        line-height: 18px;
-        margin: 5px -5vw 0px 0vw;
-        text-align: center;
+        margin: 0px 1vw 0px 4vw;
+        line-height: 10px;
         a{
-          text-decoration: none;
-          color:white;
+          display: table-cell;
+          width: 27vw;
+          height: 30px;
+          text-align: center;
+          vertical-align: middle;
         }
         span{
-          display: inline-block;
         }
       }
 
