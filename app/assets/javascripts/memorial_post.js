@@ -1,17 +1,20 @@
+var ref = document.referrer; //前のページのURLを取得
+if(ref.indexOf('station') != -1){ //前のページのurlに()内が入っていたら$(function(){
 $(function(){
   var rest = gon.rest_station
   if ( rest == '30' || rest == '40' || rest == '50' || rest == '60' || rest == '70'){
     Swal.fire({ 
-      title: '残り'+rest+'駅!',
+      title: '残り'+rest+'駅！',
       text: '全駅制覇目指して頑張りましょう！',
       imageUrl: 'https://shikanai1993.s3-ap-northeast-1.amazonaws.com/uploads/image/picture/images_V1/star1.png',
       imageWidth: 50,
       imageHeight: 50,
       imageAlt: 'おめでとうございます！',
-      showCancelButton: false,  
+      showConfirmButton: false,
+      showCancelButton: false,
+      timer : '3000',
       background: 'white',
-      confirmButtonColor: '#99CCFF',
-      backdrop : ''
+      backdrop : 'rgba(0,0,123,0.2)'
     });
   } if (rest == '75'){
     Swal.fire({   
@@ -21,9 +24,10 @@ $(function(){
       imageWidth: 50,
       imageHeight: 50,
       imageAlt: 'おめでとうございます！',
+      showConfirmButton: false,
       showCancelButton: false,
+      timer : '3000',
       background: 'white',
-      confirmButtonColor: '#99CCFF',
       backdrop : 'rgba(255,211,13,0.2)'
     });
   } 
@@ -35,12 +39,13 @@ $(function(){
       imageWidth: 50,
       imageHeight: 50,
       imageAlt: 'おめでとうございます！',
+      showConfirmButton: false,
       showCancelButton: false,
+      timer : '3000',
       background: 'white',
-      confirmButtonColor: '#99CCFF',
       backdrop : 'rgba(255,120,253,0.2)'
     });
-  }
+  } 
   if (rest == '0'){
     Swal.fire({ 
       title: '全駅制覇！',
@@ -49,12 +54,14 @@ $(function(){
       imageWidth: 50,
       imageHeight: 50,
       imageAlt: 'おめでとうございます！',
+      showConfirmButton: false,
       showCancelButton: false,
+      timer : '3000',
       background: 'white',
-      confirmButtonColor: '#99CCFF',
       backdrop : 'rgba(255,211,13,0.2)'
     });
   } 
   else {
   }
 })
+}
