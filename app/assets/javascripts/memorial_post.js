@@ -1,5 +1,5 @@
 var ref = document.referrer; //前のページのURLを取得
-if(ref.indexOf('station') != -1){ //前のページのurlに()内が入っていたら$(function(){
+if(ref.indexOf('/stations/') != -1){ //前のページのurlに()内が入っていたら$(function(){
 $(function(){
   var rest = gon.rest_station
   if ( rest == '30' || rest == '40' || rest == '50' || rest == '60' || rest == '70'){
