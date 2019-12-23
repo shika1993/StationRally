@@ -114,16 +114,13 @@ body{
     top: 8vh;
     a {
       text-decoration: none;
-      font-family: 'hikki';
-      font-weight: normal;
-      font-size: 40px;
+      font-family: 'Hiragino Maru Gothic ProN';
+      font-weight: bold;
+      font-size: 20px;
       -webkit-transform : translate(-50%,-50%);
       transform : translate(-50%,-50%);
       text-align: center;
-      color: #ACB6E5;
-      background: linear-gradient( 135deg, rgba(58, 255, 0, 0.6), rgba(43, 82, 255, 0.8));//背景色にグラデーションを指定
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: $shikagray;
     }
     a span {
       position: absolute;
